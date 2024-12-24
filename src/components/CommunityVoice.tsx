@@ -1,10 +1,4 @@
-import CommunityVoicesDark from "../assets/community-dark.png";
-import CommunityVoices from "../assets/community.png";
-import { useTheme } from "./ThemeToggle";
-
 const CommunityVoice = () => {
-	const { darkMode } = useTheme();
-
 	return (
 		<>
 			<section className="container mx-auto px-6 py-16">
@@ -18,11 +12,11 @@ const CommunityVoice = () => {
 						breaking barriers, and shaping the future of Web 3 with Web 3 Afrika
 					</p>
 					<div className="mt-4">
-						<img
+						{/* <img
 							src={darkMode ? CommunityVoicesDark : CommunityVoices}
 							alt="Community"
 							className="mx-auto h-full w-full"
-						/>
+						/> */}
 					</div>
 				</div>
 			</section>

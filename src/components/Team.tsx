@@ -1,14 +1,13 @@
-import LinkedinIcon from "../assets/icons/linkedin-logo.png";
-import TwitterIcon from "../assets/icons/x-logo.png";
 import Ajoke from "../assets/team/ajoke.png";
 import Eniola from "../assets/team/eniola.png";
 import Idris from "../assets/team/idris.png";
-import Isaac from "../assets/team/isaac.png";
+import Isaac from "../assets/team/isaac.jpeg";
 import Jennifer from "../assets/team/jennifer.png";
 import Joshua from "../assets/team/joshua.png";
-import Kanayo from "../assets/team/kanayo.png";
+import Kanayo from "../assets/team/kanayo.jpeg";
 import Oluwabamikemi from "../assets/team/oluwabamikemi.png";
 import Tony from "../assets/team/tony.png";
+import { LinkedIn, X } from "./icons";
 
 const TeamMemberCard = ({
 	image,
@@ -24,11 +23,11 @@ const TeamMemberCard = ({
 	linkedinLink: string;
 }) => {
 	return (
-		<div className="mb-16 flex flex-col items-start space-y-8 rounded-lg border border-gray-200 p-4 text-left dark:border-0 dark:bg-[#0A0A0A]">
+		<div className="flex size-72 flex-col items-start space-y-8 rounded-lg border border-gray-200 p-4 text-left dark:border-0 dark:bg-[#0A0A0A]">
 			<img
 				src={image}
 				alt={name}
-				className="w-13 h-13 rounded-lg object-cover"
+				className="size-24 rounded-lg object-cover grayscale"
 			/>
 			<div className="space-y-2">
 				<h3 className="text-xl text-[#292929]">{name}</h3>
@@ -38,17 +37,17 @@ const TeamMemberCard = ({
 						href={twitterLink}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="transition hover:opacity-75"
+						className="flex size-10 items-center justify-center rounded-md border transition hover:opacity-75"
 					>
-						<img src={TwitterIcon} alt="Twitter" className="h-6 w-6" />
+						<X />
 					</a>
 					<a
 						href={linkedinLink}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="transition hover:opacity-75"
+						className="flex size-10 items-center justify-center rounded-md border transition hover:opacity-75"
 					>
-						<img src={LinkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+						<LinkedIn />
 					</a>
 				</div>
 			</div>
@@ -131,7 +130,7 @@ const TeamSection = () => {
 					Meet the Visionaries Driving Web3 Afrika Forward
 				</h2>
 			</div>
-			<div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+			<div className="grid w-fit grid-cols-2 gap-8 md:grid-cols-3">
 				{teamMembers.map((member, index) => (
 					<TeamMemberCard
 						key={index}

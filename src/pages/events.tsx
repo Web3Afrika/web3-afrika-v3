@@ -1,58 +1,37 @@
 import { useEffect, useState } from "react";
-import ConferenceImage1 from "../assets/conference-1.png";
-import ConferenceImage2 from "../assets/conference-2.png";
-import ConferenceImage3 from "../assets/conference-3.png";
-import EventImage from "../assets/group-1.png";
-import EventImage2 from "../assets/group-2.png";
-import EventImage3 from "../assets/group-3.png";
-import DonateSection from "../components/Donate";
-import Layout from "../layout";
+import HackathonImage1 from "../assets/hackathons/hackathon-1.jpeg";
+import HackathonImage2 from "../assets/hackathons/hackathon-2.jpeg";
+import HackathonImage3 from "../assets/hackathons/hackathon-3.jpeg";
+import HackathonImage4 from "../assets/hackathons/hackathon-4.jpeg";
 
-const ArrowRight = () => (
-	<svg
-		width="16"
-		height="16"
-		viewBox="0 0 16 16"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-		className="ml-2 inline"
-	>
-		<path
-			d="M3.33334 8H12.6667"
-			stroke="currentColor"
-			strokeWidth="1.5"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
-		<path
-			d="M8 3.33337L12.6667 8.00004L8 12.6667"
-			stroke="currentColor"
-			strokeWidth="1.5"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-		/>
-	</svg>
-);
+import ConferenceImage1 from "../assets/conferences/conference-1.jpeg";
+import ConferenceImage2 from "../assets/conferences/conference-2.jpeg";
+import ConferenceImage3 from "../assets/conferences/conference-3.jpeg";
+import ConferenceImage4 from "../assets/conferences/conference-4.jpeg";
+
+import DonateSection from "../components/Donate";
+import { ArrowRight } from "../components/icons";
+import Layout from "../layout";
 
 export default function App() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [conferenceIndex, setConferenceIndex] = useState(0);
 
-	const events = [
-		{ id: 1, src: EventImage },
-		{ id: 2, src: EventImage2 },
-		{ id: 3, src: EventImage3 },
-		{ id: 4, src: EventImage },
-		{ id: 5, src: EventImage2 },
-		{ id: 6, src: EventImage3 },
+	const hackathons = [
+		{ id: 1, src: HackathonImage1 },
+		{ id: 2, src: HackathonImage2 },
+		{ id: 3, src: HackathonImage3 },
+		{ id: 4, src: HackathonImage4 },
+		{ id: 5, src: HackathonImage2 },
+		{ id: 6, src: HackathonImage3 },
 	];
 
 	const conferences = [
 		{ id: 1, src: ConferenceImage1 },
 		{ id: 2, src: ConferenceImage2 },
 		{ id: 3, src: ConferenceImage3 },
-		{ id: 4, src: ConferenceImage1 },
-		{ id: 5, src: ConferenceImage2 },
+		{ id: 4, src: ConferenceImage4 },
+		{ id: 5, src: ConferenceImage1 },
 		{ id: 6, src: ConferenceImage3 },
 	];
 
@@ -101,7 +80,7 @@ export default function App() {
 		},
 	];
 
-	const totalSlides = Math.ceil(events.length / 3);
+	const totalSlides = Math.ceil(hackathons.length / 3);
 	const totalConferenceSlides = Math.ceil(conferences.length / 3);
 
 	useEffect(() => {
@@ -153,10 +132,13 @@ export default function App() {
 								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
 									<div key={slideIndex} className="w-full flex-shrink-0">
 										<div className="grid grid-cols-3">
-											{events
+											{hackathons
 												.slice(slideIndex * 3, slideIndex * 3 + 3)
 												.map(event => (
-													<div key={event.id} className="rounded-sm p-4">
+													<div
+														key={event.id}
+														className="size-96 rounded-sm p-4"
+													>
 														<img
 															src={event.src}
 															alt={`Event ${event.id}`}
@@ -191,25 +173,26 @@ export default function App() {
 									transform: `translateX(-${conferenceIndex * 100}%)`,
 								}}
 							>
-								{Array.from({ length: totalConferenceSlides }).map(
-									(_, slideIndex) => (
-										<div key={slideIndex} className="w-full flex-shrink-0">
-											<div className="grid grid-cols-3">
-												{conferences
-													.slice(slideIndex * 3, slideIndex * 3 + 3)
-													.map(conference => (
-														<div key={conference.id} className="rounded-sm p-4">
-															<img
-																src={conference.src}
-																alt={`Conference ${conference.id}`}
-																className="h-full w-full rounded-lg object-cover"
-															/>
-														</div>
-													))}
-											</div>
+								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
+									<div key={slideIndex} className="w-full flex-shrink-0">
+										<div className="grid grid-cols-3">
+											{conferences
+												.slice(slideIndex * 3, slideIndex * 3 + 3)
+												.map(event => (
+													<div
+														key={event.id}
+														className="size-96 rounded-sm p-4"
+													>
+														<img
+															src={event.src}
+															alt={`Event ${event.id}`}
+															className="size-80 h-full w-full rounded-lg object-cover object-center"
+														/>
+													</div>
+												))}
 										</div>
-									),
-								)}
+									</div>
+								))}
 							</div>
 						</div>
 					</div>
@@ -217,7 +200,7 @@ export default function App() {
 				<h3 className="mb-12 text-3xl text-[#292929] dark:text-white">
 					Other Events
 				</h3>
-				<div className="mb-12 divide-y divide-gray-200">
+				<div className="mb-12 divide-y divide-[#F2F2F2] border-y border-[#F2F2F2] md:divide-[#000000] md:border-[#000000]">
 					{upcomingEvents.map(item => (
 						<div
 							key={item.id}

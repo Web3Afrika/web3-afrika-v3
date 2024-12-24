@@ -1,12 +1,6 @@
-import DiscordCommunityDark from "../assets/discord-dark.png";
-import DiscordCommunity from "../assets/discord.png";
-import XCommunityDark from "../assets/x-dark.png";
-import XCommunity from "../assets/x.png";
-import { useTheme } from "./ThemeToggle";
+import { Discord, X } from "./icons";
 
 const CommunitySection = () => {
-	const { darkMode } = useTheme();
-
 	return (
 		<div className="container mx-auto mb-16 px-6 py-4">
 			<div className="mb-8 text-left">
@@ -21,10 +15,7 @@ const CommunitySection = () => {
 
 			<div className="grid gap-8 md:grid-cols-2">
 				<div className="flex flex-col items-center space-y-2 rounded-xl pb-8 text-center shadow-md">
-					<img
-						src={darkMode ? XCommunityDark : XCommunity}
-						alt="Community Gathering"
-					/>
+					<X className="size-16" />
 					<h3 className="text-2xl text-[#292929]">X (Formerly Twitter)</h3>
 					<p className="p-2 text-[#757575]">
 						Join our vibrant Discord server to engage in real-time discussions,
@@ -36,10 +27,7 @@ const CommunitySection = () => {
 				</div>
 
 				<div className="flex flex-col items-center space-y-2 rounded-xl pb-8 text-center shadow-md">
-					<img
-						src={darkMode ? DiscordCommunityDark : DiscordCommunity}
-						alt="Online Meetup"
-					/>
+					<Discord className="size-16" />
 					<h3 className="text-2xl text-[#292929]">Discord</h3>
 					<p className="p-2 text-[#757575]">
 						Connect with our Telegram community for instant messaging, quick

@@ -1,5 +1,3 @@
-import HeroImage from "../assets/HeroImage.png";
-
 const HeroDetails = () => {
 	return (
 		<div>
@@ -27,11 +25,11 @@ const HeroDetails = () => {
 				</div>
 
 				<div>
-					<img
+					{/* <img
 						src={HeroImage}
 						alt="Web3 Africa Community"
 						className="w-full object-cover"
-					/>
+					/> */}
 				</div>
 			</section>
 		</div>

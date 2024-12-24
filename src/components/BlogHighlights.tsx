@@ -1,7 +1,8 @@
-import ArticleImage1 from "../assets/blog-1.png";
-import ArticleImage2 from "../assets/blog-2.png";
-import ArticleImage3 from "../assets/blog-3.png";
-import ArticleImage4 from "../assets/blog-4.png";
+import ArticleImage1 from "../assets/blog/blog-1.png";
+import ArticleImage2 from "../assets/blog/blog-2.png";
+import ArticleImage3 from "../assets/blog/blog-3.png";
+import ArticleHero from "../assets/blog/blog-hero.png";
+import { cn } from "../util";
 
 const sampleArticles = [
 	{
@@ -14,6 +15,7 @@ const sampleArticles = [
 		authorAvatar: "/api/placeholder/32/32",
 		imageUrl: ArticleImage1,
 		link: "/articles/future-web-development",
+		bg: "bg-[#000000]",
 	},
 	{
 		id: 2,
@@ -25,6 +27,7 @@ const sampleArticles = [
 		authorAvatar: "/api/placeholder/32/32",
 		imageUrl: ArticleImage2,
 		link: "/articles/mastering-tailwind",
+		bg: "bg-[#EC9120]",
 	},
 	{
 		id: 3,
@@ -36,14 +39,15 @@ const sampleArticles = [
 		authorAvatar: "/api/placeholder/32/32",
 		imageUrl: ArticleImage3,
 		link: "/articles/scalable-react-apps",
+		bg: "bg-[#0C6E5F]",
 	},
 ];
 
 const BlogHighlights = () => {
 	return (
-		<section className="container mx-auto px-6 py-8">
-			<div className="mb-12 flex flex-col gap-8 bg-[#FAFAFA] p-6 dark:bg-black md:flex-row">
-				<div className="w-full md:w-1/2">
+		<section className="container mx-auto py-8">
+			<div className="mb-12 grid grid-cols-9 gap-8 bg-[#FAFAFA] p-6 dark:bg-black">
+				<div className="col-span-4">
 					<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
 						<div className="px-6 pt-8">
 							<span className="text-sm text-gray-500">December 20, 2024</span>
@@ -71,23 +75,21 @@ const BlogHighlights = () => {
 					</div>
 				</div>
 
-				<div className="w-full bg-[#FCE4E5] md:w-1/2">
-					<div className="flex items-center justify-center p-6">
-						<img
-							src={ArticleImage4}
-							alt="Featured"
-							className="w-58 h-full rounded-lg object-cover"
-						/>
-					</div>
+				<div className="col-span-5 flex items-center justify-center bg-[#FCE4E5] py-12">
+					<img
+						src={ArticleHero}
+						alt="Featured"
+						className="max-w-[60%] rounded-lg object-cover"
+					/>
 				</div>
 			</div>
-			<div className="grid grid-cols-3 gap-6">
+			<div className="grid gap-6 md:grid-cols-3">
 				{sampleArticles.map(article => (
 					<div
 						key={article.id}
 						className="overflow-hidden rounded-lg bg-[#FAFAFA] dark:bg-black"
 					>
-						<div className="h-58 relative w-full p-4">
+						<div className={cn("relative w-full p-8 pl-10", article.bg)}>
 							<img
 								src={article.imageUrl}
 								alt={article.title}
@@ -100,11 +102,11 @@ const BlogHighlights = () => {
 						</div>
 
 						<div className="p-6">
-							<h2 className="mb-3 line-clamp-2 text-xl font-bold text-gray-800 dark:text-white">
+							<h2 className="mb-3 line-clamp-2 text-[#5D5D5D] dark:text-white md:text-2xl">
 								{article.title}
 							</h2>
 
-							<p className="mb-4 line-clamp-3 text-[#9E9E9E]">
+							<p className="mb-4 line-clamp-3 text-xs text-[#9E9E9E] md:text-sm">
 								{article.content}
 							</p>
 
@@ -114,7 +116,7 @@ const BlogHighlights = () => {
 
 							<a
 								href={article.link}
-								className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] transition-colors duration-200 hover:bg-blue-700"
+								className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-primary-green transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white"
 							>
 								Read Article
 							</a>

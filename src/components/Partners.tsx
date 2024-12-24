@@ -25,7 +25,7 @@ const Partners = () => {
 	}, [partners.length]);
 
 	return (
-		<section className="container mx-auto px-6 py-16">
+		<section className="container mx-auto py-16">
 			<div className="mb-8">
 				<h2 className="mb-2 text-2xl dark:text-white">Our Partners</h2>
 				<p className="text-lg text-gray-600 dark:text-[#5D5D5D]">
@@ -39,11 +39,11 @@ const Partners = () => {
 			<div className="relative">
 				<div className="overflow-hidden">
 					<div
-						className="flex transition-transform duration-500 ease-in-out"
+						className="flex gap-4 transition-transform duration-500 ease-in-out"
 						style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
 					>
 						{partners.map(partner => (
-							<div key={partner.id} className="w-1/3 flex-shrink-0 px-4">
+							<div key={partner.id} className="w-1/3 flex-shrink-0">
 								<div className="flex h-48 items-center justify-center rounded-sm bg-[#FAFAFA] p-8 shadow-sm">
 									<img
 										src={partner.logo}
