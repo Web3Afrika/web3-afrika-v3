@@ -6,7 +6,7 @@ const DonateSection = () => {
 		<div className="p-6">
 			<div
 				className={cn(
-					"rounded-2xl bg-black bg-contain bg-right bg-no-repeat py-12 dark:bg-[#0A0A0A]",
+					"mx-auto max-w-[1536px] rounded-2xl bg-black bg-contain bg-right bg-no-repeat py-12 dark:bg-[#0A0A0A]",
 				)}
 				style={{ backgroundImage: `url(${DonateImage})` }}
 			>

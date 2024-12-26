@@ -1,25 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import LogoDark from "../assets/logo-dark.svg";
-import Logo from "../assets/logo.svg";
 import { navLinks } from "../constants";
 import { cn } from "../util";
-import { ThemeToggle, useTheme } from "./ThemeToggle";
+import { ThemeToggle } from "./ThemeToggle";
+import { Logo, ModalTrigger } from "./icons";
 
 const Navbar = () => {
 	const location = useLocation();
-	const { darkMode } = useTheme();
 
 	return (
-		<nav className="container mx-auto flex items-center justify-between bg-white p-6 transition-colors duration-200 dark:bg-black">
+		<nav className="container mx-auto flex items-center justify-between bg-white py-6 transition-colors duration-200 dark:bg-black">
 			<div className="flex items-center">
-				<img
-					src={darkMode ? LogoDark : Logo}
-					alt="Web3 Africa Logo"
-					className="transition-opacity duration-200"
-				/>
+				<Logo className="fill-black dark:fill-white" />
 			</div>
 
-			<div className="flex space-x-6 rounded-md bg-[#FAFAFA] px-4 py-2 dark:bg-[#111111]">
+			<div className="hidden space-x-6 rounded-md bg-[#FAFAFA] px-4 py-2 dark:bg-[#111111] md:flex">
 				{navLinks.map(link => (
 					<Link
 						key={link.href}
@@ -36,7 +30,7 @@ const Navbar = () => {
 				))}
 			</div>
 
-			<div className="flex items-center">
+			<div className="hidden items-center md:flex">
 				<div className="flex items-center gap-4">
 					<ThemeToggle />
 					<Link
@@ -51,6 +45,7 @@ const Navbar = () => {
 					Collab with us
 				</button>
 			</div>
+			<ModalTrigger className="cursor-pointer md:hidden" />
 		</nav>
 	);
 };

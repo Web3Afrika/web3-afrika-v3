@@ -1,11 +1,36 @@
 import { useState } from "react";
-import LogoDark from "../assets/logo-dark.svg";
-import Logo from "../assets/logo.svg";
-import { useTheme } from "./ThemeToggle";
+import { Link } from "react-router-dom";
+import { Logo } from "./icons";
+
+const QuickLinks = [
+	{ label: "About Us", href: "/about" },
+	{ label: "Blog", href: "/blog" },
+	{ label: "Event", href: "/event" },
+	{ label: "Contact Us", href: "/contact" },
+	{ label: "Terms of Service", href: "/#" },
+	{ label: "Cookies Settings", href: "/#" },
+	{ label: "Affilate Policy", href: "/#" },
+	{ label: "Privacy Policy", href: "/#" },
+];
+
+const SocialLinks = [
+	{
+		label: (
+			<span>
+				X <span className="hidden md:inline-block">(formerly twitter)</span>
+			</span>
+		),
+		href: "/#",
+		external: true,
+	},
+	{ label: "Linkedin", href: "/#", external: true },
+	{ label: "Youtube", href: "/#", external: true },
+	{ label: "Instagram", href: "/#", external: true },
+];
 
 const Footer = () => {
 	const [email, setEmail] = useState("");
-	const { darkMode } = useTheme();
+	const [currentYear] = useState(new Date().getFullYear());
 
 	const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -13,17 +38,39 @@ const Footer = () => {
 		setEmail("");
 	};
 
+	const renderLinkUrl = (link: {
+		label: string | JSX.Element;
+		href: string;
+		external?: boolean;
+	}) => (
+		<li key={link.label.toString()}>
+			{link.external ? (
+				<a
+					href={link.href}
+					className="text-[#9E9E9E] hover:text-[#EE3C22] dark:text-[#9E9E9E]"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{link.label}
+				</a>
+			) : (
+				<Link
+					to={link.href}
+					className="text-[#9E9E9E] hover:text-[#EE3C22] dark:text-[#9E9E9E]"
+				>
+					{link.label}
+				</Link>
+			)}
+		</li>
+	);
+
 	return (
 		<div className="bg-[#FAFAFA] dark:bg-black">
 			<footer className="container mx-auto px-6 py-16">
 				<div className="grid grid-cols-2 gap-12">
-					<div className="space-y-6">
-						<img
-							src={darkMode ? LogoDark : Logo}
-							alt="Web3 Africa Logo"
-							className="transition-opacity duration-200"
-						/>
-						<p className="max-w-md text-[#666666]">
+					<div className="col-span-full space-y-6 md:col-span-1">
+						<Logo className="fill-black dark:fill-white" />
+						<p className="max-w-md text-[#9E9E9E] dark:text-[#9E9E9E]">
 							Empowering mobility entrepreneurs worldwide with accessible,
 							flexible financing to unlock vehicle ownership and accelerate
 							growth.
@@ -39,12 +86,12 @@ const Footer = () => {
 									value={email}
 									onChange={e => setEmail(e.target.value)}
 									placeholder="Enter your email"
-									className="w-full rounded-lg px-4 py-4 pr-[100px] focus:outline-none focus:ring-2 focus:ring-[#EE3C22] dark:bg-[#0A0A0A]"
+									className="w-full rounded-lg px-4 py-4 pr-[100px] text-[#9E9E9E] focus:outline-none focus:ring-1 focus:ring-[#0C6E5F] dark:bg-[#0A0A0A]"
 									required
 								/>
 								<button
 									type="submit"
-									className="absolute right-2 top-1/2 -translate-y-1/2 rounded-3xl border border-[#0C6E5F] px-4 py-2 text-[#0C6E5F] transition duration-300 hover:bg-[#D03321]"
+									className="absolute right-2 top-1/2 -translate-y-1/2 rounded-3xl border border-[#0C6E5F] px-4 py-2 text-sm text-[#0C6E5F] shadow-secondary transition duration-300 hover:bg-[#0C6E5F] hover:text-white"
 								>
 									Subscribe
 								</button>
@@ -52,107 +99,40 @@ const Footer = () => {
 						</form>
 					</div>
 
-					<div className="mt-14 grid grid-cols-3 gap-8">
-						<div>
-							<h4 className="mb-4 font-bold text-[#333333] dark:text-[#5D5D5D]">
-								Quick Links{" "}
-							</h4>
-							<ul className="space-y-2">
-								<li>
-									<a
-										href="/about"
-										className="text-[#666666] hover:text-[#EE3C22]"
-									>
-										About Us
-									</a>
-								</li>
-								<li>
-									<a
-										href="/blog"
-										className="text-[#666666] hover:text-[#EE3C22]"
-									>
-										Blog
-									</a>
-								</li>
-								<li>
-									<a
-										href="/event"
-										className="text-[#666666] hover:text-[#EE3C22]"
-									>
-										Event
-									</a>
-								</li>
-								<li>
-									<a
-										href="/contact"
-										className="text-[#666666] hover:text-[#EE3C22]"
-									>
-										Contact Us
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h4 className="mb-4 font-bold text-[#333333] dark:text-[#5D5D5D]">
+					<div className="hidden justify-between gap-8 md:flex">
+						<div className="space-y-4">
+							<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
 								Quick Links
 							</h4>
-							<ul className="space-y-2">
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Terms of Service
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Cookies Settings
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Affilate Policy
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Privacy Policy
-									</a>
-								</li>
+							<ul className="space-y-4">
+								{QuickLinks.slice(0, 4).map(renderLinkUrl)}
 							</ul>
 						</div>
-
-						<div>
-							<h4 className="mb-4 font-bold text-[#333333] dark:text-[#5D5D5D]">
+						<div className="space-y-4">
+							<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
+								Quick Links
+							</h4>
+							<ul className="space-y-4">
+								{QuickLinks.slice(4, 8).map(renderLinkUrl)}
+							</ul>
+						</div>
+						<div className="space-y-4">
+							<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
 								Social Media
 							</h4>
-							<ul className="space-y-2">
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Linkedin
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Facebook
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										Instagram
-									</a>
-								</li>
-								<li>
-									<a href="/#" className="text-[#666666] hover:text-[#EE3C22]">
-										X (formerly twitter)
-									</a>
-								</li>
-							</ul>
+							<ul className="space-y-4">{SocialLinks.map(renderLinkUrl)}</ul>
 						</div>
 					</div>
 				</div>
 
-				<div className="mt-12 pt-6 text-left text-[#9E9E9E]">
-					Copyright @2024 Web3 Afrika. All right reserved
+				<div className="mt-4 flex flex-col items-center justify-between gap-6 pt-6 text-[#9E9E9E] md:mt-12 md:flex-row">
+					<span>Copyright @{currentYear} Web3 Afrika. All right reserved</span>
+					<ul className="flex w-full max-w-xs justify-between md:hidden">
+						{SocialLinks.map(renderLinkUrl)}
+					</ul>
+					<span className="mt-12 md:mt-0">
+						Designed by <u>On Visual Matters</u>
+					</span>
 				</div>
 			</footer>
 		</div>

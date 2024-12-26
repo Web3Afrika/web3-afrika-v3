@@ -3,10 +3,10 @@ const CommunityVoice = () => {
 		<>
 			<section className="container mx-auto px-6 py-16">
 				<div className="mb-8">
-					<h2 className="mb-2 text-2xl dark:text-[#5D5D5D]">
+					<h2 className="mb-2 text-3xl dark:text-white">
 						Voices of Innovation: What Our Community Says
 					</h2>
-					<p className="dark-[#9E9E9E] text-lg text-gray-600">
+					<p className="text-xl text-[#9E9E9E]">
 						Hear from the builders, creators, and pioneers across Africa and the
 						diaspora who are driving change, <br />
 						breaking barriers, and shaping the future of Web 3 with Web 3 Afrika

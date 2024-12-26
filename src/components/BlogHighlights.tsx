@@ -1,64 +1,39 @@
-import ArticleImage1 from "../assets/blog/blog-1.png";
-import ArticleImage2 from "../assets/blog/blog-2.png";
-import ArticleImage3 from "../assets/blog/blog-3.png";
 import ArticleHero from "../assets/blog/blog-hero.png";
+import { sampleArticles } from "../constants";
 import { cn } from "../util";
+import { ChevronRight } from "./icons";
 
-const sampleArticles = [
-	{
-		id: 1,
-		title: "Demystifying Consensus Mechanism: A comprehensive Guide",
-		content:
-			"The consensus mechanism is a crucial concept in the world of blockchain technology, and it can vary widely depending on the specific use case or application.",
-		author: "Franklin Ohaegbulam",
-		date: "March 15, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage1,
-		link: "/articles/future-web-development",
-		bg: "bg-[#000000]",
-	},
-	{
-		id: 2,
-		title: "Why is the Hard Drive for Blockchain and Internet Known as IPFS",
-		content:
-			"Explore the hackathons, bounties, and events that have empowered African innovators, fostered connections, and driven Web 3 education and growth worldwide.",
-		author: "Vinyl Davyl",
-		date: "March 18, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage2,
-		link: "/articles/mastering-tailwind",
-		bg: "bg-[#EC9120]",
-	},
-	{
-		id: 3,
-		title: "A dive into the world of decentralized finance in Africa.",
-		content:
-			"Learn the essential best practices for building large-scale React applications that are maintainable, performant, and easy to test.",
-		author: "Franklin Ohaegbulam",
-		date: "March 20, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage3,
-		link: "/articles/scalable-react-apps",
-		bg: "bg-[#0C6E5F]",
-	},
-];
-
-const BlogHighlights = () => {
+const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 	return (
-		<section className="container mx-auto py-8">
-			<div className="mb-12 grid grid-cols-9 gap-8 bg-[#FAFAFA] p-6 dark:bg-black">
+		<section className="container mx-auto py-8 md:mb-40">
+			{!minimal && (
+				<div className="text-start">
+					<h2 className="text-4xl text-[#292929] dark:text-white">
+						Insights and Updates
+					</h2>
+					<p className="max-w-3xl text-xl text-[#9E9E9E] dark:text-[#9E9E9E]">
+						Stay informed with the latest news, trends, and stories shaping Web
+						3 innovation across Africa and the diaspora
+					</p>
+					<p className="mt-4 flex items-center gap-2 text-[#141414] dark:text-white">
+						<span>Enter Blog</span>
+						<ChevronRight />
+					</p>
+				</div>
+			)}
+			<div className="mb-12 flex flex-col-reverse gap-8 bg-[#FAFAFA] p-6 dark:bg-black md:grid md:grid-cols-9">
 				<div className="col-span-4">
 					<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
 						<div className="px-6 pt-8">
-							<span className="text-sm text-gray-500">December 20, 2024</span>
+							<span className="text-lg text-gray-500">December 20, 2024</span>
 						</div>
 
-						<div className="space-y-6 p-6">
-							<h2 className="line-clamp-2 text-3xl text-gray-800 dark:text-white">
+						<div className="max-w-md space-y-6 p-6">
+							<h2 className="text-3xl text-[#5D5D5D] dark:text-white">
 								Getting started with Solidity, All you need to know
 							</h2>
 
-							<p className="line-clamp-3 text-lg text-[#9E9E9E]">
+							<p className="line-clamp-3 text-xl text-[#9E9E9E]">
 								Solidity is a high-level programming language that is
 								specifically used to write smart contracts on the Ethereum
 								blockchain.
@@ -68,18 +43,18 @@ const BlogHighlights = () => {
 								<span className="text-sm text-[#9E9E9E]">Vinyl Davyl</span>
 							</div>
 
-							<button className="inline-block rounded-full border border-[#0C6E5F] px-8 py-3 text-[#0C6E5F] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
+							<button className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
 								Read Article
 							</button>
 						</div>
 					</div>
 				</div>
 
-				<div className="col-span-5 flex items-center justify-center bg-[#FCE4E5] py-12">
+				<div className="col-span-5 flex items-center justify-center rounded-lg bg-[#FCE4E5] p-8 md:rounded-s md:p-12">
 					<img
 						src={ArticleHero}
 						alt="Featured"
-						className="max-w-[60%] rounded-lg object-cover"
+						className="object-cover md:max-w-[60%]"
 					/>
 				</div>
 			</div>
@@ -87,9 +62,14 @@ const BlogHighlights = () => {
 				{sampleArticles.map(article => (
 					<div
 						key={article.id}
-						className="overflow-hidden rounded-lg bg-[#FAFAFA] dark:bg-black"
+						className="flex flex-col overflow-hidden bg-[#FAFAFA] p-6 dark:bg-[#0A0A0A] md:rounded-lg md:p-8"
 					>
-						<div className={cn("relative w-full p-8 pl-10", article.bg)}>
+						<div
+							className={cn(
+								"relative w-full rounded-lg p-8 pl-10 md:rounded-s",
+								article.bg,
+							)}
+						>
 							<img
 								src={article.imageUrl}
 								alt={article.title}
@@ -97,26 +77,30 @@ const BlogHighlights = () => {
 							/>
 						</div>
 
-						<div className="px-6 pt-4">
-							<span className="text-sm text-gray-500">{article.date}</span>
+						<div className="pt-4">
+							<span className="text-lg text-gray-500">{article.date}</span>
 						</div>
 
-						<div className="p-6">
-							<h2 className="mb-3 line-clamp-2 text-[#5D5D5D] dark:text-white md:text-2xl">
-								{article.title}
-							</h2>
+						<div className="flex h-full flex-col">
+							<div className="flex-grow">
+								<h2 className="mb-3 text-[#5D5D5D] dark:text-white md:text-2xl">
+									{article.title}
+								</h2>
 
-							<p className="mb-4 line-clamp-3 text-xs text-[#9E9E9E] md:text-sm">
-								{article.content}
-							</p>
+								<p className="mb-4 text-xs text-[#9E9E9E] md:text-sm">
+									{article.content}
+								</p>
 
-							<div className="mb-4">
-								<span className="text-sm text-[#5D5D5D]">{article.author}</span>
+								<div className="mb-4">
+									<span className="text-sm text-[#5D5D5D]">
+										{article.author}
+									</span>
+								</div>
 							</div>
 
 							<a
 								href={article.link}
-								className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-primary-green transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white"
+								className="inline-block w-fit rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white"
 							>
 								Read Article
 							</a>

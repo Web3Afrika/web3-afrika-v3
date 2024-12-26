@@ -5,10 +5,10 @@ const PurposeSection = () => {
 				<p className="mb-4 text-sm text-[#9E9E9E]">
 					Mission and Vision Statement
 				</p>
-				<h2 className="mb-4 text-4xl text-[#292929] dark:text-[#E5E4E4]">
+				<h2 className="mb-4 text-5xl text-[#292929] dark:text-[#E5E4E4]">
 					Our Purpose and Vision
 				</h2>
-				<p className="max-w-2xl text-[#757575] dark:text-[#CFCFCF]">
+				<p className="max-w-3xl text-2xl text-[#757575] dark:text-[#CFCFCF]">
 					Our mission at Web 3 Afrika is to empower African innovators and
 					communities through education, opportunities, and inclusivity in the
 					Web 3 space. Guided by our vision, we strive to position Africa and
