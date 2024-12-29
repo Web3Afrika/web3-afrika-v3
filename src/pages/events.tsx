@@ -103,9 +103,9 @@ export default function App() {
 
 	return (
 		<Layout>
-			<section className="container mx-auto px-6 py-16">
-				<div className="mb-12 text-start">
-					<h2 className="mb-4 text-6xl text-[#292929] dark:text-white">
+			<section className="container mx-auto mt-4 md:mt-40">
+				<div className="mb-12 space-y-8 text-start">
+					<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-2xl md:text-5xl">
 						Building a Decentralized Future Together
 					</h2>
 					<h3 className="mb-4 text-xl text-[#292929] dark:text-[#B0B0B0]">
