@@ -27,28 +27,32 @@ const Partners = () => {
 	return (
 		<section className="container mx-auto py-16">
 			<div className="mb-8">
-				<h2 className="mb-2 text-2xl dark:text-white">Our Partners</h2>
-				<p className="text-lg text-gray-600 dark:text-[#5D5D5D]">
-					We wouldn't have gotten this far without{" "}
-					<span className="font-bold">Our Partners</span>. Our partners are our
-					backbone, Providing <br /> much needed support to continue to support
-					Africa.
-				</p>
+				<h2 className="mb-2 text-3xl text-[#5D5D5D] dark:text-white">
+					Our Partners
+				</h2>
+				<div className="h-[44px] w-[853px]">
+					<p className="text-xl text-[#9E9E9E] dark:text-[#5D5D5D]">
+						We wouldn't have gotten this far without{" "}
+						<span className="font-medium text-[#5D5D5D]">Our Partners</span>.
+						Our partners are our backbone, Providing much needed support to
+						continue to support Africa.
+					</p>
+				</div>
 			</div>
 
 			<div className="relative">
 				<div className="overflow-hidden">
 					<div
-						className="flex gap-4 transition-transform duration-500 ease-in-out"
+						className="flex transition-transform duration-500 ease-in-out"
 						style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
 					>
 						{partners.map(partner => (
 							<div key={partner.id} className="w-1/3 flex-shrink-0">
-								<div className="flex h-48 items-center justify-center rounded-sm bg-[#FAFAFA] p-8 shadow-sm">
+								<div className="flex h-[386px] w-[386px] items-center justify-center rounded-sm bg-[#FAFAFA]">
 									<img
 										src={partner.logo}
 										alt={`${partner.name} logo`}
-										className="h-16 max-w-full object-contain"
+										className="h-48 max-w-full object-contain"
 									/>
 								</div>
 							</div>

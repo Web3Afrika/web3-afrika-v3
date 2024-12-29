@@ -29,7 +29,7 @@ const StatCard = ({
 
 const StatData = () => {
 	return (
-		<div className="grid w-full grid-cols-1 gap-8 text-center md:grid-cols-3">
+		<div className="mb-16 grid w-full grid-cols-1 gap-8 text-center md:grid-cols-3">
 			<StatCard
 				value="$1M+"
 				description="Fundraising achieved through strategic partnerships"

@@ -152,78 +152,120 @@ export default function App() {
 							</div>
 						</div>
 					</div>
-				</div>
-				<h3 className="mb-4 text-xl text-[#292929] dark:text-[#B0B0B0]">
-					Conference
-				</h3>
-				<div className="mb-24 bg-[#FAFAFA] p-2 dark:bg-black">
-					<h2 className="mb-2 text-2xl text-[#292929] dark:text-white">
-						Web3 Afrika + Scroll (Scroll Community)
-					</h2>
-					<p className="text-lg text-[#5D5D5D]">
-						This event was designed to empower builders with the skills,
-						knowledge, and connections needed to make a meaningful impact on the
-						Arbitrum ecosystem.
-					</p>
-					<div className="relative mb-16">
-						<div className="overflow-hidden">
-							<div
-								className="flex transition-transform duration-500 ease-in-out"
-								style={{
-									transform: `translateX(-${conferenceIndex * 100}%)`,
-								}}
-							>
-								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
-									<div key={slideIndex} className="w-full flex-shrink-0">
-										<div className="grid grid-cols-3">
-											{conferences
-												.slice(slideIndex * 3, slideIndex * 3 + 3)
-												.map(event => (
-													<div
-														key={event.id}
-														className="size-96 rounded-sm p-4"
-													>
-														<img
-															src={event.src}
-															alt={`Event ${event.id}`}
-															className="size-80 h-full w-full rounded-lg object-cover object-center"
-														/>
-													</div>
-												))}
+
+					<div className="mb-24 bg-[#FAFAFA] p-4 dark:bg-black">
+						<h2 className="mb-2 text-3xl text-[#292929] dark:text-white">
+							Web3 Afrika Builders Event + Arbitron
+						</h2>
+						<p className="w-[698px] text-lg text-[#5D5D5D]">
+							This event was designed to empower builders with the skills,
+							knowledge, and connections needed to make a meaningful impact on
+							the Arbitrum ecosystem.
+						</p>
+						<div className="relative mb-16">
+							<div className="overflow-hidden">
+								<div
+									className="flex transition-transform duration-500 ease-in-out"
+									style={{
+										transform: `translateX(-${currentIndex * 100}%)`,
+									}}
+								>
+									{Array.from({ length: totalSlides }).map((_, slideIndex) => (
+										<div key={slideIndex} className="w-full flex-shrink-0">
+											<div className="grid grid-cols-3">
+												{hackathons
+													.slice(slideIndex * 3, slideIndex * 3 + 3)
+													.map(event => (
+														<div
+															key={event.id}
+															className="size-96 rounded-sm p-4"
+														>
+															<img
+																src={event.src}
+																alt={`Event ${event.id}`}
+																className="h-full w-full rounded-lg object-cover"
+															/>
+														</div>
+													))}
+											</div>
 										</div>
-									</div>
-								))}
+									))}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<h3 className="mb-12 text-3xl text-[#292929] dark:text-white">
-					Other Events
-				</h3>
-				<div className="mb-12 divide-y divide-[#F2F2F2] border-y border-[#F2F2F2] md:divide-[#000000] md:border-[#000000]">
-					{upcomingEvents.map(item => (
-						<div
-							key={item.id}
-							className="grid grid-cols-3 items-center py-4 transition-colors hover:bg-gray-50"
-						>
-							<div className="text-[#292929] dark:text-[#C1C1C1]">
-								{item.name}
-							</div>
-							<div className="text-[#5D5D5D] dark:text-[#C1C1C1]">
-								{item.platform}
-							</div>
-							<div className="flex justify-end">
-								<a
-									href={item.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex items-center text-black dark:text-[#C1C1C1]"
+					<h3 className="mb-4 text-3xl font-medium text-[#292929] dark:text-[#B0B0B0]">
+						Conference
+					</h3>
+					<div className="mb-24 bg-[#FAFAFA] p-2 dark:bg-black">
+						<h2 className="mb-2 text-3xl text-[#292929] dark:text-white">
+							Web3 Afrika + Scroll (Scroll Community)
+						</h2>
+						<p className="w-[698px] text-lg text-[#5D5D5D]">
+							This event was designed to empower builders with the skills,
+							knowledge, and connections needed to make a meaningful impact on
+							the Arbitrum ecosystem.
+						</p>
+						<div className="relative mb-16">
+							<div className="overflow-hidden">
+								<div
+									className="flex transition-transform duration-500 ease-in-out"
+									style={{
+										transform: `translateX(-${conferenceIndex * 100}%)`,
+									}}
 								>
-									<ArrowRight />
-								</a>
+									{Array.from({ length: totalSlides }).map((_, slideIndex) => (
+										<div key={slideIndex} className="w-full flex-shrink-0">
+											<div className="grid grid-cols-3">
+												{conferences
+													.slice(slideIndex * 3, slideIndex * 3 + 3)
+													.map(event => (
+														<div
+															key={event.id}
+															className="size-96 rounded-sm p-4"
+														>
+															<img
+																src={event.src}
+																alt={`Event ${event.id}`}
+																className="size-80 h-full w-full rounded-lg object-cover object-center"
+															/>
+														</div>
+													))}
+											</div>
+										</div>
+									))}
+								</div>
 							</div>
 						</div>
-					))}
+					</div>
+					<h3 className="mb-12 text-3xl text-[#292929] dark:text-white">
+						Other Events
+					</h3>
+					<div className="mb-12 divide-y divide-[#F2F2F2] border-b border-t border-[#F2F2F2] md:divide-[#000000] md:border-[#000000]">
+						{upcomingEvents.map(item => (
+							<div
+								key={item.id}
+								className="grid grid-cols-3 items-center py-4 transition-colors hover:bg-gray-50"
+							>
+								<div className="text-[#292929] dark:text-[#C1C1C1]">
+									{item.name}
+								</div>
+								<div className="text-[#5D5D5D] dark:text-[#C1C1C1]">
+									{item.platform}
+								</div>
+								<div className="flex justify-end">
+									<a
+										href={item.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-flex items-center text-black dark:text-[#C1C1C1]"
+									>
+										<ArrowRight />
+									</a>
+								</div>
+							</div>
+						))}
+					</div>
 				</div>
 			</section>
 			<DonateSection />

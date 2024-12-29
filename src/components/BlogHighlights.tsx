@@ -1,4 +1,5 @@
 import ArticleHero from "../assets/blog/blog-hero.png";
+import ProfileAvatarr from "../assets/profileAvatar.svg";
 import { sampleArticles } from "../constants";
 import { cn } from "../util";
 import { ChevronRight } from "./icons";
@@ -11,11 +12,11 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 					<h2 className="text-4xl text-[#292929] dark:text-white">
 						Insights and Updates
 					</h2>
-					<p className="max-w-3xl text-xl text-[#9E9E9E] dark:text-[#9E9E9E]">
+					<p className="mt-4 max-w-3xl text-xl text-[#9E9E9E] dark:text-[#9E9E9E]">
 						Stay informed with the latest news, trends, and stories shaping Web
 						3 innovation across Africa and the diaspora
 					</p>
-					<p className="mt-4 flex items-center gap-2 text-[#141414] dark:text-white">
+					<p className="mb-4 mt-4 flex items-center gap-2 text-[#141414] dark:text-white">
 						<span>Enter Blog</span>
 						<ChevronRight />
 					</p>
@@ -24,8 +25,8 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 			<div className="mb-12 flex flex-col-reverse gap-8 bg-[#FAFAFA] p-6 dark:bg-black md:grid md:grid-cols-9">
 				<div className="col-span-4">
 					<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
-						<div className="px-6 pt-8">
-							<span className="text-lg text-gray-500">December 20, 2024</span>
+						<div className="px-6">
+							<span className="text-lg text-[#9E9E9E]">December 20, 2024</span>
 						</div>
 
 						<div className="max-w-md space-y-6 p-6">
@@ -40,6 +41,13 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 							</p>
 
 							<div>
+								<img
+									src={ProfileAvatarr}
+									alt="Profile Avatar"
+									className="mr-2 inline-block"
+									width={18}
+									height={18}
+								/>
 								<span className="text-sm text-[#9E9E9E]">Vinyl Davyl</span>
 							</div>
 
@@ -77,13 +85,13 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 							/>
 						</div>
 
-						<div className="pt-4">
-							<span className="text-lg text-gray-500">{article.date}</span>
+						<div className="mb-4 mt-4">
+							<span className="text-lg text-[#9E9E9E]">{article.date}</span>
 						</div>
 
 						<div className="flex h-full flex-col">
 							<div className="flex-grow">
-								<h2 className="mb-3 text-[#5D5D5D] dark:text-white md:text-2xl">
+								<h2 className="mb-4 text-[#5D5D5D] dark:text-white md:text-2xl">
 									{article.title}
 								</h2>
 
@@ -92,7 +100,14 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 								</p>
 
 								<div className="mb-4">
-									<span className="text-sm text-[#5D5D5D]">
+									<img
+										src={ProfileAvatarr}
+										alt="Profile Avatar"
+										className="mr-2 inline-block"
+										width={18}
+										height={18}
+									/>
+									<span className="text-lg text-[#5D5D5D]">
 										{article.author}
 									</span>
 								</div>

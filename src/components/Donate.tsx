@@ -3,10 +3,10 @@ const DonateSection = () => {
 		<div className="partner mx-auto w-[98%] max-w-[1536px] rounded-2xl bg-black bg-contain bg-right bg-no-repeat dark:bg-[#0A0A0A] md:py-12">
 			<div className="container mx-auto p-6">
 				<div className="col-span-full flex flex-col justify-center space-y-6 md:col-span-1">
-					<h2 className="text-4xl text-white">
+					<h2 className="max-w-lg text-4xl text-white">
 						Partner with Us to Shape the Future
 					</h2>
-					<p className="text-base leading-relaxed text-[#E6E6E6] lg:w-1/2">
+					<p className="max-w-md text-base leading-relaxed text-[#E6E6E6]">
 						Join us in empowering African innovators and communities. Your
 						support drives education, opportunities, and diversity in the Web 3
 						revolution.
