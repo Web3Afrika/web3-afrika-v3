@@ -3,26 +3,29 @@ import { cn } from "../util";
 
 const DonateSection = () => {
 	return (
-		<div className="p-6">
-			<div
-				className={cn(
-					"mx-auto max-w-[1536px] rounded-2xl bg-black bg-contain bg-right bg-no-repeat py-12 dark:bg-[#0A0A0A]",
-				)}
-				style={{ backgroundImage: `url(${DonateImage})` }}
-			>
-				<div className="container mx-auto">
-					<div className="col-span-full flex flex-col justify-center space-y-6 md:col-span-1">
-						<h2 className="text-4xl text-white">
-							Partner with Us to Shape the Future
-						</h2>
-						<p className="text-base leading-relaxed text-[#E6E6E6] lg:w-1/2">
-							Join us in empowering African innovators and communities. Your
-							support drives education, opportunities, and diversity in the Web
-							3 revolution.
-						</p>
-						<button className="w-max rounded-full border border-[#0C6E5F] px-8 py-3 text-[#0C6E5F] transition duration-300 hover:bg-[#D03321] dark:bg-black">
-							Donate
-						</button>
+		<div className="relative">
+			<div className="absolute bottom-0 h-1/2 w-full bg-[#FAFAFA] dark:bg-black" />
+			<div className="relative p-6">
+				<div
+					className={cn(
+						"mx-auto max-w-[1536px] rounded-2xl bg-black bg-contain bg-right bg-no-repeat py-12",
+					)}
+					style={{ backgroundImage: `url(${DonateImage})` }}
+				>
+					<div className="container mx-auto">
+						<div className="col-span-full flex flex-col justify-center space-y-6 p-12">
+							<h2 className="max-w-xl text-5xl text-white">
+								Partner with Us to Shape the Future
+							</h2>
+							<p className="max-w-lg text-lg text-[#E6E6E6]">
+								Join us in empowering African innovators and communities. Your
+								support drives education, opportunities, and diversity in the
+								Web 3 revolution.
+							</p>
+							<button className="inline-block w-fit rounded-full bg-white px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
+								Donate
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

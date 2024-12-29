@@ -23,7 +23,6 @@ const HeroDetails = () => {
 								conversation on blockchain, DeFi, NFTs, and beyond.
 							</span>
 						</p>
-
 						<button className="hidden text-nowrap rounded-full bg-[#0C6E5F] px-6 py-2 text-white transition-colors md:inline-block">
 							Join Us
 						</button>
@@ -31,20 +30,12 @@ const HeroDetails = () => {
 				</div>
 				<div className="col-span-1"></div>
 			</div>
-
-			{/* <div>
-				<img
-						src={HeroImage}
-						alt="Web3 Africa Community"
-						className="w-full object-cover"
-					/>
-			</div> */}
-			<div className="mx-auto flex max-h-[871px] w-full max-w-[1536px] flex-col overflow-hidden">
+			<div className="flex w-full flex-col overflow-hidden">
 				<img src={HeroBanner} alt="Banner" className="w-full" />
 				<img
 					src={HeroImage}
 					alt="Web3 Africa Community"
-					className="w-full max-w-full object-cover"
+					className="w-full object-cover"
 				/>
 			</div>
 		</section>

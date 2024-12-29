@@ -1,3 +1,5 @@
+import React from "react";
+
 const Logo = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		width={139}
@@ -258,6 +260,22 @@ const ChevronRight = (props: React.SVGProps<SVGSVGElement>) => (
 	</svg>
 );
 
+const ProfileAvatar = (props: React.SVGProps<SVGSVGElement>) => (
+	<svg
+		width={18}
+		height={18}
+		viewBox="0 0 18 18"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		{...props}
+	>
+		<path
+			fill={props.fill || "#282828"}
+			d="M9 1.5a4 4 0 0 0-4 4c0 1.5.65 2.9 1.67 3.85.41.37.66.89.66 1.45 0 .23-.13.44-.33.55-.18.1-.73.37-2.16.78-.82.18-2.03.42-2.71.47A3.9 3.9 0 0 0 0 15.5v.5c0 .28.22.5.5.5h17a.5.5 0 0 0 .5-.5v-.5a3.9 3.9 0 0 0-2.13-2.9c-.68-.05-1.89-.3-2.71-.47-1.43-.41-1.98-.67-2.16-.78a.58.58 0 0 1-.33-.55c0-.56.25-1.08.66-1.45A4 4 0 0 0 13 5.5a4 4 0 0 0-4-4z"
+		/>
+	</svg>
+);
+
 export {
 	ArrowRight,
 	Build,
@@ -267,6 +285,7 @@ export {
 	Logo,
 	Meetup,
 	ModalTrigger,
+	ProfileAvatar,
 	Stamp,
 	Switcher,
 	X,
