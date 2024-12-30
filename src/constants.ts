@@ -19,6 +19,17 @@ export const navLinks = [
 	{ href: "/events", label: "Events" },
 ];
 
+export const QuickLinks = [
+	{ label: "About Us", href: "/about" },
+	{ label: "Blog", href: "/blog" },
+	{ label: "Event", href: "/event" },
+	{ label: "Contact Us", href: "/contact" },
+	{ label: "Terms of Service", href: "/#" },
+	{ label: "Cookies Settings", href: "/#" },
+	{ label: "Affilate Policy", href: "/#" },
+	{ label: "Privacy Policy", href: "/#" },
+];
+
 export const teamMembers = [
 	{
 		name: "Idris Olubisi",

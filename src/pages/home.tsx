@@ -1,6 +1,5 @@
 import BlogHighlights from "../components/BlogHighlights";
 import CommunityVoice from "../components/CommunityVoice";
-import DonateSection from "../components/Donate";
 import Hackathon from "../components/Hackathon";
 import HeroDetails from "../components/HeroDetails";
 import HomeStats from "../components/HomeStats";
@@ -16,7 +15,6 @@ export default function Home() {
 			<Partners />
 			<CommunityVoice />
 			<BlogHighlights />
-			<DonateSection />
 		</Layout>
 	);
 }
