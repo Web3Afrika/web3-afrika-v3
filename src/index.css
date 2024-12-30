@@ -5,3 +5,13 @@
 body {
 	font-family: "Archivo Variable";
 }
+
+.partner {
+	background-image: url("./assets/Donate.png");
+}
+
+@media (max-width: 768px) {
+	.partner {
+		background-image: none;
+	}
+}

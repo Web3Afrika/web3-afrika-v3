@@ -103,15 +103,54 @@ export default function App() {
 
 	return (
 		<Layout>
-			<section className="mt-4 transition-all duration-300 md:mt-40">
-				<div className="container mx-auto mb-12">
-					<div className="mb-12 text-start">
-						<h2 className="mb-12 max-w-3xl text-5xl text-[#292929] dark:text-white">
-							Building a Decentralized Future Together
-						</h2>
-						<h3 className="mb-4 text-3xl font-medium text-[#292929] dark:text-[#B0B0B0]">
-							Hackathon
-						</h3>
+			<section className="container mx-auto mt-4 md:mt-40">
+				<div className="mb-12 space-y-8 text-start">
+					<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-2xl md:text-5xl">
+						Building a Decentralized Future Together
+					</h2>
+					<h3 className="mb-4 text-xl text-[#292929] dark:text-[#B0B0B0]">
+						Hackathon
+					</h3>
+				</div>
+				<div className="mb-24 bg-[#FAFAFA] p-4 dark:bg-black">
+					<h2 className="mb-2 text-2xl text-[#292929] dark:text-white">
+						Web3 Afrika Builders Event + Arbitron
+					</h2>
+					<p className="text-lg text-[#5D5D5D]">
+						This event was designed to empower builders with the skills,
+						knowledge, and connections needed to make a meaningful impact on the
+						Arbitrum ecosystem.
+					</p>
+					<div className="relative mb-16">
+						<div className="overflow-hidden">
+							<div
+								className="flex transition-transform duration-500 ease-in-out"
+								style={{
+									transform: `translateX(-${currentIndex * 100}%)`,
+								}}
+							>
+								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
+									<div key={slideIndex} className="w-full flex-shrink-0">
+										<div className="grid grid-cols-3">
+											{hackathons
+												.slice(slideIndex * 3, slideIndex * 3 + 3)
+												.map(event => (
+													<div
+														key={event.id}
+														className="size-96 rounded-sm p-4"
+													>
+														<img
+															src={event.src}
+															alt={`Event ${event.id}`}
+															className="h-full w-full rounded-lg object-cover"
+														/>
+													</div>
+												))}
+										</div>
+									</div>
+								))}
+							</div>
+						</div>
 					</div>
 
 					<div className="mb-24 bg-[#FAFAFA] p-4 dark:bg-black">
