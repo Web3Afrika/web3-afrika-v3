@@ -15,7 +15,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="container mx-auto flex items-center justify-between bg-white px-4 py-6 transition-colors duration-200 dark:bg-black">
+		<nav className="container mx-auto flex w-11/12 items-center justify-between bg-white py-6 transition-colors duration-200 dark:bg-black">
 			<div className="flex items-center">
 				<Logo className="fill-black dark:fill-white" />
 			</div>
@@ -81,7 +81,7 @@ const Modal = ({
 			)}
 			onClick={modalOpenHandler}
 		>
-			<div className="relative top-24 z-50 mx-auto w-10/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg">
+			<div className="relative top-24 z-50 mx-auto w-11/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg">
 				<div className="flex items-center justify-between">
 					<Logo className="fill-black" />
 					<CloseSquare className="cursor-pointer" onClick={modalOpenHandler} />
