@@ -14,26 +14,30 @@ const CommunitySection = () => {
 			</div>
 
 			<div className="grid gap-8 md:grid-cols-2">
-				<div className="flex flex-col items-center space-y-2 rounded-xl pb-8 text-center shadow-md">
-					<X className="size-16" />
-					<h3 className="text-2xl text-[#292929]">X (Formerly Twitter)</h3>
-					<p className="p-2 text-[#757575]">
-						Join our vibrant Discord server to engage in real-time discussions,
-						network with experts, and stay updated on the latest Web3 trends.
+				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md">
+					<X className="my-6 size-8 md:size-16" />
+					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
+						X (Formerly Twitter)
+					</h3>
+					<p className="p-2 text-[#9E9E9E]">
+						Empowering African builders through hackathons, bounties, and
+						opportunities to lead in the Web 3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-sm transition duration-300 hover:bg-[#0A5A4E]">
+					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
 				</div>
 
-				<div className="flex flex-col items-center space-y-2 rounded-xl pb-8 text-center shadow-md">
-					<Discord className="size-16" />
-					<h3 className="text-2xl text-[#292929]">Discord</h3>
-					<p className="p-2 text-[#757575]">
-						Connect with our Telegram community for instant messaging, quick
-						updates, and collaborative opportunities in the Web3 space.
+				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md">
+					<Discord className="my-6 size-8 md:size-16" />
+					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
+						Discord
+					</h3>
+					<p className="p-2 text-[#9E9E9E]">
+						Empowering African builders through hackathons, bounties, and
+						opportunities to lead in the Web 3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-sm transition duration-300 hover:bg-[#0A5A4E]">
+					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
 				</div>

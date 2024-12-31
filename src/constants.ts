@@ -12,6 +12,16 @@ import ArticleImage1 from "./assets/blog/blog-1.png";
 import ArticleImage2 from "./assets/blog/blog-2.png";
 import ArticleImage3 from "./assets/blog/blog-3.png";
 
+import HackathonImage1 from "./assets/hackathons/hackathon-1.jpeg";
+import HackathonImage2 from "./assets/hackathons/hackathon-2.jpeg";
+import HackathonImage3 from "./assets/hackathons/hackathon-3.jpeg";
+import HackathonImage4 from "./assets/hackathons/hackathon-4.jpeg";
+
+import ConferenceImage1 from "./assets/conferences/conference-1.jpeg";
+import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
+import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
+import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
+
 export const navLinks = [
 	{ href: "/", label: "Home" },
 	{ href: "/about", label: "About Us" },
@@ -133,4 +143,67 @@ export const sampleArticles = [
 		link: "/articles/scalable-react-apps",
 		bg: "bg-[#0C6E5F]",
 	},
+];
+
+export const upcomingEvents = [
+	{
+		id: 1,
+		name: "Contributing to Layer 1 Chains",
+		platform: "Zoom Conference",
+		link: "https://twitter.com/i/spaces/123456",
+	},
+	{
+		id: 2,
+		name: "Getting Started with Account Abstractions",
+		platform: "Zoom Conference",
+		link: "https://zoom.us/j/123456",
+	},
+	{
+		id: 3,
+		name: "Contributing to Layer 1 Chains",
+		platform: "Zoom Conference",
+		link: "https://meet.google.com/123-456-789",
+	},
+	{
+		id: 4,
+		name: "Building with ZK in your NextJS App ",
+		platform: "Zoom Conference",
+		link: "https://discord.gg/123456",
+	},
+	{
+		id: 5,
+		name: "Deep dive into Zero-Knowledge",
+		platform: "Zoom Conference",
+		link: "https://zoom.us/j/987654",
+	},
+	{
+		id: 6,
+		name: "Contributing to Layer 1 Chains",
+		platform: "Zoom Conference",
+		link: "https://twitter.com/i/spaces/987654",
+	},
+	{
+		id: 7,
+		name: "C-Exchange or D-Exchange",
+		platform: "Twitter Space",
+		link: "https://twitter.com/i/spaces/987654",
+	},
+];
+
+export const hackathons = [
+	{ id: 1, src: HackathonImage1 },
+	{ id: 2, src: HackathonImage2 },
+	{ id: 3, src: HackathonImage3 },
+	{ id: 4, src: HackathonImage4 },
+	{ id: 5, src: HackathonImage2 },
+	{ id: 6, src: HackathonImage3 },
+];
+
+export const conferences = [
+	{ id: 1, src: ConferenceImage1 },
+	{ id: 2, src: ConferenceImage2 },
+	{ id: 3, src: ConferenceImage3 },
+	{ id: 4, src: ConferenceImage4 },
+	{ id: 5, src: ConferenceImage1 },
+	{ id: 6, src: ConferenceImage3 },
 ];

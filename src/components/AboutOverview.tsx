@@ -3,7 +3,7 @@ import AboutImage from "../assets/about-image.png";
 const AboutOverview = () => {
 	return (
 		<section className="mt-4 transition-all duration-300 md:mt-40">
-			<div className="container mx-auto mb-12 space-y-4 text-start">
+			<div className="container mx-auto mb-12 w-11/12 space-y-4 text-start">
 				<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl">
 					Building a Decentralized Future Together
 				</h2>
