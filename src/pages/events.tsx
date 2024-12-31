@@ -1,33 +1,9 @@
-import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRight } from "../components/icons";
 import { conferences, hackathons, upcomingEvents } from "../constants";
 import Layout from "../layout";
 
 export default function App() {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const [conferenceIndex, setConferenceIndex] = useState(0);
-
-	const totalSlides = Math.ceil(hackathons.length / 3);
-	const totalConferenceSlides = Math.ceil(conferences.length / 3);
-
-	useEffect(() => {
-		const timer = setInterval(() => {
-			setCurrentIndex(prev => (prev === totalSlides - 1 ? 0 : prev + 1));
-		}, 3000);
-
-		return () => clearInterval(timer);
-	}, [totalSlides]);
-
-	useEffect(() => {
-		const timer = setInterval(() => {
-			setConferenceIndex(prev =>
-				prev === totalConferenceSlides - 1 ? 0 : prev + 1,
-			);
-		}, 3000);
-
-		return () => clearInterval(timer);
-	}, [totalConferenceSlides]);
-
 	return (
 		<Layout>
 			<section className="container mx-auto mt-4 w-11/12 md:mt-40">
@@ -40,7 +16,7 @@ export default function App() {
 					</h3>
 				</div>
 
-				<div className="mb-24 bg-[#FAFAFA] p-4 dark:bg-black">
+				<div className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
 					<h2 className="mb-2 text-base text-[#292929] dark:text-white md:text-3xl">
 						Web3 Afrika Builders Event + Arbitron
 					</h2>
@@ -49,42 +25,26 @@ export default function App() {
 						knowledge, and connections needed to make a meaningful impact on the
 						Arbitrum ecosystem.
 					</p>
-					<div className="relative">
-						<div className="overflow-hidden">
-							<div
-								className="flex transition-transform duration-500 ease-in-out"
-								style={{
-									transform: `translateX(-${currentIndex * 100}%)`,
-								}}
-							>
-								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
-									<div key={slideIndex} className="w-full flex-shrink-0">
-										<div className="grid grid-cols-3">
-											{hackathons
-												.slice(slideIndex * 3, slideIndex * 3 + 3)
-												.map(event => (
-													<div
-														key={event.id}
-														className="size-96 rounded-sm p-4"
-													>
-														<img
-															src={event.src}
-															alt={`Event ${event.id}`}
-															className="h-full w-full rounded-lg object-cover"
-														/>
-													</div>
-												))}
-										</div>
+					<div className="mt-4 md:mt-6">
+						<Swiper slidesPerView={"auto"} spaceBetween={20}>
+							{hackathons.map(event => (
+								<SwiperSlide key={event.id} className="w-fit">
+									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
+										<img
+											src={event.src}
+											alt={`Event ${event.id}`}
+											className="h-full w-full rounded-lg object-cover"
+										/>
 									</div>
-								))}
-							</div>
-						</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
 					</div>
 				</div>
 				<h3 className="mb-3 text-base font-medium text-[#292929] dark:text-[#B0B0B0] md:mb-8 md:text-3xl">
 					Conference
 				</h3>
-				<div className="mb-24 bg-[#FAFAFA] p-4 dark:bg-black">
+				<div className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
 					<h2 className="mb-2 text-base font-medium text-[#292929] dark:text-white md:text-3xl">
 						Web3 Afrika + Scroll (Scroll Community)
 					</h2>
@@ -93,36 +53,20 @@ export default function App() {
 						knowledge, and connections needed to make a meaningful impact on the
 						Arbitrum ecosystem.
 					</p>
-					<div className="relative">
-						<div className="overflow-hidden">
-							<div
-								className="flex transition-transform duration-500 ease-in-out"
-								style={{
-									transform: `translateX(-${conferenceIndex * 100}%)`,
-								}}
-							>
-								{Array.from({ length: totalSlides }).map((_, slideIndex) => (
-									<div key={slideIndex} className="w-full flex-shrink-0">
-										<div className="grid grid-cols-3">
-											{conferences
-												.slice(slideIndex * 3, slideIndex * 3 + 3)
-												.map(event => (
-													<div
-														key={event.id}
-														className="size-96 rounded-sm p-4"
-													>
-														<img
-															src={event.src}
-															alt={`Event ${event.id}`}
-															className="size-80 h-full w-full rounded-lg object-cover object-center"
-														/>
-													</div>
-												))}
-										</div>
+					<div className="mt-4 md:mt-6">
+						<Swiper slidesPerView={"auto"} spaceBetween={20}>
+							{conferences.map(event => (
+								<SwiperSlide key={event.id} className="w-fit">
+									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
+										<img
+											src={event.src}
+											alt={`Event ${event.id}`}
+											className="h-full w-full rounded-lg object-cover"
+										/>
 									</div>
-								))}
-							</div>
-						</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
 					</div>
 				</div>
 				<div>
