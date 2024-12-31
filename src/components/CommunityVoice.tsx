@@ -16,7 +16,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 1,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Jennifer Lawrence",
 			profile: ProfileAvatarr,
 			bgColor: "green",
@@ -24,7 +24,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 2,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "David Okonkwo",
 			profile: ProfileAvatarr,
 			bgColor: "yellow",
@@ -32,7 +32,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 3,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Sarah Mensah",
 			profile: ProfileAvatarr,
 			bgColor: "red",
@@ -40,7 +40,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 4,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Michael Adebayo",
 			profile: ProfileAvatarr,
 			bgColor: "gray",
@@ -48,7 +48,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 5,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Jennifer Lawrence",
 			profile: ProfileAvatarr,
 			bgColor: "green",
@@ -56,7 +56,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 6,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "David Okonkwo",
 			profile: ProfileAvatarr,
 			bgColor: "yellow",
@@ -64,7 +64,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 7,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Sarah Mensah",
 			profile: ProfileAvatarr,
 			bgColor: "red",
@@ -72,7 +72,7 @@ const CommunityVoice: React.FC = () => {
 		{
 			id: 8,
 			comment:
-				"I really love the hackathons I landed my dream role soon after I attended a technical workshop",
+				"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
 			name: "Michael Adebayo",
 			profile: ProfileAvatarr,
 			bgColor: "gray",
@@ -84,7 +84,7 @@ const CommunityVoice: React.FC = () => {
 			case 0:
 				return { x: "-15vw", y: "40vh" };
 			case 1:
-				return { x: "15vw", y: "0vh" };
+				return { x: "15vw", y: "10vh" };
 			case 2:
 				return { x: "20vw", y: "42vh" };
 			case 3:
@@ -96,12 +96,12 @@ const CommunityVoice: React.FC = () => {
 			case 6:
 				return { x: "-40vw", y: "41vh" };
 			default:
-				return { x: 0, y: 0 };
+				return { x: 0, y: 10 };
 		}
 	};
 
 	return (
-		<section className="relative w-full">
+		<section className="relative w-full overflow-hidden">
 			<div className="container mx-auto w-11/12 pb-48 pt-8">
 				<h2 className="mb-2 text-3xl dark:text-white">
 					Voices of Innovation: What Our Community Says
@@ -113,7 +113,7 @@ const CommunityVoice: React.FC = () => {
 				</p>
 			</div>
 
-			<div className="relative h-[60vh]">
+			<div className="relative h-[60vh] overflow-hidden">
 				{comments.map((comment, index) => {
 					const finalPos = getFinalPosition(index);
 
@@ -140,9 +140,10 @@ const CommunityVoice: React.FC = () => {
 								},
 							}}
 							viewport={{
-								once: false, // Animation will repeat
-								amount: 0.3, // Triggers when 30% of element is in view
-								margin: "-100px 0px", // Offset trigger point
+								once: false,
+								amount: 0.3,
+								margin: "-100px",
+								root: undefined,
 							}}
 						>
 							<CommentCard
