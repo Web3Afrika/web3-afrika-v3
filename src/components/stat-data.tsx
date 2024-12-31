@@ -15,7 +15,9 @@ const StatCard = ({
 	descriptionWidth: keyof typeof descriptionWidths;
 }) => (
 	<div className="rounded-lg bg-[#FAFAFA] py-10 dark:bg-black">
-		<h3 className="mb-4 text-8xl font-medium text-[#7A7A7A]">{value}</h3>
+		<h3 className="mb-4 text-6xl font-medium text-[#7A7A7A] md:text-8xl">
+			{value}
+		</h3>
 		<p
 			className={cn(
 				"mx-auto w-fit max-w-[200px] text-sm text-[#666666]",
@@ -29,7 +31,7 @@ const StatCard = ({
 
 const StatData = () => {
 	return (
-		<div className="mb-16 grid w-full grid-cols-1 gap-8 text-center md:grid-cols-3">
+		<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
 			<StatCard
 				value="$1M+"
 				description="Fundraising achieved through strategic partnerships"
