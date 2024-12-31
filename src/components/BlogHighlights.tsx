@@ -23,21 +23,21 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 				</div>
 			)}
 			<div className="grid gap-6 md:grid-cols-3">
-				<div className="col-span-full flex flex-col-reverse gap-8 bg-[#FAFAFA] p-6 dark:bg-black md:grid md:grid-cols-9">
+				<div className="col-span-full flex flex-col-reverse bg-[#FAFAFA] p-6 dark:bg-black md:grid md:grid-cols-9 md:gap-8">
 					<div className="col-span-4">
 						<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
-							<div className="px-6">
+							<div className="my-4 md:my-auto md:px-6">
 								<span className="text-lg text-[#9E9E9E]">
 									December 20, 2024
 								</span>
 							</div>
 
-							<div className="max-w-md space-y-6 p-6">
-								<h2 className="text-3xl text-[#5D5D5D] dark:text-white">
+							<div className="max-w-md space-y-6 md:p-6">
+								<h2 className="text-base text-[#5D5D5D] dark:text-white md:text-3xl">
 									Getting started with Solidity, All you need to know
 								</h2>
 
-								<p className="line-clamp-3 text-xl text-[#9E9E9E]">
+								<p className="line-clamp-3 text-xs text-[#9E9E9E] md:text-xl">
 									Solidity is a high-level programming language that is
 									specifically used to write smart contracts on the Ethereum
 									blockchain.
@@ -51,7 +51,9 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 										width={18}
 										height={18}
 									/>
-									<span className="text-sm text-[#9E9E9E]">Vinyl Davyl</span>
+									<span className="text-sm text-[#5D5D5D] md:text-base">
+										Vinyl Davyl
+									</span>
 								</div>
 
 								<button className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
@@ -87,7 +89,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 							/>
 						</div>
 
-						<div className="mb-4 mt-4">
+						<div className="my-4">
 							<span className="text-lg text-[#9E9E9E]">{article.date}</span>
 						</div>
 
@@ -109,7 +111,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 										width={18}
 										height={18}
 									/>
-									<span className="text-lg text-[#5D5D5D]">
+									<span className="text-sm text-[#5D5D5D] md:text-base">
 										{article.author}
 									</span>
 								</div>

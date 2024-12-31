@@ -23,7 +23,7 @@ const CommunitySection = () => {
 						Empowering African builders through hackathons, bounties, and
 						opportunities to lead in the Web 3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-sm transition duration-300 hover:bg-[#0A5A4E]">
+					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
 				</div>
@@ -37,7 +37,7 @@ const CommunitySection = () => {
 						Empowering African builders through hackathons, bounties, and
 						opportunities to lead in the Web 3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-sm transition duration-300 hover:bg-[#0A5A4E]">
+					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
 				</div>
