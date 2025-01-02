@@ -18,7 +18,7 @@ const PurposeSection = () => {
 			</div>
 
 			<div className="grid gap-8 md:grid-cols-2">
-				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-black md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
+				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
 					<DetailTitle title="Empowerment" supText="Mission" />
 					<div className="space-y-4">
 						<Detail
@@ -44,7 +44,7 @@ const PurposeSection = () => {
 					</div>
 				</div>
 
-				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-black md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
+				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
 					<DetailTitle title="Innovation" supText="Vision" />
 					<div className="space-y-4">
 						<Detail

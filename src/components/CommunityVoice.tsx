@@ -1,7 +1,7 @@
 const CommunityVoice = () => {
 	return (
 		<>
-			<section className="container mx-auto px-6 py-16">
+			<section className="container mx-auto w-11/12 py-16">
 				<div className="mb-8">
 					<h2 className="mb-2 text-3xl dark:text-white">
 						Voices of Innovation: What Our Community Says

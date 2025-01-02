@@ -109,7 +109,7 @@ const ArrowRight = (props: React.SVGProps<SVGSVGElement>) => (
 	>
 		<path
 			d="M36.06 13.06a1.5 1.5 0 0 0 0-2.12l-9.545-9.547a1.5 1.5 0 1 0-2.122 2.122L32.88 12l-8.486 8.485a1.5 1.5 0 1 0 2.122 2.122zM0 13.5h35v-3H0z"
-			fill="#000"
+			fill="currentColor"
 		/>
 	</svg>
 );
@@ -252,7 +252,7 @@ const ChevronRight = (props: React.SVGProps<SVGSVGElement>) => (
 	>
 		<path
 			d="M6.375 3.75s5.25 3.108 5.25 5.25-5.25 5.25-5.25 5.25"
-			stroke={props.stroke || "#141414"}
+			stroke="currentColor"
 			strokeWidth={1.5}
 			strokeLinecap="round"
 			strokeLinejoin="round"

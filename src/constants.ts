@@ -22,6 +22,11 @@ import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
 import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
 import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
 
+import Celo from "./assets/partners/celo.png";
+import D_D from "./assets/partners/d_d.png";
+import Web3Bridge from "./assets/partners/web3-bridge.png";
+import Web3Gblobal from "./assets/partners/web3-global.png";
+
 export const navLinks = [
 	{ href: "/", label: "Home" },
 	{ href: "/about", label: "About Us" },
@@ -206,4 +211,11 @@ export const conferences = [
 	{ id: 4, src: ConferenceImage4 },
 	{ id: 5, src: ConferenceImage1 },
 	{ id: 6, src: ConferenceImage3 },
+];
+
+export const partners = [
+	{ id: 1, name: "Partner 1", logo: Web3Gblobal },
+	{ id: 2, name: "Partner 2", logo: Celo },
+	{ id: 3, name: "Partner 3", logo: D_D },
+	{ id: 4, name: "Partner 4", logo: Web3Bridge },
 ];

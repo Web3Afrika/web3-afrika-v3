@@ -1,3 +1,4 @@
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRight } from "../components/icons";
 import { conferences, hackathons, upcomingEvents } from "../constants";
@@ -26,7 +27,16 @@ export default function App() {
 						Arbitrum ecosystem.
 					</p>
 					<div className="mt-4 md:mt-6">
-						<Swiper slidesPerView={"auto"} spaceBetween={20}>
+						<Swiper
+							slidesPerView={"auto"}
+							spaceBetween={20}
+							autoplay={{
+								delay: 2500,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay]}
+							loop={true}
+						>
 							{hackathons.map(event => (
 								<SwiperSlide key={event.id} className="w-fit">
 									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
@@ -54,7 +64,16 @@ export default function App() {
 						Arbitrum ecosystem.
 					</p>
 					<div className="mt-4 md:mt-6">
-						<Swiper slidesPerView={"auto"} spaceBetween={20}>
+						<Swiper
+							slidesPerView={"auto"}
+							spaceBetween={20}
+							autoplay={{
+								delay: 2500,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay]}
+							loop={true}
+						>
 							{conferences.map(event => (
 								<SwiperSlide key={event.id} className="w-fit">
 									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
@@ -73,7 +92,7 @@ export default function App() {
 					<h3 className="mb-6 text-base text-[#292929] dark:text-white md:mb-12 md:text-3xl">
 						Other Events
 					</h3>
-					<div className="mb-12 divide-y divide-[#F2F2F2] border-b border-t border-[#F2F2F2] md:divide-[#000000] md:border-[#000000]">
+					<div className="mb-12 cursor-pointer divide-y divide-[#F2F2F2] border-b border-t border-[#F2F2F2] dark:divide-[#C1C1C1] dark:border-[#C1C1C1] md:divide-[#000000] md:border-[#000000]">
 						{upcomingEvents.map(item => (
 							<div
 								key={item.id}
@@ -95,7 +114,7 @@ export default function App() {
 										rel="noopener noreferrer"
 										className="inline-flex items-center text-black dark:text-[#C1C1C1]"
 									>
-										<ArrowRight />
+										<ArrowRight className="dark:text-[#C1C1C1]" />
 									</a>
 								</div>
 							</div>
