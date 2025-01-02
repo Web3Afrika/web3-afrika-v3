@@ -29,17 +29,19 @@ const TeamMemberCard = ({
 				/>
 			</div>
 			<div className="space-y-1.5">
-				<h3 className="text-sm font-medium text-[#292929] md:text-2xl">
+				<h3 className="text-sm font-medium text-[#292929] dark:text-[#FFFFFF] md:text-2xl">
 					{name}
 				</h3>
-				<p className="text-xs text-[#757575] md:text-2xl">{role}</p>
+				<p className="text-xs text-[#757575] dark:text-[#9E9E9E] md:text-2xl">
+					{role}
+				</p>
 			</div>
 			<div className="flex space-x-4">
 				<a
 					href={twitterLink}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex size-8 items-center justify-center rounded-md border transition hover:opacity-75 md:size-10"
+					className="flex size-8 items-center justify-center rounded-md border transition hover:opacity-75 dark:border-[#121212] dark:bg-[#121212] md:size-10"
 				>
 					<X />
 				</a>
@@ -47,7 +49,7 @@ const TeamMemberCard = ({
 					href={linkedinLink}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex size-8 items-center justify-center rounded-md border transition hover:opacity-75 md:size-10"
+					className="flex size-8 items-center justify-center rounded-md border transition hover:opacity-75 dark:border-[#121212] dark:bg-[#121212] md:size-10"
 				>
 					<LinkedIn />
 				</a>
@@ -61,7 +63,7 @@ const TeamSection = () => {
 		<div className="container mx-auto space-y-6 px-6 py-16 md:space-y-12">
 			<div className="space-y-2 text-start md:space-y-4">
 				<p className="text-sm text-[#9E9E9E] md:text-base">Our Team</p>
-				<h2 className="max-w-3xl text-xl text-[#292929] md:text-5xl">
+				<h2 className="max-w-3xl text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
 					Meet the Visionaries Driving Web3 Afrika Forward
 				</h2>
 			</div>

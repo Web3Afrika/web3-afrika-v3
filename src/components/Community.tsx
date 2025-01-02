@@ -14,7 +14,7 @@ const CommunitySection = () => {
 			</div>
 
 			<div className="grid gap-8 md:grid-cols-2">
-				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md">
+				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
 					<X className="my-6 size-8 md:size-16" />
 					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
 						X (Formerly Twitter)
@@ -28,7 +28,7 @@ const CommunitySection = () => {
 					</button>
 				</div>
 
-				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md">
+				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
 					<Discord className="my-6 size-8 md:size-16" />
 					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
 						Discord

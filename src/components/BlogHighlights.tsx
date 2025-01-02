@@ -23,7 +23,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 				</div>
 			)}
 			<div className="grid gap-6 md:grid-cols-3">
-				<div className="col-span-full flex flex-col-reverse bg-[#FAFAFA] p-6 dark:bg-black md:grid md:grid-cols-9 md:gap-8">
+				<div className="col-span-full flex flex-col-reverse bg-[#FAFAFA] p-6 dark:bg-[#121212] md:grid md:grid-cols-9 md:gap-8">
 					<div className="col-span-4">
 						<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
 							<div className="my-4 md:my-auto md:px-6">
@@ -74,7 +74,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 				{sampleArticles.map(article => (
 					<div
 						key={article.id}
-						className="flex flex-col overflow-hidden bg-[#FAFAFA] p-6 dark:bg-[#0A0A0A] md:rounded-lg md:p-8"
+						className="flex flex-col overflow-hidden bg-[#FAFAFA] p-6 dark:bg-[#121212] md:rounded-lg md:p-8"
 					>
 						<div
 							className={cn(

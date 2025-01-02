@@ -1,36 +1,15 @@
-import { useEffect, useState } from "react";
-import Celo from "../assets/partners/celo.png";
-import D_D from "../assets/partners/d_d.png";
-import Web3Bridge from "../assets/partners/web3-bridge.png";
-import Web3Gblobal from "../assets/partners/web3-global.png";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { partners } from "../constants";
 
 const Partners = () => {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const partners = [
-		{ id: 1, name: "Partner 1", logo: Web3Gblobal },
-		{ id: 2, name: "Partner 2", logo: Celo },
-		{ id: 3, name: "Partner 3", logo: D_D },
-		{ id: 4, name: "Partner 4", logo: Web3Bridge },
-		{ id: 5, name: "Partner 3", logo: D_D },
-		{ id: 6, name: "Partner 4", logo: Web3Bridge },
-	];
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentIndex(prevIndex =>
-				prevIndex === partners.length - 3 ? 0 : prevIndex + 1,
-			);
-		}, 3000);
-		return () => clearInterval(interval);
-	}, [partners.length]);
-
 	return (
-		<section className="container mx-auto py-16">
+		<section className="container mx-auto w-11/12 py-16">
 			<div className="mb-8">
 				<h2 className="mb-2 text-3xl text-[#5D5D5D] dark:text-white">
 					Our Partners
 				</h2>
-				<div className="h-[44px] w-[853px]">
+				<div className="max-w-4xl">
 					<p className="text-xl text-[#9E9E9E] dark:text-[#5D5D5D]">
 						We wouldn't have gotten this far without{" "}
 						<span className="font-medium text-[#5D5D5D]">Our Partners</span>.
@@ -40,15 +19,21 @@ const Partners = () => {
 				</div>
 			</div>
 
-			<div className="relative">
-				<div className="overflow-hidden">
-					<div
-						className="flex transition-transform duration-500 ease-in-out"
-						style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-					>
-						{partners.map(partner => (
+			<div className="mt-4 md:mt-6">
+				<Swiper
+					slidesPerView={"auto"}
+					spaceBetween={20}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
+					modules={[Autoplay]}
+					loop={true}
+				>
+					{partners.map(partner => (
+						<SwiperSlide key={partner.id} className="w-fit">
 							<div key={partner.id} className="w-1/3 flex-shrink-0">
-								<div className="flex h-[386px] w-[386px] items-center justify-center rounded-sm bg-[#FAFAFA]">
+								<div className="flex h-[386px] w-[386px] items-center justify-center rounded-sm bg-[#FAFAFA] p-12">
 									<img
 										src={partner.logo}
 										alt={`${partner.name} logo`}
@@ -56,21 +41,9 @@ const Partners = () => {
 									/>
 								</div>
 							</div>
-						))}
-					</div>
-				</div>
-
-				<div className="mt-6 flex justify-center space-x-2">
-					{[...Array(partners.length - 2)].map((_, index) => (
-						<button
-							key={index}
-							onClick={() => setCurrentIndex(index)}
-							className={`h-2 w-2 rounded-full transition-colors ${
-								index === currentIndex ? "bg-blue-600" : "bg-gray-300"
-							}`}
-						/>
+						</SwiperSlide>
 					))}
-				</div>
+				</Swiper>
 			</div>
 		</section>
 	);
