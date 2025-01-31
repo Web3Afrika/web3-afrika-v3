@@ -14,7 +14,7 @@ const StatCard = ({
 	description: string;
 	descriptionWidth: keyof typeof descriptionWidths;
 }) => (
-	<div className="rounded-lg bg-[#FAFAFA] py-10 dark:bg-black">
+	<div className="rounded-lg bg-[#FAFAFA] py-10 dark:bg-[#121212]">
 		<h3 className="mb-4 text-6xl font-medium text-[#7A7A7A] md:text-8xl">
 			{value}
 		</h3>

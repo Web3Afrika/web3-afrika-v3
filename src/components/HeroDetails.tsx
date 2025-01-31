@@ -4,7 +4,7 @@ import HeroImage from "../assets/hero.png";
 const HeroDetails = () => {
 	return (
 		<section className="mt-4 transition-all duration-300 md:mt-40">
-			<div className="container mx-auto mb-12">
+			<div className="container mx-auto mb-12 w-11/12">
 				<div className="space-y-4">
 					<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl">
 						Empowering the next generation of African web 3 Innovators
