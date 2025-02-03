@@ -29,12 +29,12 @@ const CommentCard: React.FC<CommentCardProps> = ({
 	};
 
 	return (
-		<div className="h-42 w-72 p-2 overflow-hidden rounded-lg text-white" style={getBgColor()}>
+		<div
+			className="h-42 w-72 overflow-hidden rounded-lg p-2 text-white"
+			style={getBgColor()}
+		>
 			<div className="h-24 px-4 pt-4">
-				<p className="text-center text-base">
-					{" "}
-					&ldquo;{comment}&rdquo;
-				</p>
+				<p className="text-center text-base">&ldquo;{comment}&rdquo;</p>
 			</div>
 			<div className="flex items-center justify-center px-8 py-6">
 				<div className="flex items-center gap-3">

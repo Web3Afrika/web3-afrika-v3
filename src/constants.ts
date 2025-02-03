@@ -27,6 +27,8 @@ import D_D from "./assets/partners/d_d.png";
 import Web3Bridge from "./assets/partners/web3-bridge.png";
 import Web3Gblobal from "./assets/partners/web3-global.png";
 
+import ProfileAvatar from "./assets/profileAvatar.svg";
+
 export const navLinks = [
 	{ href: "/", label: "Home" },
 	{ href: "/about", label: "About Us" },
@@ -218,4 +220,71 @@ export const partners = [
 	{ id: 2, name: "Partner 2", logo: Celo },
 	{ id: 3, name: "Partner 3", logo: D_D },
 	{ id: 4, name: "Partner 4", logo: Web3Bridge },
+];
+
+export const comments = [
+	{
+		id: 1,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Jennifer Lawrence",
+		profile: ProfileAvatar,
+		bgColor: "green",
+	},
+	{
+		id: 2,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "David Okonkwo",
+		profile: ProfileAvatar,
+		bgColor: "yellow",
+	},
+	{
+		id: 3,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Sarah Mensah",
+		profile: ProfileAvatar,
+		bgColor: "red",
+	},
+	{
+		id: 4,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Michael Adebayo",
+		profile: ProfileAvatar,
+		bgColor: "gray",
+	},
+	{
+		id: 5,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Jennifer Lawrence",
+		profile: ProfileAvatar,
+		bgColor: "green",
+	},
+	{
+		id: 6,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "David Okonkwo",
+		profile: ProfileAvatar,
+		bgColor: "yellow",
+	},
+	{
+		id: 7,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Sarah Mensah",
+		profile: ProfileAvatar,
+		bgColor: "red",
+	},
+	{
+		id: 8,
+		comment:
+			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
+		name: "Michael Adebayo",
+		profile: ProfileAvatar,
+		bgColor: "gray",
+	},
 ];

@@ -15,3 +15,7 @@ body {
 		background-image: none;
 	}
 }
+
+html.dark body {
+	background-color: black;
+}
