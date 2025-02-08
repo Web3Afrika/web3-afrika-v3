@@ -1,20 +1,27 @@
+import { AnimatedText } from "./animated-text";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 import { Discord, X } from "./icons";
 
 const CommunitySection = () => {
 	return (
 		<div className="container mx-auto mb-16 px-6 py-4">
 			<div className="mb-8 text-left">
-				<h2 className="mb-4 text-4xl text-[#292929] dark:text-white">
+				<AnimatedText
+					text={["Join Our Community"]}
+					once
+					className="mb-4 text-4xl text-[#292929] dark:text-white"
+				/>
+				{/* <h2 className="mb-4 text-4xl text-[#292929] dark:text-white">
 					Join Our Community
-				</h2>
-				<p className="max-w-2xl text-[#757575]">
+				</h2> */}
+				<FadeIn className="max-w-2xl text-[#757575]">
 					Empowering African builders through hackathons, bounties, and
 					opportunities to lead in the Web 3 revolution
-				</p>
+				</FadeIn>
 			</div>
 
-			<div className="grid gap-8 md:grid-cols-2">
-				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
+			<FadeInStagger className="grid gap-8 md:grid-cols-2">
+				<FadeIn className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
 					<X className="my-6 size-8 md:size-16" />
 					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
 						X (Formerly Twitter)
@@ -26,9 +33,9 @@ const CommunitySection = () => {
 					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
-				</div>
+				</FadeIn>
 
-				<div className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
+				<FadeIn className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
 					<Discord className="my-6 size-8 md:size-16" />
 					<h3 className="text-base font-medium text-[#292929] md:text-2xl">
 						Discord
@@ -40,8 +47,8 @@ const CommunitySection = () => {
 					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
 						Join Community
 					</button>
-				</div>
-			</div>
+				</FadeIn>
+			</FadeInStagger>
 		</div>
 	);
 };

@@ -1,10 +1,11 @@
+import { FadeIn } from "./FadeIn";
 import { ChevronRight } from "./icons";
 import StatData from "./stat-data";
 
 const HomeStats = () => {
 	return (
 		<section className="container mx-auto px-6 py-16">
-			<div className="mb-12 max-w-4xl text-start">
+			<FadeIn className="mb-12 max-w-4xl text-start">
 				<h2 className="mb-4 text-3xl text-[#5D5D5D] dark:text-white">
 					Web 3 Afrika empowers Africans to lead in Web 3 through education,
 					opportunities, and community
@@ -17,7 +18,7 @@ const HomeStats = () => {
 					<span>Mission and Vision Statement </span>
 					<ChevronRight />
 				</p>
-			</div>
+			</FadeIn>
 			<StatData />
 		</section>
 	);

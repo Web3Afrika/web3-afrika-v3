@@ -1,4 +1,6 @@
 import { teamMembers } from "../constants";
+import { AnimatedText } from "./animated-text";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 import { LinkedIn, X } from "./icons";
 
 const TeamMemberCard = ({
@@ -15,7 +17,7 @@ const TeamMemberCard = ({
 	linkedinLink: string;
 }) => {
 	return (
-		<div className="w-full items-start space-y-4 rounded-lg border border-gray-200 p-3 text-left dark:border-0 dark:bg-[#0A0A0A] md:p-6">
+		<FadeIn className="w-full items-start space-y-4 rounded-lg border border-gray-200 p-3 text-left dark:border-0 dark:bg-[#0A0A0A] md:p-6">
 			{/* <img
 				src={image}
 				alt={name}
@@ -54,7 +56,7 @@ const TeamMemberCard = ({
 					<LinkedIn />
 				</a>
 			</div>
-		</div>
+		</FadeIn>
 	);
 };
 
@@ -63,11 +65,16 @@ const TeamSection = () => {
 		<div className="container mx-auto space-y-6 px-6 py-16 md:space-y-12">
 			<div className="space-y-2 text-start md:space-y-4">
 				<p className="text-sm text-[#9E9E9E] md:text-base">Our Team</p>
-				<h2 className="max-w-3xl text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
+				<AnimatedText
+					text={["Meet the Visionaries Driving Web3", "Afrika Forward"]}
+					once
+					className="max-w-3xl text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl"
+				/>
+				{/* <h2 className="max-w-3xl text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
 					Meet the Visionaries Driving Web3 Afrika Forward
-				</h2>
+				</h2> */}
 			</div>
-			<div className="grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+			<FadeInStagger className="grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
 				{teamMembers.map((member, index) => (
 					<TeamMemberCard
 						key={index}
@@ -78,7 +85,7 @@ const TeamSection = () => {
 						linkedinLink={member.linkedinLink}
 					/>
 				))}
-			</div>
+			</FadeInStagger>
 		</div>
 	);
 };

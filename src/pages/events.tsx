@@ -1,5 +1,7 @@
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { AnimatedText } from "../components/animated-text";
+import { FadeIn } from "../components/FadeIn";
 import { ArrowRight } from "../components/icons";
 import { conferences, hackathons, upcomingEvents } from "../constants";
 import Layout from "../layout";
@@ -9,15 +11,26 @@ export default function App() {
 		<Layout>
 			<section className="container mx-auto mt-4 w-11/12 md:mt-40">
 				<div className="mb-3 space-y-8 text-start md:mb-8 md:px-5">
-					<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-2xl md:text-5xl">
+					<AnimatedText
+						text={["Building a Decentralized", "Future Together"]}
+						once
+						className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-3xl md:text-5xl"
+					/>
+					{/* <h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-2xl md:text-5xl">
 						Building a Decentralized Future Together
-					</h2>
-					<h3 className="mb-4 text-base text-[#292929] dark:text-[#B0B0B0] md:text-3xl">
+					</h2> */}
+
+					<AnimatedText
+						text={["Hackathon"]}
+						once
+						className="mb-4 text-base text-[#292929] dark:text-[#B0B0B0] md:text-3xl"
+					/>
+					{/* <h3 className="mb-4 text-base text-[#292929] dark:text-[#B0B0B0] md:text-3xl">
 						Hackathon
-					</h3>
+					</h3> */}
 				</div>
 
-				<div className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
+				<FadeIn className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
 					<h2 className="mb-2 text-base text-[#292929] dark:text-white md:text-3xl">
 						Web3 Afrika Builders Event + Arbitron
 					</h2>
@@ -50,11 +63,16 @@ export default function App() {
 							))}
 						</Swiper>
 					</div>
-				</div>
-				<h3 className="mb-3 text-base font-medium text-[#292929] dark:text-[#B0B0B0] md:mb-8 md:text-3xl">
+				</FadeIn>
+				<AnimatedText
+					text={["Conference"]}
+					once
+					className="mb-4 text-base text-[#292929] dark:text-[#B0B0B0] md:text-3xl"
+				/>
+				{/* <FadeIn className="mb-3 text-base font-medium text-[#292929] dark:text-[#B0B0B0] md:mb-8 md:text-3xl">
 					Conference
-				</h3>
-				<div className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
+				</FadeIn> */}
+				<FadeIn className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
 					<h2 className="mb-2 text-base font-medium text-[#292929] dark:text-white md:text-3xl">
 						Web3 Afrika + Scroll (Scroll Community)
 					</h2>
@@ -87,12 +105,17 @@ export default function App() {
 							))}
 						</Swiper>
 					</div>
-				</div>
+				</FadeIn>
 				<div>
-					<h3 className="mb-6 text-base text-[#292929] dark:text-white md:mb-12 md:text-3xl">
+					<AnimatedText
+						text={["Other Events"]}
+						once
+						className="mb-6 text-base text-[#292929] dark:text-white md:mb-12 md:text-3xl"
+					/>
+					{/* <h3 className="mb-6 text-base text-[#292929] dark:text-white md:mb-12 md:text-3xl">
 						Other Events
-					</h3>
-					<div className="mb-12 cursor-pointer divide-y divide-[#F2F2F2] border-b border-t border-[#F2F2F2] dark:divide-[#C1C1C1] dark:border-[#C1C1C1] md:divide-[#000000] md:border-[#000000]">
+					</h3> */}
+					<FadeIn className="mb-12 cursor-pointer divide-y divide-[#F2F2F2] border-b border-t border-[#F2F2F2] dark:divide-[#C1C1C1] dark:border-[#C1C1C1] md:divide-[#000000] md:border-[#000000]">
 						{upcomingEvents.map(item => (
 							<div
 								key={item.id}
@@ -119,7 +142,7 @@ export default function App() {
 								</div>
 							</div>
 						))}
-					</div>
+					</FadeIn>
 				</div>
 			</section>
 		</Layout>

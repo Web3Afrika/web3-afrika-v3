@@ -1,14 +1,18 @@
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { partners } from "../constants";
+import { AnimatedText } from "./animated-text";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 
 const Partners = () => {
 	return (
-		<section className="container mx-auto w-11/12 py-16">
-			<div className="mb-8">
-				<h2 className="mb-2 text-3xl text-[#5D5D5D] dark:text-white">
-					Our Partners
-				</h2>
+		<FadeInStagger className="container mx-auto w-11/12 py-16">
+			<FadeIn className="mb-8">
+				<AnimatedText
+					text={["Our Partners"]}
+					once
+					className="mb-2 text-3xl text-[#5D5D5D] dark:text-white"
+				/>
 				<div className="max-w-4xl">
 					<p className="text-xl text-[#9E9E9E] dark:text-[#5D5D5D]">
 						We wouldn't have gotten this far without{" "}
@@ -17,9 +21,9 @@ const Partners = () => {
 						continue to support Africa.
 					</p>
 				</div>
-			</div>
+			</FadeIn>
 
-			<div className="mt-4 md:mt-6">
+			<FadeIn className="mt-4 md:mt-6">
 				<Swiper
 					slidesPerView={"auto"}
 					spaceBetween={20}
@@ -44,8 +48,8 @@ const Partners = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-			</div>
-		</section>
+			</FadeIn>
+		</FadeInStagger>
 	);
 };
 

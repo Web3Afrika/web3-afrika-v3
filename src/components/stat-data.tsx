@@ -1,4 +1,5 @@
 import { cn } from "../util";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 
 const descriptionWidths = {
 	sm: "max-w-[200px]",
@@ -31,23 +32,31 @@ const StatCard = ({
 
 const StatData = () => {
 	return (
-		<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
-			<StatCard
-				value="$1M+"
-				description="Fundraising achieved through strategic partnerships"
-				descriptionWidth="sm"
-			/>
-			<StatCard
-				value="$1M+"
-				description="achieved through strategic partnerships"
-				descriptionWidth="sm"
-			/>
-			<StatCard
-				value="5000"
-				description="Builers in attendance for hackathons and events"
-				descriptionWidth="md"
-			/>
-		</div>
+		<FadeInStagger>
+			<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
+				<FadeIn>
+					<StatCard
+						value="$1M+"
+						description="Fundraising achieved through strategic partnerships"
+						descriptionWidth="sm"
+					/>
+				</FadeIn>
+				<FadeIn>
+					<StatCard
+						value="$1M+"
+						description="achieved through strategic partnerships"
+						descriptionWidth="sm"
+					/>
+				</FadeIn>
+				<FadeIn>
+					<StatCard
+						value="5000"
+						description="Builers in attendance for hackathons and events"
+						descriptionWidth="md"
+					/>
+				</FadeIn>
+			</div>
+		</FadeInStagger>
 	);
 };
 

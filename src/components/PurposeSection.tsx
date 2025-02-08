@@ -1,3 +1,6 @@
+import { AnimatedText } from "./animated-text";
+import { FadeIn, FadeInStagger } from "./FadeIn";
+
 const PurposeSection = () => {
 	return (
 		<div className="container mx-auto px-6 py-16">
@@ -5,9 +8,14 @@ const PurposeSection = () => {
 				<p className="text-sm text-[#9E9E9E] md:mb-4 md:text-base">
 					Mission and Vision Statement
 				</p>
-				<h2 className="mb-4 text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
+				<AnimatedText
+					text={["Our Purpose and Vision"]}
+					once
+					className="mb-4 text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl"
+				/>
+				{/* <h2 className="mb-4 text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
 					Our Purpose and Vision
-				</h2>
+				</h2> */}
 				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
 					Our mission at Web 3 Afrika is to empower African innovators and
 					communities through education, opportunities, and inclusivity in the
@@ -17,8 +25,8 @@ const PurposeSection = () => {
 				</p>
 			</div>
 
-			<div className="grid gap-8 md:grid-cols-2">
-				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
+			<FadeInStagger className="grid gap-8 md:grid-cols-2">
+				<FadeIn className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
 					<DetailTitle title="Empowerment" supText="Mission" />
 					<div className="space-y-4">
 						<Detail
@@ -42,9 +50,9 @@ const PurposeSection = () => {
 							description="Builds inclusive and diverse communities that amplify African voices in global Web 3 conversations"
 						/>
 					</div>
-				</div>
+				</FadeIn>
 
-				<div className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
+				<FadeIn className="space-y-6 rounded-lg border-[1.5px] p-6 dark:bg-[#090909] md:rounded-none md:border-transparent md:bg-[#FAFAFA]">
 					<DetailTitle title="Innovation" supText="Vision" />
 					<div className="space-y-4">
 						<Detail
@@ -68,8 +76,8 @@ const PurposeSection = () => {
 							description="Strives to unlock new economic opportunities for African communities through participation in the decentralized economy"
 						/>
 					</div>
-				</div>
-			</div>
+				</FadeIn>
+			</FadeInStagger>
 		</div>
 	);
 };

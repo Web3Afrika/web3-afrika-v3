@@ -1,15 +1,27 @@
 import HeroBanner from "../assets/banner.svg";
 import HeroImage from "../assets/hero.png";
+import { AnimatedText } from "./animated-text";
+import { FadeIn } from "./FadeIn";
 
 const HeroDetails = () => {
 	return (
 		<section className="mt-4 transition-all duration-300 md:mt-40">
 			<div className="container mx-auto mb-12 w-11/12">
-				<div className="space-y-4">
-					<h2 className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl">
-						Empowering the next generation of African web 3 Innovators
-					</h2>
-					<div className="flex items-center md:max-w-xl">
+				<FadeIn className="space-y-4">
+					{/* <WordsPullUp
+						text="Empowering the next generation of African web3 Innovators"
+						className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl"
+					/> */}
+					<AnimatedText
+						text={[
+							"Empowering the next",
+							"generation of African web3",
+							"Innovators",
+						]}
+						once
+						className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl"
+					/>
+					<FadeIn className="flex items-center md:max-w-xl">
 						<p className="text-lg text-[#757575]">
 							<span className="hidden md:inline-block">
 								Building communities, fostering diversity, and creating global
@@ -26,8 +38,8 @@ const HeroDetails = () => {
 						<button className="hidden text-nowrap rounded-full bg-[#0C6E5F] px-6 py-2 text-white transition-colors md:inline-block">
 							Join Us
 						</button>
-					</div>
-				</div>
+					</FadeIn>
+				</FadeIn>
 				<div className="col-span-1"></div>
 			</div>
 			<div className="flex w-full flex-col overflow-hidden">
