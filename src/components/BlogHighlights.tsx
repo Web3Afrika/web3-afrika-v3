@@ -1,13 +1,20 @@
+import { Link } from "react-router-dom";
 import { articles } from "../constants";
-import { cn } from "../util";
+import { cn, formatDate } from "../util";
 import { AnimatedText } from "./animated-text";
 import { FadeIn, FadeInStagger } from "./FadeIn";
 import { ChevronRight } from "./icons";
 
-const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
+const BlogHighlights = ({
+	noDescription,
+	partial,
+}: {
+	noDescription?: boolean;
+	partial?: boolean;
+}) => {
 	return (
 		<section className="container mx-auto w-11/12 py-8">
-			{!minimal && (
+			{!noDescription && (
 				<div className="text-start">
 					<AnimatedText
 						text={["Insights and Updates"]}
@@ -18,10 +25,13 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 						Stay informed with the latest news, trends, and stories shaping Web
 						3 innovation across Africa and the diaspora
 					</p>
-					<p className="mb-4 mt-4 flex items-center gap-2 text-[#141414] dark:text-white">
+					<Link
+						to="/blog"
+						className="mb-4 mt-4 flex items-center gap-2 text-[#141414] dark:text-white"
+					>
 						<span>Enter Blog</span>
 						<ChevronRight />
-					</p>
+					</Link>
 				</div>
 			)}
 
@@ -31,7 +41,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 						<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
 							<div className="my-4 md:my-auto md:px-6">
 								<span className="text-lg text-[#9E9E9E]">
-									{articles[0].date}
+									{formatDate(articles[0].date)}
 								</span>
 							</div>
 
@@ -48,9 +58,14 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 									{articles[0].author}
 								</span>
 
-								<button className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
+								<a
+									target="_blank"
+									rel="noreferrer"
+									href={articles[0].link}
+									className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white"
+								>
 									Read Article
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -64,7 +79,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 					</div>
 				</FadeIn>
 				<FadeInStagger className="col-span-full grid gap-6 md:grid-cols-3">
-					{articles.slice(1).map(article => (
+					{(partial ? articles.slice(1, 4) : articles.slice(1)).map(article => (
 						<FadeIn
 							key={article.id}
 							className="flex flex-col overflow-hidden bg-[#FAFAFA] p-6 dark:bg-[#121212] md:rounded-lg md:p-8"
@@ -88,7 +103,9 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 							</div>
 
 							<div className="my-4">
-								<span className="text-lg text-[#9E9E9E]">{article.date}</span>
+								<span className="text-lg text-[#9E9E9E]">
+									{formatDate(article.date)}
+								</span>
 							</div>
 
 							<div className="flex h-full flex-col">
@@ -107,6 +124,8 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 								</div>
 
 								<a
+									target="_blank"
+									rel="noreferrer"
 									href={article.link}
 									className="inline-block w-fit rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white"
 								>
