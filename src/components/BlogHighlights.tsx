@@ -1,4 +1,3 @@
-import ProfileAvatarr from "../assets/profileAvatar.svg";
 import { articles } from "../constants";
 import { cn } from "../util";
 import { AnimatedText } from "./animated-text";
@@ -45,18 +44,9 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 									{articles[0].content}
 								</p>
 
-								<div>
-									<img
-										src={ProfileAvatarr}
-										alt="Profile Avatar"
-										className="mr-2 inline-block"
-										width={18}
-										height={18}
-									/>
-									<span className="text-sm text-[#5D5D5D] md:text-base">
-										{articles[0].author}
-									</span>
-								</div>
+								<span className="block text-sm text-[#5D5D5D] md:text-base">
+									{articles[0].author}
+								</span>
 
 								<button className="inline-block rounded-full border border-[#0C6E5F] px-6 py-2 text-sm text-[#0C6E5F] shadow-lg shadow-[#469F9214] transition-colors duration-200 hover:bg-[#0C6E5F] hover:text-white">
 									Read Article
@@ -111,18 +101,9 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 										{article.content}
 									</p>
 
-									<div className="mb-4">
-										<img
-											src={ProfileAvatarr}
-											alt="Profile Avatar"
-											className="mr-2 inline-block"
-											width={18}
-											height={18}
-										/>
-										<span className="text-sm text-[#5D5D5D] md:text-base">
-											{article.author}
-										</span>
-									</div>
+									<span className="mb-4 block text-sm text-[#5D5D5D] md:text-base">
+										{article.author}
+									</span>
 								</div>
 
 								<a
