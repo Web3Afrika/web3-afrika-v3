@@ -99,8 +99,9 @@ const reviews = [
 	},
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, reviews.length / 3);
+const secondRow = reviews.slice((reviews.length / 3) * 2, reviews.length);
+const thirdRow = reviews.slice(reviews.length / 3, (reviews.length / 3) * 2);
 
 const bgs = {
 	yellow: "bg-[#EC9120]",
@@ -151,6 +152,11 @@ export function CommunityReview() {
 			</Marquee>
 			<Marquee reverse className="[--duration:40s]">
 				{secondRow.map(review => (
+					<ReviewCard key={review.id} {...review} />
+				))}
+			</Marquee>
+			<Marquee className="[--duration:40s]">
+				{thirdRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
