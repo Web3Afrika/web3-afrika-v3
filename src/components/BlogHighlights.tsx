@@ -1,6 +1,5 @@
-import ArticleHero from "../assets/blog/blog-hero.png";
 import ProfileAvatarr from "../assets/profileAvatar.svg";
-import { sampleArticles } from "../constants";
+import { articles } from "../constants";
 import { cn } from "../util";
 import { AnimatedText } from "./animated-text";
 import { FadeIn, FadeInStagger } from "./FadeIn";
@@ -28,24 +27,22 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 			)}
 
 			<div className="grid gap-6 md:grid-cols-3">
-				<FadeIn className="col-span-full flex flex-col-reverse bg-[#FAFAFA] p-6 dark:bg-[#121212] md:grid md:grid-cols-9 md:gap-8">
+				<FadeIn className="col-span-full flex flex-col-reverse bg-[#FAFAFA] p-6 dark:bg-[#121212] md:grid md:grid-cols-9 md:gap-8 md:rounded-lg md:p-8">
 					<div className="col-span-4">
 						<div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
 							<div className="my-4 md:my-auto md:px-6">
 								<span className="text-lg text-[#9E9E9E]">
-									December 20, 2024
+									{articles[0].date}
 								</span>
 							</div>
 
 							<div className="max-w-md space-y-6 md:p-6">
 								<h2 className="text-base text-[#5D5D5D] dark:text-white md:text-3xl">
-									Getting started with Solidity, All you need to know
+									{articles[0].title}
 								</h2>
 
 								<p className="line-clamp-3 text-xs text-[#9E9E9E] md:text-xl">
-									Solidity is a high-level programming language that is
-									specifically used to write smart contracts on the Ethereum
-									blockchain.
+									{articles[0].content}
 								</p>
 
 								<div>
@@ -57,7 +54,7 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 										height={18}
 									/>
 									<span className="text-sm text-[#5D5D5D] md:text-base">
-										Vinyl Davyl
+										{articles[0].author}
 									</span>
 								</div>
 
@@ -68,30 +65,35 @@ const BlogHighlights = ({ minimal }: { minimal?: boolean }) => {
 						</div>
 					</div>
 
-					<div className="col-span-5 flex items-center justify-center rounded-lg bg-[#FCE4E5] p-8 md:rounded-s md:p-12">
+					<div className="col-span-5 flex items-center justify-center overflow-hidden rounded">
 						<img
-							src={ArticleHero}
+							src={articles[0].imageUrl}
 							alt="Featured"
-							className="object-cover md:max-w-[60%]"
+							className="max-w-full object-cover"
 						/>
 					</div>
 				</FadeIn>
 				<FadeInStagger className="col-span-full grid gap-6 md:grid-cols-3">
-					{sampleArticles.map(article => (
+					{articles.slice(1).map(article => (
 						<FadeIn
 							key={article.id}
 							className="flex flex-col overflow-hidden bg-[#FAFAFA] p-6 dark:bg-[#121212] md:rounded-lg md:p-8"
 						>
 							<div
-								className={cn(
-									"relative w-full rounded-lg p-8 pl-10 md:rounded-s",
-									article.bg,
-								)}
+								className={
+									cn("box-border block", "relative w-full")
+									// article.bg,
+								}
+								style={{
+									width: "initial",
+									height: "initial",
+									padding: "52.5% 0 0",
+								}}
 							>
 								<img
 									src={article.imageUrl}
 									alt={article.title}
-									className="h-full w-full object-cover"
+									className="absolute left-0 top-0 h-full w-full rounded-lg object-cover md:rounded"
 								/>
 							</div>
 
