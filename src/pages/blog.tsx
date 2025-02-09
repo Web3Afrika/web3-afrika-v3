@@ -17,7 +17,7 @@ export default function App() {
 					</h2> */}
 				</div>
 			</section>
-			<BlogHighlights minimal />
+			<BlogHighlights noDescription />
 		</Layout>
 	);
 }

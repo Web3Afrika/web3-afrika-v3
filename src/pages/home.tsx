@@ -14,7 +14,7 @@ export default function Home() {
 			<Hackathon />
 			<Partners />
 			<CommunityVoice />
-			<BlogHighlights />
+			<BlogHighlights partial />
 		</Layout>
 	);
 }

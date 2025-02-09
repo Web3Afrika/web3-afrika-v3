@@ -8,10 +8,6 @@ import Kanayo from "./assets/team/kanayo.jpeg";
 import Oluwabamikemi from "./assets/team/oluwabamikemi.png";
 import Tony from "./assets/team/tony.png";
 
-import ArticleImage1 from "./assets/blog/blog-1.png";
-import ArticleImage2 from "./assets/blog/blog-2.png";
-import ArticleImage3 from "./assets/blog/blog-3.png";
-
 import HackathonImage1 from "./assets/hackathons/hackathon-1.jpeg";
 import HackathonImage2 from "./assets/hackathons/hackathon-2.jpeg";
 import HackathonImage3 from "./assets/hackathons/hackathon-3.jpeg";
@@ -110,45 +106,6 @@ export const teamMembers = [
 		image: Kanayo,
 		twitterLink: "https://x.com/kanayouzo",
 		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",
-	},
-];
-
-export const sampleArticles = [
-	{
-		id: 1,
-		title: "Demystifying Consensus Mechanism: A comprehensive Guide",
-		content:
-			"The consensus mechanism is a crucial concept in the world of blockchain technology, and it can vary widely depending on the specific use case or application.",
-		author: "Franklin Ohaegbulam",
-		date: "March 15, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage1,
-		link: "/articles/future-web-development",
-		bg: "bg-[#000000]",
-	},
-	{
-		id: 2,
-		title: "Why is the Hard Drive for Blockchain and Internet Known as IPFS",
-		content:
-			"Explore the hackathons, bounties, and events that have empowered African innovators, fostered connections, and driven Web 3 education and growth worldwide.",
-		author: "Vinyl Davyl",
-		date: "March 18, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage2,
-		link: "/articles/mastering-tailwind",
-		bg: "bg-[#EC9120]",
-	},
-	{
-		id: 3,
-		title: "A dive into the world of decentralized finance in Africa.",
-		content:
-			"Learn the essential best practices for building large-scale React applications that are maintainable, performant, and easy to test.",
-		author: "Franklin Ohaegbulam",
-		date: "March 20, 2024",
-		authorAvatar: "/api/placeholder/32/32",
-		imageUrl: ArticleImage3,
-		link: "/articles/scalable-react-apps",
-		bg: "bg-[#0C6E5F]",
 	},
 ];
 
