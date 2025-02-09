@@ -5,15 +5,15 @@ import { AnimatedText } from "./animated-text";
 import { FadeIn, FadeInStagger } from "./FadeIn";
 import { ChevronRight } from "./icons";
 
-type Article = {
+interface RSSItem {
 	id: string;
 	title: string;
 	link: string;
 	date: string;
 	content: string;
-	author: string;
-	imageUrl: string;
-};
+	author?: string;
+	imageUrl?: string;
+}
 
 const BlogHighlights = ({
 	noDescription,
@@ -22,14 +22,14 @@ const BlogHighlights = ({
 	noDescription?: boolean;
 	partial?: boolean;
 }) => {
-	const [articles, setArticles] = useState<Article[]>([]);
+	const [articles, setArticles] = useState<RSSItem[]>([]);
 
 	useEffect(() => {
 		console.log("Sent a fetch request to the RSS feed");
 		async function fetchRSS() {
 			try {
 				const response = await fetch(
-					`https://api.allorigins.win/get?url=${encodeURIComponent("https://blog.web3afrika.com/rss.xml")}`,
+					`https://api.allorigins.win/get?url=${encodeURIComponent("https://replit-bounties-fdfa530ed703.herokuapp.com/web3afrika-articles")}`,
 				);
 
 				if (!response.ok) {
@@ -37,26 +37,9 @@ const BlogHighlights = ({
 				}
 
 				const data = await response.json();
-				const xmlText = data.contents;
-				const parser = new DOMParser();
-				const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+				const result = JSON.parse(data.contents);
 
-				const filteredItems = [...xmlDoc.querySelectorAll("item")].map(
-					item => ({
-						id: item.querySelector("guid")?.textContent || "",
-						title: item.querySelector("title")?.textContent || "",
-						link: item.querySelector("link")?.textContent || "",
-						date: item.querySelector("pubDate")?.textContent || "",
-						content: item.querySelector("description")?.textContent || "",
-						author:
-							item.getElementsByTagName("dc:creator")[0]?.textContent || "",
-						imageUrl:
-							item.getElementsByTagName("hashnode:coverImage")[0]
-								?.textContent || "",
-					}),
-				);
-
-				setArticles(filteredItems);
+				setArticles(result);
 			} catch (error) {
 				console.error("Error fetching RSS feed:", error);
 			}
