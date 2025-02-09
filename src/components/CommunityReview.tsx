@@ -4,43 +4,6 @@ import { FadeIn } from "./FadeIn";
 import { Marquee } from "./ui/Marquee";
 
 const reviews = [
-	// {
-	// 	name: "Jack",
-	// 	id: "@jack",
-	// 	body: "I've never seen anything like this before. It's amazing. I love it.",
-	// 	img: "https://avatar.vercel.sh/jack",
-	// },
-	// {
-	// 	name: "Jill",
-	// 	id: "@jill",
-	// 	body: "I don't know what to say. I'm speechless. This is amazing.",
-	// 	img: "https://avatar.vercel.sh/jill",
-	// },
-	// {
-	// 	name: "John",
-	// 	id: "@john",
-	// 	body: "I'm at a loss for words. This is amazing. I love it.",
-	// 	img: "https://avatar.vercel.sh/john",
-	// },
-	// {
-	// 	name: "Jane",
-	// 	id: "@jane",
-	// 	body: "I'm at a loss for words. This is amazing. I love it.",
-	// 	img: "https://avatar.vercel.sh/jane",
-	// },
-	// {
-	// 	name: "Jenny",
-	// 	id: "@jenny",
-	// 	body: "I'm at a loss for words. This is amazing. I love it.",
-	// 	img: "https://avatar.vercel.sh/jenny",
-	// },
-	// {
-	// 	name: "James",
-	// 	id: "@james",
-	// 	body: "I'm at a loss for words. This is amazing. I love it.",
-	// 	img: "https://avatar.vercel.sh/james",
-	// },
-
 	{
 		id: 1,
 		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
@@ -144,7 +107,7 @@ const ReviewCard = ({
 
 export function CommunityReview() {
 	return (
-		<FadeIn className="bg-background container relative m-auto flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+		<FadeIn className="bg-background container relative m-auto flex h-[580px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
 			<Marquee className="[--duration:40s]">
 				{firstRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
