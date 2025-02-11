@@ -10,7 +10,7 @@ const DonateSection = () => {
 					</h2>
 					<p className="max-w-md text-base leading-relaxed text-[#E6E6E6]">
 						Join us in empowering African innovators and communities. Your
-						support drives education, opportunities, and diversity in the Web 3
+						support drives education, opportunities, and diversity in the Web3
 						revolution.
 					</p>
 					<button className="w-max rounded-full border border-[#0C6E5F] bg-white px-8 py-3 text-[#0C6E5F] shadow-lg transition duration-300 dark:bg-black">

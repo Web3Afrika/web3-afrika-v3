@@ -15,9 +15,9 @@ const AboutOverview = () => {
 					Building a Decentralized Future Together
 				</h2> */}
 				<FadeIn className="max-w-2xl text-lg text-[#757575]">
-					Web 3 Afrika is dedicated to equipping African innovators, builders,
+					Web3 Afrika is dedicated to equipping African innovators, builders,
 					and creators with access to education, opportunities, and resources in
-					the Web 3 space. Our platform champions diversity and inclusion,
+					the Web3 space. Our platform champions diversity and inclusion,
 					ensuring African voices lead the global conversation on blockchain,
 					DeFi, NFTs, and beyond.
 				</FadeIn>

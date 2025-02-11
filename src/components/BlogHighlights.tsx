@@ -58,8 +58,8 @@ const BlogHighlights = ({
 						className="text-4xl text-[#292929] dark:text-white"
 					/>
 					<p className="mt-4 max-w-3xl text-xl text-[#9E9E9E] dark:text-[#9E9E9E]">
-						Stay informed with the latest news, trends, and stories shaping Web
-						3 innovation across Africa and the diaspora
+						Stay informed with the latest news, trends, and stories shaping Web3
+						innovation across Africa and the diaspora
 					</p>
 					<Link
 						to="/blog"
