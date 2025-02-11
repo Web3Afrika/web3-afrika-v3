@@ -6,9 +6,9 @@ const Stats = () => {
 			<div className="mb-8 text-start md:mb-12">
 				<p className="max-w-3xl text-lg text-[#757575]">
 					We believe Africa and its diaspora hold the key to shaping the future
-					of Web3. Through hackathons, bounties, and collaborative spaces,
-					we're building a vibrant community where individuals of African
-					descent can connect, learn, and lead in the decentralized era.
+					of Web3. Through hackathons, bounties, and collaborative spaces, we're
+					building a vibrant community where individuals of African descent can
+					connect, learn, and lead in the decentralized era.
 				</p>
 			</div>
 

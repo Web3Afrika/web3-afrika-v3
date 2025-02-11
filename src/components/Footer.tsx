@@ -15,9 +15,21 @@ const SocialLinks = [
 		href: "https://x.com/web3afrika",
 		external: true,
 	},
-	{ label: "Linkedin", href: "https://www.linkedin.com/company/web3afrika/", external: true },
-	{ label: "Youtube", href: "https://www.youtube.com/@web3afrika", external: true },
-	{ label: "Instagram", href: "https://www.instagram.com/web3afrika?igsh=MXBkMm9hMnpwM3ZwYQ==", external: true },
+	{
+		label: "Linkedin",
+		href: "https://www.linkedin.com/company/web3afrika/",
+		external: true,
+	},
+	{
+		label: "Youtube",
+		href: "https://www.youtube.com/@web3afrika",
+		external: true,
+	},
+	{
+		label: "Instagram",
+		href: "https://www.instagram.com/web3afrika?igsh=MXBkMm9hMnpwM3ZwYQ==",
+		external: true,
+	},
 ];
 
 const Footer = () => {

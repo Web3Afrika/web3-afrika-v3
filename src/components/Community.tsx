@@ -30,7 +30,10 @@ const CommunitySection = () => {
 						Empowering African builders through hackathons, bounties, and
 						opportunities to lead in the Web3 revolution
 					</p>
-					<a href="https://x.com/web3afrika" className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
+					<a
+						href="https://x.com/web3afrika"
+						className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white"
+					>
 						Join Community
 					</a>
 				</FadeIn>
@@ -44,7 +47,10 @@ const CommunitySection = () => {
 						Empowering African builders through hackathons, bounties, and
 						opportunities to lead in the Web3 revolution
 					</p>
-					<a href="https://t.co/CMKLNdoxYU" className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
+					<a
+						href="https://t.co/CMKLNdoxYU"
+						className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white"
+					>
 						Join Community
 					</a>
 				</FadeIn>
