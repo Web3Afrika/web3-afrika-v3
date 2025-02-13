@@ -19,9 +19,13 @@ const PurposeSection = () => {
 				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
 					Our mission at Web3 Afrika is to empower African innovators and
 					communities through education, opportunities, and inclusivity in the
-					Web3 space. Guided by our vision, we strive to position Africa and its
-					diaspora at the forefront of global Web3 innovation, shaping a
-					decentralized future that is diverse, equitable, and transformative.
+					Web3 space.
+				</p>
+				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
+					Guided by our vision, we strive to position Africa and its diaspora at
+					the forefront of global Web3 innovation, shaping a decentralized
+					future that is diverse, equitable, and transformative. Join us as we
+					shape the future of Web3!
 				</p>
 			</div>
 
