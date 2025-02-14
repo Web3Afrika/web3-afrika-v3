@@ -17,10 +17,10 @@ const PurposeSection = () => {
 					Our Purpose and Vision
 				</h2> */}
 				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
-					Our mission at Web 3 Afrika is to empower African innovators and
+					Our mission at Web3 Afrika is to empower African innovators and
 					communities through education, opportunities, and inclusivity in the
-					Web 3 space. Guided by our vision, we strive to position Africa and
-					its diaspora at the forefront of global Web 3 innovation, shaping a
+					Web3 space. Guided by our vision, we strive to position Africa and its
+					diaspora at the forefront of global Web3 innovation, shaping a
 					decentralized future that is diverse, equitable, and transformative.
 				</p>
 			</div>
@@ -31,7 +31,7 @@ const PurposeSection = () => {
 					<div className="space-y-4">
 						<Detail
 							title="Access to Education"
-							description="Provides resources and training to help individuals understand and excel in Web 3 technologies like blockchain, NFTs, DeFi, and"
+							description="Provides resources and training to help individuals understand and excel in Web3 technologies like blockchain, NFTs, DeFi, and"
 						/>
 						<Detail
 							title="Skill Development"
@@ -39,15 +39,15 @@ const PurposeSection = () => {
 						/>
 						<Detail
 							title="Career Opportunities"
-							description="Opens doors to exclusive jobs, internships, and collaborations in the Web 3 space, tailored to African talent"
+							description="Opens doors to exclusive jobs, internships, and collaborations in the Web3 space, tailored to African talent"
 						/>
 						<Detail
 							title="Global Networking"
-							description="Connects innovators, creators, and entrepreneurs with a worldwide network of Web 3 leaders, partners, and investors"
+							description="Connects innovators, creators, and entrepreneurs with a worldwide network of Web3 leaders, partners, and investors"
 						/>
 						<Detail
 							title="Empowering Communities"
-							description="Builds inclusive and diverse communities that amplify African voices in global Web 3 conversations"
+							description="Builds inclusive and diverse communities that amplify African voices in global Web3 conversations"
 						/>
 					</div>
 				</FadeIn>
@@ -57,7 +57,7 @@ const PurposeSection = () => {
 					<div className="space-y-4">
 						<Detail
 							title="Global Leadership"
-							description="Envisions Africa and its diaspora leading innovations in Web 3 technologies on the global stage"
+							description="Envisions Africa and its diaspora leading innovations in Web3 technologies on the global stage"
 						/>
 						<Detail
 							title="Diversity and Inclusion"
@@ -65,7 +65,7 @@ const PurposeSection = () => {
 						/>
 						<Detail
 							title="Technological Advancement"
-							description="Aspires to drive groundbreaking advancements in blockchain, DeFi, NFTs, and other Web 3 sectors"
+							description="Aspires to drive groundbreaking advancements in blockchain, DeFi, NFTs, and other Web3 sectors"
 						/>
 						<Detail
 							title="Community Growth"

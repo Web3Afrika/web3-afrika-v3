@@ -7,7 +7,7 @@ const HomeStats = () => {
 		<section className="container mx-auto px-6 py-16">
 			<FadeIn className="mb-12 max-w-4xl text-start">
 				<h2 className="mb-4 text-3xl text-[#5D5D5D] dark:text-white">
-					Web 3 Afrika empowers Africans to lead in Web 3 through education,
+					Web3 Afrika empowers Africans to lead in Web3 through education,
 					opportunities, and community
 				</h2>
 				<p className="text-lg text-[#5D5D5D] dark:text-[#C0C0C0]">
