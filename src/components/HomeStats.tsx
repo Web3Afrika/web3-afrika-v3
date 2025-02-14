@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FadeIn } from "./FadeIn";
 import { ChevronRight } from "./icons";
 import StatData from "./stat-data";
@@ -14,13 +15,13 @@ const HomeStats = () => {
 					Empowering African builders through hackathons, bounties, and
 					opportunities
 				</p>
-				<a
-					href="/about"
+				<Link
+					to="/about"
 					className="mt-4 flex items-center gap-2 text-[#141414] dark:text-[#666666]"
 				>
 					<span>Mission and Vision Statement </span>
 					<ChevronRight />
-				</a>
+				</Link>
 			</FadeIn>
 			<StatData />
 		</section>

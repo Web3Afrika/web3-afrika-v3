@@ -27,7 +27,7 @@ const SocialLinks = [
 	},
 	{
 		label: "Instagram",
-		href: "https://www.instagram.com/web3afrika?igsh=MXBkMm9hMnpwM3ZwYQ==",
+		href: "https://www.instagram.com/web3afrika",
 		external: true,
 	},
 ];

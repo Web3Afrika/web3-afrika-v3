@@ -74,7 +74,7 @@ const TeamSection = () => {
 					Meet the Visionaries Driving Web3 Afrika Forward
 				</h2> */}
 			</div>
-			<FadeInStagger className="grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+			<FadeInStagger className="grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
 				{teamMembers.map((member, index) => (
 					<TeamMemberCard
 						key={index}

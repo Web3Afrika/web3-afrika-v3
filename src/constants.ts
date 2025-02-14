@@ -1,11 +1,14 @@
 import Ajoke from "./assets/team/ajoke.png";
 import Eniola from "./assets/team/eniola.png";
+import Goodness from "./assets/team/goodness.png";
 import Idris from "./assets/team/idris.png";
 import Isaac from "./assets/team/isaac.jpeg";
 import Jennifer from "./assets/team/jennifer.png";
 import Joshua from "./assets/team/joshua.png";
 import Kanayo from "./assets/team/kanayo.jpeg";
 import Oluwabamikemi from "./assets/team/oluwabamikemi.png";
+import Qudusayo from "./assets/team/qudusayo.png";
+import QueenHaddassah from "./assets/team/QueenHaddassah.png";
 import Tony from "./assets/team/tony.png";
 
 import HackathonImage1 from "./assets/hackathons/hackathon-1.jpeg";
@@ -106,6 +109,27 @@ export const teamMembers = [
 		image: Kanayo,
 		twitterLink: "https://x.com/kanayouzo",
 		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",
+	},
+	{
+		name: "Goodness",
+		role: "Experience Designer",
+		image: Goodness,
+		twitterLink: "https://x.com/kanayouzo",
+		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",
+	},
+	{
+		name: "Queen Haddassah",
+		role: "Video Content Creator",
+		image: QueenHaddassah,
+		twitterLink: "https://x.com/QueenHaddassah",
+		linkedinLink: "https://www.linkedin.com/in/esther-ekwonye-213750162",
+	},
+	{
+		name: "Abdulqudus Ayoola",
+		role: "Developer",
+		image: Qudusayo,
+		twitterLink: "https://x.com/qudusayo",
+		linkedinLink: "https://linkedin.com/in/qudusayo",
 	},
 ];
 
