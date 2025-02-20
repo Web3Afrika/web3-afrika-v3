@@ -7,7 +7,7 @@ const AboutOverview = () => {
 		<section className="mt-4 transition-all duration-300 md:mt-40">
 			<FadeIn className="container mx-auto mb-12 w-11/12 space-y-4 text-start">
 				<AnimatedText
-					text={["Building a Decentralized", "Future Together"]}
+					text={["Building Africa’s Web3", "Future Together"]}
 					once
 					className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl"
 				/>
@@ -15,11 +15,9 @@ const AboutOverview = () => {
 					Building a Decentralized Future Together
 				</h2> */}
 				<FadeIn className="max-w-2xl text-lg text-[#757575]">
-					Web 3 Afrika is dedicated to equipping African innovators, builders,
-					and creators with access to education, opportunities, and resources in
-					the Web 3 space. Our platform champions diversity and inclusion,
-					ensuring African voices lead the global conversation on blockchain,
-					DeFi, NFTs, and beyond.
+					Web3 Afrika empowers African innovators, builders, and creators with
+					education, opportunities, and resources to thrive in the Web3
+					Ecosystem.
 				</FadeIn>
 			</FadeIn>
 

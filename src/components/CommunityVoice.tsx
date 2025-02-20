@@ -12,7 +12,7 @@ const CommunityVoice: React.FC = () => {
 				<p className="max-w-4xl text-xl text-[#9E9E9E]">
 					Hear from the builders, creators, and pioneers across Africa and the
 					diaspora who are driving change, breaking barriers, and shaping the
-					future of Web 3 with Web 3 Afrika
+					future of Web3 with Web3 Afrika
 				</p>
 
 				<CommunityReview />

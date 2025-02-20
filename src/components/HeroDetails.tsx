@@ -28,9 +28,9 @@ const HeroDetails = () => {
 								opportunities in the decentralized future.
 							</span>
 							<span className="inline-block md:hidden">
-								Web 3 Afrika is dedicated to equipping African innovators,
+								Web3 Afrika is dedicated to equipping African innovators,
 								builders, and creators with access to education, opportunities,
-								and resources in the Web 3 space. Our platform champions
+								and resources in the Web3 space. Our platform champions
 								diversity and inclusion, ensuring African voices lead the global
 								conversation on blockchain, DeFi, NFTs, and beyond.
 							</span>

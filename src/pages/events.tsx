@@ -32,7 +32,7 @@ export default function App() {
 
 				<FadeIn className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
 					<h2 className="mb-2 text-base text-[#292929] dark:text-white md:text-3xl">
-						Web3 Afrika Builders Event + Arbitron
+						Web3 Afrika Builders Event + Arbitrum
 					</h2>
 					<p className="max-w-4xl text-sm text-[#5D5D5D] md:text-lg">
 						This event was designed to empower builders with the skills,

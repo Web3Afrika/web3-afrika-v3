@@ -33,9 +33,14 @@ const Hackathon = () => {
 									<Meetup />
 								</div>
 							</div>
-							<button className="mt-24 w-fit rounded-lg bg-white px-2 py-2 text-sm text-[#757575]">
+							<a
+								href="https://x.com/web3afrika/status/1760998743925461454"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="mt-24 inline-block w-fit rounded-lg bg-white px-2 py-2 text-sm text-[#757575]"
+							>
 								Event
-							</button>
+							</a>
 						</div>
 					</div>
 				</FadeIn>
@@ -52,11 +57,16 @@ const Hackathon = () => {
 					<div className="flex h-56 w-full flex-col justify-between rounded-lg bg-gray-50 p-6 dark:bg-[#121212] md:h-3/4">
 						<p className="mb-4 text-sm text-[#707070] dark:text-[#BDBDBD] md:text-2xl">
 							Scroll Community Meetup, here we collaborated with scroll and the
-							web 3 community, View below.
+							web3 community, View below.
 						</p>
-						<button className="w-fit rounded-full border border-[#0C6E5F] bg-[#E4212A] px-4 py-2 text-sm text-white">
+						<a
+							href="https://x.com/web3afrika/status/1760998743925461454"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-block w-fit rounded-full border border-[#0C6E5F] bg-[#E4212A] px-4 py-2 text-sm text-white"
+						>
 							View Event
-						</button>
+						</a>
 					</div>
 				</FadeIn>
 			</div>

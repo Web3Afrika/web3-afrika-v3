@@ -12,12 +12,24 @@ const SocialLinks = [
 				X <span className="hidden md:inline-block">(formerly twitter)</span>
 			</span>
 		),
-		href: "/#",
+		href: "https://x.com/web3afrika",
 		external: true,
 	},
-	{ label: "Linkedin", href: "/#", external: true },
-	{ label: "Youtube", href: "/#", external: true },
-	{ label: "Instagram", href: "/#", external: true },
+	{
+		label: "Linkedin",
+		href: "https://www.linkedin.com/company/web3afrika/",
+		external: true,
+	},
+	{
+		label: "Youtube",
+		href: "https://www.youtube.com/@web3afrika",
+		external: true,
+	},
+	{
+		label: "Instagram",
+		href: "https://www.instagram.com/web3afrika",
+		external: true,
+	},
 ];
 
 const Footer = () => {

@@ -16,7 +16,7 @@ const CommunitySection = () => {
 				</h2> */}
 				<FadeIn className="max-w-2xl text-[#757575]">
 					Empowering African builders through hackathons, bounties, and
-					opportunities to lead in the Web 3 revolution
+					opportunities to lead in the Web3 revolution
 				</FadeIn>
 			</div>
 
@@ -28,11 +28,14 @@ const CommunitySection = () => {
 					</h3>
 					<p className="p-2 text-[#9E9E9E]">
 						Empowering African builders through hackathons, bounties, and
-						opportunities to lead in the Web 3 revolution
+						opportunities to lead in the Web3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
+					<a
+						href="https://x.com/web3afrika"
+						className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white"
+					>
 						Join Community
-					</button>
+					</a>
 				</FadeIn>
 
 				<FadeIn className="flex flex-col items-center space-y-2 rounded-xl p-8 text-center shadow-md dark:bg-[#0A0A0A]">
@@ -42,11 +45,14 @@ const CommunitySection = () => {
 					</h3>
 					<p className="p-2 text-[#9E9E9E]">
 						Empowering African builders through hackathons, bounties, and
-						opportunities to lead in the Web 3 revolution
+						opportunities to lead in the Web3 revolution
 					</p>
-					<button className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white">
+					<a
+						href="https://discord.com/invite/YMJ49PDTym"
+						className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white"
+					>
 						Join Community
-					</button>
+					</a>
 				</FadeIn>
 			</FadeInStagger>
 		</div>
