@@ -1,14 +1,14 @@
 import Ajoke from "./assets/team/ajoke.png";
-import Eniola from "./assets/team/eniola.png";
+import Eniola from "./assets/team/eniola.jpeg";
 import Goodness from "./assets/team/goodness.png";
-import Idris from "./assets/team/idris.png";
+import Idris from "./assets/team/idris.jpeg";
 import Isaac from "./assets/team/isaac.jpeg";
 import Jennifer from "./assets/team/jennifer.png";
 import Joshua from "./assets/team/joshua.png";
 import Kanayo from "./assets/team/kanayo.jpeg";
 import Oluwabamikemi from "./assets/team/oluwabamikemi.png";
 import Qudusayo from "./assets/team/qudusayo.png";
-import QueenHaddassah from "./assets/team/QueenHaddassah.png";
+import QueenHaddassah from "./assets/team/QueenHaddassah.jpeg";
 import Tony from "./assets/team/tony.png";
 
 import HackathonImage1 from "./assets/hackathons/hackathon-1.jpeg";
