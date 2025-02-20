@@ -1,4 +1,4 @@
-import AboutImage from "../assets/about-image.png";
+import AboutImage from "../assets/about-image.jpeg";
 import { AnimatedText } from "./animated-text";
 import { FadeIn } from "./FadeIn";
 

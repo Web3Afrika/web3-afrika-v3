@@ -1,5 +1,5 @@
 import HeroBanner from "../assets/banner.svg";
-import HeroImage from "../assets/hero.png";
+import HeroImage from "../assets/hero.jpeg";
 import { AnimatedText } from "./animated-text";
 import { FadeIn } from "./FadeIn";
 
