@@ -38,12 +38,12 @@ export const navLinks = [
 export const QuickLinks = [
 	{ label: "About Us", href: "/about" },
 	{ label: "Blog", href: "/blog" },
-	{ label: "Event", href: "/event" },
-	{ label: "Contact Us", href: "/contact" },
-	{ label: "Terms of Service", href: "/#" },
-	{ label: "Cookies Settings", href: "/#" },
-	{ label: "Affilate Policy", href: "/#" },
-	{ label: "Privacy Policy", href: "/#" },
+	{ label: "Events", href: "/events" },
+	// { label: "Contact Us", href: "/contact" },
+	// { label: "Terms of Service", href: "/#" },
+	// { label: "Cookies Settings", href: "/#" },
+	// { label: "Affilate Policy", href: "/#" },
+	// { label: "Privacy Policy", href: "/#" },
 ];
 
 export const teamMembers = [
@@ -84,7 +84,7 @@ export const teamMembers = [
 	},
 	{
 		name: "Tony Olendo",
-		role: "Partnerships",
+		role: "Co-founder",
 		image: Tony,
 		twitterLink: "https://twitter.com/tony_olendo",
 		linkedinLink: "https://www.linkedin.com/in/tony-olendo",

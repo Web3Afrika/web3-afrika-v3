@@ -38,7 +38,10 @@ const Footer = () => {
 
 	const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log("Subscribed with email:", email);
+		window.open(
+			`https://web3afrika.substack.com/subscribe?&email=${email}`,
+			"_blank",
+		);
 		setEmail("");
 	};
 
@@ -74,8 +77,8 @@ const Footer = () => {
 			<div className="bg-[#FBFBFB] dark:bg-black md:pt-60">
 				<FadeInStagger>
 					<footer className="container mx-auto px-6 py-16">
-						<div className="grid grid-cols-2 gap-12">
-							<FadeIn className="col-span-full space-y-6 md:col-span-1">
+						<div className="grid grid-cols-7 gap-12">
+							<FadeIn className="col-span-full space-y-6 md:col-span-5">
 								<Logo className="fill-black dark:fill-white" />
 								<p className="max-w-md text-[#9E9E9E] dark:text-[#9E9E9E]">
 									Empowering mobility entrepreneurs worldwide with accessible,
@@ -106,7 +109,7 @@ const Footer = () => {
 								</form>
 							</FadeIn>
 
-							<div className="hidden justify-between gap-8 md:flex">
+							<div className="hidden justify-between gap-8 md:col-span-2 md:flex">
 								<FadeIn className="space-y-4">
 									<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
 										Quick Links
@@ -115,14 +118,14 @@ const Footer = () => {
 										{QuickLinks.slice(0, 4).map(renderLinkUrl)}
 									</ul>
 								</FadeIn>
-								<FadeIn className="space-y-4">
+								{/* <FadeIn className="space-y-4">
 									<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
 										Quick Links
 									</h4>
 									<ul className="space-y-4">
 										{QuickLinks.slice(4, 8).map(renderLinkUrl)}
 									</ul>
-								</FadeIn>
+								</FadeIn> */}
 								<FadeIn className="space-y-4">
 									<h4 className="font-medium text-[#5D5D5D] dark:text-[#CFCFCF]">
 										Social Media
