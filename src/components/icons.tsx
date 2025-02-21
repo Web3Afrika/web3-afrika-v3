@@ -233,7 +233,7 @@ const ModalTrigger = (props: React.SVGProps<SVGSVGElement>) => (
 		<path
 			clipRule="evenodd"
 			d="M12 15.5c0-2.625.028-3.5 3.5-3.5s3.5.875 3.5 3.5.011 3.5-3.5 3.5-3.5-.875-3.5-3.5"
-			stroke="#000"
+			stroke={props.stroke || "#000000"}
 			strokeWidth={1.5}
 			strokeLinecap="round"
 			strokeLinejoin="round"

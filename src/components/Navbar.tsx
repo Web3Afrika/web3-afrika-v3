@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../constants";
 import { cn } from "../util";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle, useTheme } from "./ThemeToggle";
 import { ChevronRight2, CloseSquare, Logo, ModalTrigger } from "./icons";
 
 const Navbar = () => {
+	const { darkMode } = useTheme();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const location = useLocation();
 
@@ -55,6 +56,7 @@ const Navbar = () => {
 			<ModalTrigger
 				className="cursor-pointer md:hidden"
 				onClick={() => modalOpenHandler(true)}
+				stroke={darkMode ? "#FFFFFF" : "#000000"}
 			/>
 			<Modal
 				className={isModalOpen ? "bg-opacity-50" : "hidden bg-opacity-0"}
@@ -81,9 +83,9 @@ const Modal = ({
 			)}
 			onClick={modalOpenHandler}
 		>
-			<div className="relative top-24 z-50 mx-auto w-11/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg">
+			<div className="relative top-24 z-50 mx-auto w-11/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-[#121212]">
 				<div className="flex items-center justify-between">
-					<Logo className="fill-black" />
+					<Logo className="fill-black dark:fill-white" />
 					<CloseSquare className="cursor-pointer" onClick={modalOpenHandler} />
 				</div>
 				<button className="my-6 w-full rounded-full bg-[#0C6E5F] py-2.5 text-white">
@@ -102,7 +104,7 @@ const Modal = ({
 							<span
 								className={cn(
 									location.pathname === link.href
-										? "text-[#222222]"
+										? "text-[#222222] dark:text-white"
 										: "text-[#B8B8B8]",
 								)}
 							>
@@ -111,7 +113,7 @@ const Modal = ({
 							<ChevronRight2
 								className={cn(
 									location.pathname === link.href
-										? "stroke-[#222222]"
+										? "stroke-[#222222] dark:stroke-white"
 										: "stroke-[#B8B8B8]",
 								)}
 							/>
