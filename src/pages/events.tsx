@@ -119,9 +119,9 @@ export default function App() {
 						{upcomingEvents.map(item => (
 							<div
 								key={item.id}
-								className="flex items-center py-4 transition-colors hover:bg-gray-50 md:grid md:grid-cols-3"
+								className="flex items-center py-4 transition-colors hover:bg-gray-50 md:grid md:grid-cols-4"
 							>
-								<div className="flex-1 text-[#292929] dark:text-[#C1C1C1]">
+								<div className="col-span-2 flex-1 text-[#292929] dark:text-[#C1C1C1]">
 									<span>{item.name}</span>
 									<span className="block text-sm text-[#5D5D5D] md:hidden">
 										{item.platform}
