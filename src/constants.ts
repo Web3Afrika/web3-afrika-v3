@@ -206,15 +206,35 @@ export const conferences = [
 ];
 
 export const partners = [
-	{ id: 1, name: "Partner 1", logo: Web3Gblobal },
-	{ id: 2, name: "Partner 2", logo: Celo },
-	{ id: 3, name: "Partner 3", logo: D_D },
-	{ id: 4, name: "Partner 4", logo: Web3Bridge },
-	{ id: 4, name: "Partner 5", logo: Akindo },
-	{ id: 4, name: "Partner 6", logo: TheMu },
-	{ id: 4, name: "Partner 7", logo: CmFest },
-	{ id: 4, name: "Partner 8", logo: Polygon },
-	{ id: 4, name: "Partner 9", logo: Arbitrum },
+	{
+		id: 1,
+		name: "Partner 1",
+		logo: Web3Gblobal,
+		url: "https://web3globalconference.com/",
+	},
+	{ id: 2, name: "Partner 2", logo: Celo, url: "https://celo.org/" },
+	{ id: 3, name: "Partner 3", logo: D_D, url: "https://developerdao.com/" },
+	{
+		id: 4,
+		name: "Partner 4",
+		logo: Web3Bridge,
+		url: "https://www.web3bridgeafrica.com/",
+	},
+	{ id: 4, name: "Partner 5", logo: Akindo, url: "https://akindo.io/" },
+	{ id: 4, name: "Partner 6", logo: TheMu, url: "https://the-mu.xyz/" },
+	{ id: 4, name: "Partner 7", logo: CmFest, url: "https://cmfest.africa/" },
+	{
+		id: 4,
+		name: "Partner 8",
+		logo: Polygon,
+		url: "https://polygon.technology/",
+	},
+	{
+		id: 4,
+		name: "Partner 9",
+		logo: Arbitrum,
+		url: "https://arbitrum.foundation/",
+	},
 ];
 
 export const reviews = [

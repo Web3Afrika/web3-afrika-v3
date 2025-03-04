@@ -51,7 +51,13 @@ const Partners = () => {
 				>
 					{partners.map(partner => (
 						<SwiperSlide key={partner.id} className="w-fit">
-							<div key={partner.id} className="w-1/3 flex-shrink-0">
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href={partner.url}
+								key={partner.id}
+								className="w-1/3 flex-shrink-0"
+							>
 								<div className="flex h-[386px] max-h-[91.5vw] w-[386px] max-w-[91.5vw] items-center justify-center rounded-sm bg-[#FAFAFA] p-12">
 									<img
 										src={partner.logo}
@@ -59,7 +65,7 @@ const Partners = () => {
 										className="max-h-36 w-3/4 max-w-full object-contain"
 									/>
 								</div>
-							</div>
+							</a>
 						</SwiperSlide>
 					))}
 					<div
