@@ -74,13 +74,13 @@ const Modal = ({
 				</div>
 				<div className="rounded-lg border border-gray-200 px-4 py-6">
 					<div>
-						<h2>Donation</h2>
+						<h2 className="dark:text-white">Donation</h2>
 						<p className="text-gray-400">
 							Donations are to be made to our Ethereum address.
 						</p>
 					</div>
 
-					<h2 className="mt-6">Supported Networks</h2>
+					<h2 className="mt-6 dark:text-white">Supported Networks</h2>
 					<div className="my-4 mb-2 flex space-x-4">
 						<div className="rounded-full border p-2">
 							<img
@@ -109,7 +109,7 @@ const Modal = ({
 					</div>
 					<span
 						className={cn(
-							"text-sm transition duration-300 dark:text-white",
+							"text-sm transition duration-300 dark:text-gray-400",
 							isAddressCopied ? "opacity-100" : "opacity-0",
 						)}
 					>
@@ -120,11 +120,10 @@ const Modal = ({
 							type="text"
 							placeholder="0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766"
 							value="0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766"
-							className="flex-1 rounded-lg border border-gray-200 p-2 text-gray-400"
-							disabled
+							className="flex-1 rounded-lg border border-gray-200 bg-transparent p-2 text-gray-400"
 						/>
 						<button
-							className="flex w-full items-center justify-center gap-4 rounded-lg border border-gray-200 px-8 py-2 text-gray-400 transition duration-300 dark:bg-black md:w-fit"
+							className="flex w-full items-center justify-center gap-4 rounded-lg border border-gray-200 bg-transparent px-8 py-2 text-gray-400 transition duration-300 md:w-fit"
 							onClick={copyAddress}
 						>
 							<Copy />
