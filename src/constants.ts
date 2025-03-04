@@ -3,6 +3,7 @@ import Eniola from "./assets/team/eniola.jpeg";
 import Goodness from "./assets/team/goodness.png";
 import Idris from "./assets/team/idris.jpeg";
 import Isaac from "./assets/team/isaac.jpeg";
+import Israel from "./assets/team/israel.png";
 import Jennifer from "./assets/team/jennifer.png";
 import Joshua from "./assets/team/joshua.png";
 import Kanayo from "./assets/team/kanayo.jpeg";
@@ -25,13 +26,12 @@ import ConferenceImage6 from "./assets/conferences/conference-6.jpeg";
 import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
 import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 
-
+import FemaleAvatar1 from "/femaleAvatar-1.png";
+import FemaleAvatar2 from "/femaleAvatar-2.png";
+import FemaleAvatar3 from "/femaleAvatar-3.png";
 import MaleAvatar1 from "/maleAvatar-1.png";
 import MaleAvatar2 from "/maleAvatar-2.png";
 import MaleAvatar3 from "/maleAvatar-3.png";
-import FemaleAvatar1 from "/femaleAvatar-1.png";
-import FemaleAvatar2 from "/femaleAvatar-2.png";
-import FemaleAvatar3 from "/femaleAvatar-3.png"
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
@@ -145,6 +145,13 @@ export const teamMembers = [
 		image: Qudusayo,
 		twitterLink: "https://x.com/qudusayo",
 		linkedinLink: "https://linkedin.com/in/qudusayo",
+	},
+	{
+		name: "Ogedengbe Israel",
+		role: "Developer",
+		image: Israel,
+		twitterLink: "https://x.com/techwithmide",
+		linkedinLink: "https://www.linkedin.com/in/ogedengbe-israel-a93407219/",
 	},
 ];
 
