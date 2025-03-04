@@ -35,9 +35,14 @@ const HeroDetails = () => {
 								conversation on blockchain, DeFi, NFTs, and beyond.
 							</span>
 						</p>
-						<button className="hidden text-nowrap rounded-full bg-[#0C6E5F] px-6 py-2 text-white transition-colors md:inline-block">
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href={import.meta.env.VITE_DISCORD_URL}
+							className="hidden text-nowrap rounded-full bg-[#0C6E5F] px-6 py-2 text-white transition-colors md:inline-block"
+						>
 							Join Us
-						</button>
+						</a>
 					</FadeIn>
 				</FadeIn>
 				<div className="col-span-1"></div>

@@ -51,6 +51,13 @@ export const QuickLinks = [
 
 export const teamMembers = [
 	{
+		name: "Tony Olendo",
+		role: "Co-founder",
+		image: Tony,
+		twitterLink: "https://twitter.com/tony_olendo",
+		linkedinLink: "https://www.linkedin.com/in/tony-olendo",
+	},
+	{
 		name: "Idris Olubisi",
 		role: "Founder",
 		image: Idris,
@@ -86,13 +93,6 @@ export const teamMembers = [
 		linkedinLink: "https://www.linkedin.com/in/eniola-mercy",
 	},
 	{
-		name: "Tony Olendo",
-		role: "Co-founder",
-		image: Tony,
-		twitterLink: "https://twitter.com/tony_olendo",
-		linkedinLink: "https://www.linkedin.com/in/tony-olendo",
-	},
-	{
 		name: "Oluwabamikemi",
 		role: "Community Manager",
 		image: Oluwabamikemi,
@@ -101,7 +101,7 @@ export const teamMembers = [
 	},
 	{
 		name: "Ajoke Asunmonu",
-		role: "Partnerships",
+		role: "Partnership lead",
 		image: Ajoke,
 		twitterLink: "https://x.com/ajokeasunmonu",
 		linkedinLink: "https://www.linkedin.com/in/ajoke-asunmonu",
@@ -115,7 +115,7 @@ export const teamMembers = [
 	},
 	{
 		name: "Goodness",
-		role: "Experience Designer",
+		role: "Content Creator",
 		image: Goodness,
 		twitterLink: "https://x.com/kanayouzo",
 		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",

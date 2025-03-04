@@ -2,7 +2,7 @@ import { useState } from "react";
 import { cn } from "../util";
 import { CloseSquare, Logo } from "./icons";
 
-const DonateButton = () => {
+const DonateButton = ({ isText }: { isText?: boolean }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const modalOpenHandler = (state: boolean) => {
@@ -12,12 +12,21 @@ const DonateButton = () => {
 
 	return (
 		<>
-			<button
-				className="w-max rounded-full border border-[#0C6E5F] bg-white px-8 py-3 text-[#0C6E5F] shadow-lg transition duration-300 dark:bg-black"
-				onClick={() => modalOpenHandler(true)}
-			>
-				Donate
-			</button>
+			{isText ? (
+				<span
+					className="cursor-pointer text-[#B8B8B8] transition duration-300 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+					onClick={() => modalOpenHandler(true)}
+				>
+					Donate
+				</span>
+			) : (
+				<button
+					className="w-max rounded-full border border-[#0C6E5F] bg-white px-8 py-3 text-[#0C6E5F] shadow-lg transition duration-300 dark:bg-black"
+					onClick={() => modalOpenHandler(true)}
+				>
+					Donate
+				</button>
+			)}
 			<Modal
 				className={isModalOpen ? "bg-opacity-50" : "hidden bg-opacity-0"}
 				modalOpenHandler={() => modalOpenHandler(false)}

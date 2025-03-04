@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../constants";
 import { cn } from "../util";
+import DonateButton from "./DonateButton";
 import { ThemeToggle, useTheme } from "./ThemeToggle";
 import { ChevronRight2, CloseSquare, Logo, ModalTrigger } from "./icons";
 
@@ -17,9 +18,9 @@ const Navbar = () => {
 
 	return (
 		<nav className="container mx-auto flex w-11/12 items-center justify-between bg-white py-6 transition-colors duration-200 dark:bg-black">
-			<div className="flex items-center">
+			<Link to="/" className="flex items-center">
 				<Logo className="fill-black dark:fill-white" />
-			</div>
+			</Link>
 
 			<div className="hidden space-x-6 rounded-md bg-[#FAFAFA] px-4 py-2 dark:bg-[#111111] md:flex">
 				{navLinks.map(link => (
@@ -41,17 +42,14 @@ const Navbar = () => {
 			<div className="hidden items-center md:flex">
 				<div className="flex items-center gap-4">
 					<ThemeToggle />
-					<Link
-						to="/#"
-						className="text-[#B8B8B8] transition duration-300 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-					>
-						Donate
-					</Link>
+					<DonateButton isText />
 				</div>
 				<div className="mx-2 h-10 border-l border-[#F2F2F2] dark:border-gray-700"></div>
-				<button className="rounded-3xl border border-[#EE3C22] px-6 py-2 text-[#EE3C22] shadow-primary transition duration-200 hover:bg-[#EE3C22] hover:text-white dark:border-[#FF4D33] dark:text-[#FF4D33] dark:hover:bg-[#FF4D33]">
-					Collab with us
-				</button>
+				<a href="mailto:web3afrika@gmail.com">
+					<button className="rounded-3xl border border-[#EE3C22] px-6 py-2 text-[#EE3C22] shadow-primary transition duration-200 hover:bg-[#EE3C22] hover:text-white dark:border-[#FF4D33] dark:text-[#FF4D33] dark:hover:bg-[#FF4D33] dark:hover:text-white">
+						Collab with us
+					</button>
+				</a>
 			</div>
 			<ModalTrigger
 				className="cursor-pointer md:hidden"
