@@ -20,6 +20,10 @@ import ConferenceImage1 from "./assets/conferences/conference-1.jpeg";
 import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
 import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
 import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
+import ConferenceImage5 from "./assets/conferences/conference-5.jpeg";
+import ConferenceImage6 from "./assets/conferences/conference-6.jpeg";
+import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
+import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
@@ -201,8 +205,10 @@ export const conferences = [
 	{ id: 2, src: ConferenceImage2 },
 	{ id: 3, src: ConferenceImage3 },
 	{ id: 4, src: ConferenceImage4 },
-	{ id: 5, src: ConferenceImage1 },
-	{ id: 6, src: ConferenceImage3 },
+	{ id: 5, src: ConferenceImage5 },
+	{ id: 6, src: ConferenceImage6 },
+	{ id: 7, src: ConferenceImage7 },
+	{ id: 8, src: ConferenceImage8 },
 ];
 
 export const partners = [
@@ -244,53 +250,62 @@ export const reviews = [
 Special thanks to @ayahq_ @Web3Bridge @web3afrika @Ebunayo08 for this opportunity.`,
 		name: "Sarah Mensah",
 		bgColor: "gray",
+		image: "/public/femaleAvatar-2.png",
 	},
 	{
 		id: 2,
 		body: "At the start of 2024, I made a commitment to improve my communication skills and public speaking. Fast forward to September, I volunteered at @web3afrika in Lagos, which helped boost my confidence even more! 🌱",
 		name: "Madev",
 		bgColor: "yellow",
+		image: "/public/maleAvatar-3.png",
 	},
 	{
 		id: 3,
 		body: "It was an amazing experience at @web3afrika last week! I met many passionate Web3 enthusiasts and was introduced to the @baseafricaa community. I also had the pleasure of meeting @AdewuniChris, @DohouDaniel10 and my Alx family . Thank you, @web3afrika and @oasisonchain",
 		name: "Anoluwapo Ali",
 		bgColor: "red",
+		image: "/public/femaleAvatar-3.png",
 	},
 	{
 		id: 6,
 		body: "Excited to win this week quiz challenge at @web3afrika, and also being a first time winner in the quiz challenge 😁. Thanks to @web3afrika and everyone that participated in the quiz challenge.",
 		name: "Alade Toheeb",
 		bgColor: "yellow",
+		image: "/public/maleAvatar-1.png",
 	},
 	{
 		id: 8,
 		body: "It was a great time yesterday at the @oasisonchain @ThankArbitrum @web3afrika builders event. What stood out for me was the quality of speakers invite. I also was able to network well.",
 		name: "𝒅𝒆𝒂𝒏 𓃵",
 		bgColor: "gray",
+		image: "/public/maleAvatar-2.png",
 	},
 	{
 		id: 1,
 		body: "I'm super excited to be here, live and direct at d@web3afrika event, witnessing the FIRST collaboration between @oasisOnchain n @ThankArbitrum! 🎉",
 		name: "Bukola Anuoluwapo",
 		bgColor: "green",
+		image: "/public/femaleAvatar-1.png",
 	},
 	{
 		id: 4,
 		body: "Excited to be here at the @web3afrika builders event…LFG! 🤗",
 		name: "Agbakwuru Oluchi",
 		bgColor: "gray",
+		image: "/public/femaleAvatar-2.png",
 	},
 	{
 		id: 5,
 		body: "Hectic day today, but I met some of my favorite people in Web3 at @web3afrika Builders' event too🤭🧡",
 		name: "NonFungibleHuman",
 		bgColor: "green",
+		image: "/public/maleAvatar-2.png",
 	},
 	{
 		id: 9,
 		body: "Interesting to here how intentional @olanetsoft n the team is about the community. I'm really bullish on Web3afrika! ",
 		name: "YoungAncient 💎",
 		bgColor: "red",
+		image: "/public/maleAvatar-2.png",
 	},
 ];

@@ -18,10 +18,12 @@ const ReviewCard = ({
 	name,
 	body,
 	bgColor,
+	image,
 }: {
 	name: string;
 	body: string;
 	bgColor: string;
+	image?: string;
 }) => {
 	return (
 		<figure
@@ -34,7 +36,14 @@ const ReviewCard = ({
 			<q className="text-base">{body}</q>
 			<div className="flex flex-row items-center gap-2">
 				{/* <div className="size-8 rounded-full bg-white"></div> */}
-				<div className="flex flex-col">
+				<div className="flex flex-row items-center gap-2">
+					{image && (
+						<img
+							src={image}
+							alt={`${name}'s profile`}
+							className="h-8 w-8 rounded-full object-cover"
+						/>
+					)}
 					<figcaption className="text-base font-medium dark:text-white">
 						{name}
 					</figcaption>
