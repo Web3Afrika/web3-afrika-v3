@@ -21,12 +21,15 @@ import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
 import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
 import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
 
+import Akindo from "./assets/partners/akindo.svg";
+import Arbitrum from "./assets/partners/arbitrum.svg";
 import Celo from "./assets/partners/celo.png";
-import D_D from "./assets/partners/d_d.png";
-import Web3Bridge from "./assets/partners/web3-bridge.png";
+import CmFest from "./assets/partners/cmfest.svg";
+import D_D from "./assets/partners/d_d.svg";
+import Polygon from "./assets/partners/polygon.svg";
+import TheMu from "./assets/partners/themu.svg";
+import Web3Bridge from "./assets/partners/web3-bridge.svg";
 import Web3Gblobal from "./assets/partners/web3-global.png";
-
-import ProfileAvatar from "./assets/profileAvatar.svg";
 
 export const navLinks = [
 	{ href: "/", label: "Home" },
@@ -207,71 +210,67 @@ export const partners = [
 	{ id: 2, name: "Partner 2", logo: Celo },
 	{ id: 3, name: "Partner 3", logo: D_D },
 	{ id: 4, name: "Partner 4", logo: Web3Bridge },
+	{ id: 4, name: "Partner 5", logo: Akindo },
+	{ id: 4, name: "Partner 6", logo: TheMu },
+	{ id: 4, name: "Partner 7", logo: CmFest },
+	{ id: 4, name: "Partner 8", logo: Polygon },
+	{ id: 4, name: "Partner 9", logo: Arbitrum },
 ];
 
-export const comments = [
+export const reviews = [
 	{
-		id: 1,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Jennifer Lawrence",
-		profile: ProfileAvatar,
-		bgColor: "green",
+		id: 7,
+		body: `I'm proud to say, my team and I won the just  concluded Ayathon. I had a lovely time building "CERTIFLEX" alongside  @kenzman18 @WiseMrMusa @only1franchesco @uche2v.
+Special thanks to @ayahq_ @Web3Bridge @web3afrika @Ebunayo08 for this opportunity.`,
+		name: "Sarah Mensah",
+		bgColor: "gray",
 	},
 	{
 		id: 2,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "David Okonkwo",
-		profile: ProfileAvatar,
+		body: "At the start of 2024, I made a commitment to improve my communication skills and public speaking. Fast forward to September, I volunteered at @web3afrika in Lagos, which helped boost my confidence even more! 🌱",
+		name: "Madev",
 		bgColor: "yellow",
 	},
 	{
 		id: 3,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Sarah Mensah",
-		profile: ProfileAvatar,
+		body: "It was an amazing experience at @web3afrika last week! I met many passionate Web3 enthusiasts and was introduced to the @baseafricaa community. I also had the pleasure of meeting @AdewuniChris, @DohouDaniel10 and my Alx family . Thank you, @web3afrika and @oasisonchain",
+		name: "Anoluwapo Ali",
 		bgColor: "red",
 	},
 	{
+		id: 6,
+		body: "Excited to win this week quiz challenge at @web3afrika, and also being a first time winner in the quiz challenge 😁. Thanks to @web3afrika and everyone that participated in the quiz challenge.",
+		name: "Alade Toheeb",
+		bgColor: "yellow",
+	},
+	{
+		id: 8,
+		body: "It was a great time yesterday at the @oasisonchain @ThankArbitrum @web3afrika builders event. What stood out for me was the quality of speakers invite. I also was able to network well.",
+		name: "𝒅𝒆𝒂𝒏 𓃵",
+		bgColor: "gray",
+	},
+	{
+		id: 1,
+		body: "I'm super excited to be here, live and direct at d@web3afrika event, witnessing the FIRST collaboration between @oasisOnchain n @ThankArbitrum! 🎉",
+		name: "Bukola Anuoluwapo",
+		bgColor: "green",
+	},
+	{
 		id: 4,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Michael Adebayo",
-		profile: ProfileAvatar,
+		body: "Excited to be here at the @web3afrika builders event…LFG! 🤗",
+		name: "Agbakwuru Oluchi",
 		bgColor: "gray",
 	},
 	{
 		id: 5,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Jennifer Lawrence",
-		profile: ProfileAvatar,
+		body: "Hectic day today, but I met some of my favorite people in Web3 at @web3afrika Builders' event too🤭🧡",
+		name: "NonFungibleHuman",
 		bgColor: "green",
 	},
 	{
-		id: 6,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "David Okonkwo",
-		profile: ProfileAvatar,
-		bgColor: "yellow",
-	},
-	{
-		id: 7,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Sarah Mensah",
-		profile: ProfileAvatar,
+		id: 9,
+		body: "Interesting to here how intentional @olanetsoft n the team is about the community. I'm really bullish on Web3afrika! ",
+		name: "YoungAncient 💎",
 		bgColor: "red",
-	},
-	{
-		id: 8,
-		comment:
-			"I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Michael Adebayo",
-		profile: ProfileAvatar,
-		bgColor: "gray",
 	},
 ];

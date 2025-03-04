@@ -83,7 +83,7 @@ const Modal = ({
 			)}
 			onClick={modalOpenHandler}
 		>
-			<div className="relative top-24 z-50 mx-auto w-11/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-[#121212]">
+			<div className="container relative top-24 z-50 mx-auto w-11/12 overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-[#121212]">
 				<div className="flex items-center justify-between">
 					<Logo className="fill-black dark:fill-white" />
 					<CloseSquare className="cursor-pointer" onClick={modalOpenHandler} />
