@@ -20,6 +20,10 @@ import ConferenceImage1 from "./assets/conferences/conference-1.jpeg";
 import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
 import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
 import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
+import ConferenceImage5 from "./assets/conferences/conference-5.jpeg";
+import ConferenceImage6 from "./assets/conferences/conference-6.jpeg";
+import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
+import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
@@ -201,8 +205,10 @@ export const conferences = [
 	{ id: 2, src: ConferenceImage2 },
 	{ id: 3, src: ConferenceImage3 },
 	{ id: 4, src: ConferenceImage4 },
-	{ id: 5, src: ConferenceImage1 },
-	{ id: 6, src: ConferenceImage3 },
+	{ id: 5, src: ConferenceImage5 },
+	{ id: 6, src: ConferenceImage6 },
+	{ id: 7, src: ConferenceImage7 },
+	{ id: 8, src: ConferenceImage8 },
 ];
 
 export const partners = [
