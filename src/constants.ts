@@ -137,7 +137,7 @@ export const teamMembers = [
 		name: "Goodness",
 		role: "Content Creator",
 		image: Goodness,
-		twitterLink: "https://x.com/goodylilu",
+		twitterLink: "https://x.com/goodylili",
 		linkedinLink: "https://www.linkedin.com/in/goodylili",
 	},
 	{
