@@ -39,7 +39,11 @@ export const QuickLinks = [
 	{ label: "About Us", href: "/about" },
 	{ label: "Blog", href: "/blog" },
 	{ label: "Events", href: "/events" },
-	// { label: "Contact Us", href: "/contact" },
+	{
+		label: "Contact Us",
+		href: "https://calendar.app.google/ymuHJ6sbBrQt8xHj8",
+		external: true,
+	},
 	// { label: "Terms of Service", href: "/#" },
 	// { label: "Cookies Settings", href: "/#" },
 	// { label: "Affilate Policy", href: "/#" },

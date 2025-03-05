@@ -66,7 +66,7 @@ const TeamSection = () => {
 			<div className="space-y-2 text-start md:space-y-4">
 				<p className="text-sm text-[#9E9E9E] md:text-base">Our Team</p>
 				<AnimatedText
-					text={["Meet the Visionaries Driving Web3", "Afrika Forward"]}
+					text={["Meet the Visionaries Driving", "Web3 Afrika Forward"]}
 					once
 					className="max-w-3xl text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl"
 				/>

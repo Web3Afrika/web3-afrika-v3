@@ -9,7 +9,7 @@ const SocialLinks = [
 	{
 		label: (
 			<span>
-				X <span className="hidden md:inline-block">(formerly twitter)</span>
+				X <span className="hidden md:inline-block">(formerly Twitter)</span>
 			</span>
 		),
 		href: "https://x.com/web3afrika",

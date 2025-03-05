@@ -9,14 +9,14 @@ const HeroDetails = () => {
 			<div className="container mx-auto mb-12 w-11/12">
 				<FadeIn className="space-y-4">
 					{/* <WordsPullUp
-						text="Empowering the next generation of African web3 Innovators"
+						text="Empowering the next generation of African web3 innovators"
 						className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl"
 					/> */}
 					<AnimatedText
 						text={[
 							"Empowering the next",
 							"generation of African web3",
-							"Innovators",
+							"innovators",
 						]}
 						once
 						className="max-w-xs text-2xl text-[#292929] dark:text-white md:max-w-xl md:text-5xl"
