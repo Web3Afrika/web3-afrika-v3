@@ -39,7 +39,11 @@ export const QuickLinks = [
 	{ label: "About Us", href: "/about" },
 	{ label: "Blog", href: "/blog" },
 	{ label: "Events", href: "/events" },
-	// { label: "Contact Us", href: "/contact" },
+	{
+		label: "Contact Us",
+		href: "https://calendar.app.google/ymuHJ6sbBrQt8xHj8",
+		external: true,
+	},
 	// { label: "Terms of Service", href: "/#" },
 	// { label: "Cookies Settings", href: "/#" },
 	// { label: "Affilate Policy", href: "/#" },
@@ -114,8 +118,8 @@ export const teamMembers = [
 		name: "Goodness",
 		role: "Experience Designer",
 		image: Goodness,
-		twitterLink: "https://x.com/kanayouzo",
-		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",
+		twitterLink: "https://x.com/goodylilu",
+		linkedinLink: "https://www.linkedin.com/in/goodylili",
 	},
 	{
 		name: "Queen Haddassah",

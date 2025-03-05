@@ -93,9 +93,9 @@ const DetailTitle = ({
 	title: string;
 	supText: string;
 }) => (
-	<h3 className="space-x-2 text-xl font-medium text-[#292929] dark:text-white md:text-3xl">
+	<h3 className="flex items-center space-x-2 text-xl font-medium text-[#292929] dark:text-white md:text-3xl">
 		<span>{title}</span>
-		<span className="rounded border-[1.25px] border-[#F2F2F2] bg-[#F7F7F7] p-1 align-super text-xs font-normal text-[#6C6C6C] md:text-sm">
+		<span className="rounded border-[1.25px] border-[#F2F2F2] bg-[#F7F7F7] p-1 text-xs font-normal text-[#6C6C6C] md:text-sm">
 			{supText}
 		</span>
 	</h3>
