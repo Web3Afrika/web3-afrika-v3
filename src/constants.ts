@@ -18,6 +18,9 @@ import HackathonImage3 from "./assets/hackathons/hackathon-3.jpeg";
 import HackathonImage4 from "./assets/hackathons/hackathon-4.jpeg";
 
 import ConferenceImage1 from "./assets/conferences/conference-1.jpeg";
+import ConferenceImage10 from "./assets/conferences/conference-10.jpeg";
+import ConferenceImage11 from "./assets/conferences/conference-11.jpeg";
+import ConferenceImage12 from "./assets/conferences/conference-12.jpeg";
 import ConferenceImage2 from "./assets/conferences/conference-2.jpeg";
 import ConferenceImage3 from "./assets/conferences/conference-3.jpeg";
 import ConferenceImage4 from "./assets/conferences/conference-4.jpeg";
@@ -25,6 +28,7 @@ import ConferenceImage5 from "./assets/conferences/conference-5.jpeg";
 import ConferenceImage6 from "./assets/conferences/conference-6.jpeg";
 import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
 import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
+import ConferenceImage9 from "./assets/conferences/conference-9.jpeg";
 
 import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
 import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
@@ -224,6 +228,10 @@ export const conferences = [
 	{ id: 6, src: ConferenceImage6 },
 	{ id: 7, src: ConferenceImage7 },
 	{ id: 8, src: ConferenceImage8 },
+	{ id: 9, src: ConferenceImage9 },
+	{ id: 10, src: ConferenceImage10 },
+	{ id: 11, src: ConferenceImage11 },
+	{ id: 12, src: ConferenceImage12 },
 ];
 
 export const partners = [
