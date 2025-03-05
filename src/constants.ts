@@ -67,13 +67,6 @@ export const QuickLinks = [
 
 export const teamMembers = [
 	{
-		name: "Tony Olendo",
-		role: "Co-founder",
-		image: Tony,
-		twitterLink: "https://twitter.com/tony_olendo",
-		linkedinLink: "https://www.linkedin.com/in/tony-olendo",
-	},
-	{
 		name: "Idris Olubisi",
 		role: "Founder",
 		image: Idris,
@@ -81,11 +74,18 @@ export const teamMembers = [
 		linkedinLink: "https://www.linkedin.com/in/idrisolubisi",
 	},
 	{
-		name: "Isaac Zara",
-		role: "Design Lead",
-		image: Isaac,
-		twitterLink: "https://x.com/isaaczara_",
-		linkedinLink: "https://www.linkedin.com/in/isaac-zara",
+		name: "Tony Olendo",
+		role: "Co-founder",
+		image: Tony,
+		twitterLink: "https://twitter.com/tony_olendo",
+		linkedinLink: "https://www.linkedin.com/in/tony-olendo",
+	},
+	{
+		name: "Ajoke Asunmonu",
+		role: "Partnership lead",
+		image: Ajoke,
+		twitterLink: "https://x.com/ajokeasunmonu",
+		linkedinLink: "https://www.linkedin.com/in/ajoke-asunmonu",
 	},
 	{
 		name: "Jennifer Echenim",
@@ -95,11 +95,11 @@ export const teamMembers = [
 		linkedinLink: "https://www.linkedin.com/in/jennifer-echenim",
 	},
 	{
-		name: "Joshua Omobola",
-		role: "Developer Relations",
-		image: Joshua,
-		twitterLink: "https://twitter.com/joshua_omobola",
-		linkedinLink: "https://www.linkedin.com/in/joshua-omobola",
+		name: "Isaac Zara",
+		role: "Design Lead",
+		image: Isaac,
+		twitterLink: "https://x.com/isaaczara_",
+		linkedinLink: "https://www.linkedin.com/in/isaac-zara",
 	},
 	{
 		name: "Eniola Mercy",
@@ -116,11 +116,11 @@ export const teamMembers = [
 		linkedinLink: "https://www.linkedin.com/in/oluwabamikemi",
 	},
 	{
-		name: "Ajoke Asunmonu",
-		role: "Partnership lead",
-		image: Ajoke,
-		twitterLink: "https://x.com/ajokeasunmonu",
-		linkedinLink: "https://www.linkedin.com/in/ajoke-asunmonu",
+		name: "Joshua Omobola",
+		role: "Developer Relations",
+		image: Joshua,
+		twitterLink: "https://twitter.com/joshua_omobola",
+		linkedinLink: "https://www.linkedin.com/in/joshua-omobola",
 	},
 	{
 		name: "Kanayo Uzo",
