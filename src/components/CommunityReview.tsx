@@ -1,66 +1,7 @@
-import ProfileAvatar from "../assets/profileAvatar.svg";
+import { reviews } from "../constants";
 import { cn } from "../util";
 import { FadeIn } from "./FadeIn";
 import { Marquee } from "./ui/Marquee";
-
-const reviews = [
-	{
-		id: 1,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Jennifer Lawrence",
-		img: ProfileAvatar,
-		bgColor: "green",
-	},
-	{
-		id: 2,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "David Okonkwo",
-		img: ProfileAvatar,
-		bgColor: "yellow",
-	},
-	{
-		id: 3,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Sarah Mensah",
-		img: ProfileAvatar,
-		bgColor: "red",
-	},
-	{
-		id: 4,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Michael Adebayo",
-		img: ProfileAvatar,
-		bgColor: "gray",
-	},
-	{
-		id: 5,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Jennifer Lawrence",
-		img: ProfileAvatar,
-		bgColor: "green",
-	},
-	{
-		id: 6,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "David Okonkwo",
-		img: ProfileAvatar,
-		bgColor: "yellow",
-	},
-	{
-		id: 7,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Sarah Mensah",
-		img: ProfileAvatar,
-		bgColor: "red",
-	},
-	{
-		id: 8,
-		body: "I really love the hackathons, I landed my dream role soon after I attended a technical workshop",
-		name: "Michael Adebayo",
-		img: ProfileAvatar,
-		bgColor: "gray",
-	},
-];
 
 const firstRow = reviews.slice(0, reviews.length / 3);
 const secondRow = reviews.slice((reviews.length / 3) * 2, reviews.length);
@@ -74,29 +15,36 @@ const bgs = {
 };
 
 const ReviewCard = ({
-	img,
 	name,
 	body,
 	bgColor,
+	image,
 }: {
-	img: string;
 	name: string;
 	body: string;
 	bgColor: string;
+	image?: string;
 }) => {
 	return (
 		<figure
 			className={cn(
-				"relative w-72 cursor-pointer overflow-hidden rounded-xl p-6",
-				"space-y-6 text-white",
+				"relative h-fit w-full max-w-96 cursor-pointer overflow-hidden rounded-xl p-6",
+				"space-y-3 self-center text-white",
 				bgs[bgColor as keyof typeof bgs],
 			)}
 		>
-			<blockquote className="text-base">{body}</blockquote>
+			<q className="text-base">{body}</q>
 			<div className="flex flex-row items-center gap-2">
-				<img className="rounded-full" width="32" height="32" alt="" src={img} />
-				<div className="flex flex-col">
-					<figcaption className="text-sm font-medium dark:text-white">
+				{/* <div className="size-8 rounded-full bg-white"></div> */}
+				<div className="flex flex-row items-center gap-2">
+					{image && (
+						<img
+							src={image}
+							alt={`${name}'s profile`}
+							className="h-8 w-8 rounded-full object-cover"
+						/>
+					)}
+					<figcaption className="text-base font-medium dark:text-white">
 						{name}
 					</figcaption>
 				</div>
@@ -107,7 +55,7 @@ const ReviewCard = ({
 
 export function CommunityReview() {
 	return (
-		<FadeIn className="bg-background container relative m-auto flex h-[580px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+		<FadeIn className="bg-background container relative m-auto flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
 			<Marquee className="[--duration:40s]">
 				{firstRow.map(review => (
 					<ReviewCard key={review.id} {...review} />

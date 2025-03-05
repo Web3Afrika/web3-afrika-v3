@@ -1,3 +1,4 @@
+import DonateButton from "./DonateButton";
 import { FadeIn } from "./FadeIn";
 
 const DonateSection = () => {
@@ -13,9 +14,7 @@ const DonateSection = () => {
 						support drives education, opportunities, and diversity in the Web3
 						revolution.
 					</p>
-					<button className="w-max rounded-full border border-[#0C6E5F] bg-white px-8 py-3 text-[#0C6E5F] shadow-lg transition duration-300 dark:bg-black">
-						Donate
-					</button>
+					<DonateButton />
 				</div>
 			</div>
 		</FadeIn>

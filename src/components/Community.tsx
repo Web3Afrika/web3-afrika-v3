@@ -48,7 +48,9 @@ const CommunitySection = () => {
 						opportunities to lead in the Web3 revolution
 					</p>
 					<a
-						href="https://discord.com/invite/YMJ49PDTym"
+						target="_blank"
+						rel="noreferrer"
+						href={import.meta.env.VITE_DISCORD_URL}
 						className="rounded-full border border-[#0C6E5F] px-6 py-2 text-[#0C6E5F] shadow-xl shadow-[#469F9214] transition duration-300 hover:bg-[#0A5A4E] hover:text-white"
 					>
 						Join Community

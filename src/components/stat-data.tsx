@@ -36,21 +36,21 @@ const StatData = () => {
 			<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
 				<FadeIn>
 					<StatCard
-						value="$1M+"
+						value="$21.5K"
 						description="Fundraising achieved through strategic partnerships"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						value="$1M+"
+						value="$10K+"
 						description="achieved through strategic partnerships"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						value="5000"
+						value="7K+"
 						description="Builers in attendance for hackathons and events"
 						descriptionWidth="md"
 					/>

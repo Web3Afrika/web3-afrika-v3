@@ -16,16 +16,12 @@ const PurposeSection = () => {
 				{/* <h2 className="mb-4 text-xl text-[#292929] dark:text-[#E5E4E4] md:text-5xl">
 					Our Purpose and Vision
 				</h2> */}
-				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
+				<p className="max-w-5xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
 					Our mission at Web3 Afrika is to empower African innovators and
 					communities through education, opportunities, and inclusivity in the
-					Web3 space.
-				</p>
-				<p className="max-w-3xl text-sm text-[#757575] dark:text-[#CFCFCF] md:text-2xl">
-					Guided by our vision, we strive to position Africa and its diaspora at
-					the forefront of global Web3 innovation, shaping a decentralized
-					future that is diverse, equitable, and transformative. Join us as we
-					shape the future of Web3!
+					web3 space. Guided by our vision, we strive to position Africa and its
+					diaspora at the forefront of global web3 innovation, shaping a
+					decentralized future that is diverse, equitable, and transformative.
 				</p>
 			</div>
 
@@ -35,23 +31,23 @@ const PurposeSection = () => {
 					<div className="space-y-4">
 						<Detail
 							title="Access to Education"
-							description="Provides resources and training to help individuals understand and excel in Web3 technologies like blockchain, NFTs, DeFi, and"
+							description="Provides resources and training to help individuals understand and excel in Web3 technologies like blockchain, NFTs, DeFi, and DAOs."
 						/>
 						<Detail
 							title="Skill Development"
-							description="Equips participants with technical and entrepreneurial skills needed to succeed in the decentralized digital economy"
+							description="Equips participants with technical and entrepreneurial skills needed to succeed in the decentralized digital economy."
 						/>
 						<Detail
 							title="Career Opportunities"
-							description="Opens doors to exclusive jobs, internships, and collaborations in the Web3 space, tailored to African talent"
+							description="Opens doors to exclusive jobs, internships, and collaborations in the Web3 space, tailored to African talent."
 						/>
 						<Detail
 							title="Global Networking"
-							description="Connects innovators, creators, and entrepreneurs with a worldwide network of Web3 leaders, partners, and investors"
+							description="Connects innovators, creators, and entrepreneurs with a worldwide network of Web3 leaders, partners, and investors."
 						/>
 						<Detail
 							title="Empowering Communities"
-							description="Builds inclusive and diverse communities that amplify African voices in global Web3 conversations"
+							description="Builds inclusive and diverse communities that amplify African voices in global Web3 conversations."
 						/>
 					</div>
 				</FadeIn>
@@ -61,23 +57,23 @@ const PurposeSection = () => {
 					<div className="space-y-4">
 						<Detail
 							title="Global Leadership"
-							description="Envisions Africa and its diaspora leading innovations in Web3 technologies on the global stage"
+							description="Envisions Africa and its diaspora leading innovations in Web3 technologies on the global stage."
 						/>
 						<Detail
 							title="Diversity and Inclusion"
-							description="Aims to create a decentralized ecosystem where African voices and perspectives are central to the conversation"
+							description="Aims to create a decentralized ecosystem where African voices and perspectives are central to the conversation."
 						/>
 						<Detail
 							title="Technological Advancement"
-							description="Aspires to drive groundbreaking advancements in blockchain, DeFi, NFTs, and other Web3 sectors"
+							description="Aspires to drive groundbreaking advancements in blockchain, DeFi, NFTs, and other Web3 sectors."
 						/>
 						<Detail
 							title="Community Growth"
-							description="Seeks to build a thriving network of innovators, creators, and leaders who collaborate to shape the future"
+							description="Seeks to build a thriving network of innovators, creators, and leaders who collaborate to shape the future."
 						/>
 						<Detail
 							title="Economic Transformation"
-							description="Strives to unlock new economic opportunities for African communities through participation in the decentralized economy"
+							description="Strives to unlock new economic opportunities for African communities through participation in the decentralized economy."
 						/>
 					</div>
 				</FadeIn>
