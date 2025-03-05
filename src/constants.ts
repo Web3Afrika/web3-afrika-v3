@@ -118,8 +118,8 @@ export const teamMembers = [
 		name: "Goodness",
 		role: "Experience Designer",
 		image: Goodness,
-		twitterLink: "https://x.com/kanayouzo",
-		linkedinLink: "https://www.linkedin.com/in/kanayo-uzo",
+		twitterLink: "https://x.com/goodylilu",
+		linkedinLink: "https://www.linkedin.com/in/goodylili",
 	},
 	{
 		name: "Queen Haddassah",
