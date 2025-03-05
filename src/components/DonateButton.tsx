@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "../util";
 import { CloseSquare, Copy, Logo } from "./icons";
 
-import Scroll from "../assets/brands/ scroll.svg";
 import Arbitrum from "../assets/brands/arbitrum.svg";
 import EthLogo from "../assets/brands/ethereum.png";
 import Optimism from "../assets/brands/optimism.svg";
+import Scroll from "../assets/brands/scroll.svg";
 
 const DonateButton = ({ isText }: { isText?: boolean }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,15 +47,51 @@ const Modal = ({
 	modalOpenHandler?: () => void;
 }) => {
 	const [isAddressCopied, setIsAddressCopied] = useState(false);
+	// Add at the top of the Modal component:
+	const firstFocusableRef = useRef<HTMLButtonElement>(null);
+	const lastFocusableRef = useRef<HTMLButtonElement>(null);
 
-	const copyAddress = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
-		e.stopPropagation();
-		navigator.clipboard.writeText("0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766");
-		setIsAddressCopied(true);
-		setTimeout(() => {
-			setIsAddressCopied(false);
-		}, 3000);
+	// Add to the useEffect hook (you'll need to add this):
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") {
+				modalOpenHandler?.();
+			}
+			if (e.key === "Tab") {
+				if (e.shiftKey) {
+					if (document.activeElement === firstFocusableRef.current) {
+						e.preventDefault();
+						lastFocusableRef.current?.focus();
+					}
+				} else {
+					if (document.activeElement === lastFocusableRef.current) {
+						e.preventDefault();
+						firstFocusableRef.current?.focus();
+					}
+				}
+			}
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+		firstFocusableRef.current?.focus();
+
+		return () => {
+			document.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [modalOpenHandler]);
+
+	const copyAddress = () => {
+		try {
+			navigator.clipboard.writeText(
+				"0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766",
+			);
+			setIsAddressCopied(true);
+			setTimeout(() => {
+				setIsAddressCopied(false);
+			}, 3000);
+		} catch (error) {
+			console.log("Failed to copy address to clipboard", error);
+		}
 	};
 
 	return (
@@ -66,11 +102,18 @@ const Modal = ({
 					className,
 				)}
 				onClick={modalOpenHandler}
+				aria-hidden="true"
 			></div>
 			<div className="relative top-24 z-50 mx-auto w-11/12 max-w-4xl space-y-6 overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-[#121212]">
 				<div className="flex items-center justify-between">
 					<Logo className="fill-black dark:fill-white" />
-					<CloseSquare className="cursor-pointer" onClick={modalOpenHandler} />
+					<button ref={firstFocusableRef}>
+						<CloseSquare
+							className="cursor-pointer"
+							onClick={modalOpenHandler}
+							aria-label="Close donation modal"
+						/>
+					</button>
 				</div>
 				<div className="rounded-lg border border-gray-200 px-4 py-6">
 					<div>
@@ -125,6 +168,7 @@ const Modal = ({
 						<button
 							className="flex w-full items-center justify-center gap-4 rounded-lg border border-gray-200 bg-transparent px-8 py-2 text-gray-400 transition duration-300 md:w-fit"
 							onClick={copyAddress}
+							ref={lastFocusableRef}
 						>
 							<Copy />
 							<span>Copy</span>

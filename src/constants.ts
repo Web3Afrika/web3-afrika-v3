@@ -26,12 +26,12 @@ import ConferenceImage6 from "./assets/conferences/conference-6.jpeg";
 import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
 import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 
-import FemaleAvatar1 from "/femaleAvatar-1.png";
-import FemaleAvatar2 from "/femaleAvatar-2.png";
-import FemaleAvatar3 from "/femaleAvatar-3.png";
-import MaleAvatar1 from "/maleAvatar-1.png";
-import MaleAvatar2 from "/maleAvatar-2.png";
-import MaleAvatar3 from "/maleAvatar-3.png";
+import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
+import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
+import FemaleAvatar3 from "./assets/avatar/femaleAvatar-3.png";
+import MaleAvatar1 from "./assets/avatar/maleAvatar-1.png";
+import MaleAvatar2 from "./assets/avatar/maleAvatar-2.png";
+import MaleAvatar3 from "./assets/avatar/maleAvatar-3.png";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
@@ -241,17 +241,17 @@ export const partners = [
 		logo: Web3Bridge,
 		url: "https://www.web3bridgeafrica.com/",
 	},
-	{ id: 4, name: "Partner 5", logo: Akindo, url: "https://akindo.io/" },
-	{ id: 4, name: "Partner 6", logo: TheMu, url: "https://the-mu.xyz/" },
-	{ id: 4, name: "Partner 7", logo: CmFest, url: "https://cmfest.africa/" },
+	{ id: 5, name: "Partner 5", logo: Akindo, url: "https://akindo.io/" },
+	{ id: 6, name: "Partner 6", logo: TheMu, url: "https://the-mu.xyz/" },
+	{ id: 7, name: "Partner 7", logo: CmFest, url: "https://cmfest.africa/" },
 	{
-		id: 4,
+		id: 8,
 		name: "Partner 8",
 		logo: Polygon,
 		url: "https://polygon.technology/",
 	},
 	{
-		id: 4,
+		id: 9,
 		name: "Partner 9",
 		logo: Arbitrum,
 		url: "https://arbitrum.foundation/",
