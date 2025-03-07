@@ -43,7 +43,7 @@ const StatData = () => {
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						value="$10K+"
+						value="$10K"
 						description="achieved through strategic partnerships"
 						descriptionWidth="sm"
 					/>
@@ -51,7 +51,7 @@ const StatData = () => {
 				<FadeIn>
 					<StatCard
 						value="7K+"
-						description="Builers in attendance for hackathons and events"
+						description="Builders in attendance for hackathons and events"
 						descriptionWidth="md"
 					/>
 				</FadeIn>
