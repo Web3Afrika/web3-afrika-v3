@@ -16,7 +16,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="container mx-auto flex w-11/12 items-center justify-between bg-white py-6 transition-colors duration-200 dark:bg-black">
+		<nav className="container mx-auto flex w-11/12 items-center justify-between py-6 transition-colors duration-200">
 			<Link to="/" className="flex items-center">
 				<Logo className="fill-black dark:fill-white" />
 			</Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
 				</div>
 				<div className="mx-2 h-10 border-l border-[#F2F2F2] dark:border-gray-700"></div>
 				<a href="mailto:web3afrika@gmail.com">
-					<button className="rounded-3xl border border-[#EE3C22] px-6 py-2 text-[#EE3C22] shadow-primary transition duration-200 hover:bg-[#EE3C22] hover:text-white dark:border-[#FF4D33] dark:text-[#FF4D33] dark:hover:bg-[#FF4D33] dark:hover:text-white">
+					<button className="rounded-3xl border border-[#EE3C22] bg-transparent px-6 py-2 text-[#EE3C22] shadow-primary transition duration-200 hover:bg-[#EE3C22] hover:text-white dark:border-[#FF4D33] dark:bg-black dark:text-[#FF4D33] dark:hover:bg-[#FF4D33] dark:hover:text-white">
 						Collab with us
 					</button>
 				</a>
