@@ -26,9 +26,9 @@ export const Clicker = ({
 			<div
 				className={cn(
 					"w-fit rounded p-2 py-1.5 text-sm text-white",
-					`bg-[${fill}]`,
 					bottomCursor ? "rounded-bl-[1px]" : "rounded-tl-[1px]",
 				)}
+				style={{ backgroundColor: fill }}
 			>
 				{title}
 			</div>
