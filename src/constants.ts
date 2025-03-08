@@ -42,10 +42,12 @@ import Arbitrum from "./assets/partners/arbitrum.svg";
 import Celo from "./assets/partners/celo.png";
 import CmFest from "./assets/partners/cmfest.svg";
 import D_D from "./assets/partners/d_d.svg";
+import Oasis from "./assets/partners/oasis.png";
 import Polygon from "./assets/partners/polygon.svg";
+import Scroll from "./assets/partners/scroll.svg";
 import TheMu from "./assets/partners/themu.svg";
 import Web3Bridge from "./assets/partners/web3-bridge.svg";
-import Web3Gblobal from "./assets/partners/web3-global.png";
+import Web3Global from "./assets/partners/web3-global.png";
 
 export const navLinks = [
 	{ href: "/", label: "Home" },
@@ -123,7 +125,7 @@ export const teamMembers = [
 		name: "Joshua Omobola",
 		role: "Developer Relations",
 		image: Joshua,
-		twitterLink: "https://twitter.com/joshua_omobola",
+		twitterLink: "https://x.com/joshua_omobola",
 		linkedinLink: "https://www.linkedin.com/in/joshua-omobola",
 	},
 	{
@@ -239,19 +241,25 @@ export const conferences = [
 ];
 
 export const partners = [
+	{ id: 1, name: "Partner 1", logo: D_D, url: "https://developerdao.com/" },
+
 	{
-		id: 1,
-		name: "Partner 1",
-		logo: Web3Gblobal,
-		url: "https://web3globalconference.com/",
+		id: 2,
+		name: "Partner 2",
+		logo: Scroll,
+		url: "https://scroll.io/",
 	},
-	{ id: 2, name: "Partner 2", logo: Celo, url: "https://celo.org/" },
-	{ id: 3, name: "Partner 3", logo: D_D, url: "https://developerdao.com/" },
+	{
+		id: 3,
+		name: "Partner 3",
+		logo: Web3Bridge,
+		url: "https://www.web3bridgeafrica.com/",
+	},
 	{
 		id: 4,
 		name: "Partner 4",
-		logo: Web3Bridge,
-		url: "https://www.web3bridgeafrica.com/",
+		logo: Web3Global,
+		url: "https://web3globalconference.com/",
 	},
 	{ id: 5, name: "Partner 5", logo: Akindo, url: "https://akindo.io/" },
 	{ id: 6, name: "Partner 6", logo: TheMu, url: "https://the-mu.xyz/" },
@@ -268,6 +276,8 @@ export const partners = [
 		logo: Arbitrum,
 		url: "https://arbitrum.foundation/",
 	},
+	{ id: 10, name: "Partner 10", logo: Celo, url: "https://celo.org/" },
+	{ id: 11, name: "Partner 11", logo: Oasis, url: "https://oasisonchain.xyz" },
 ];
 
 export const reviews = [

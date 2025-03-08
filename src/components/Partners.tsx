@@ -22,8 +22,8 @@ const Partners = () => {
 				<div className="max-w-4xl">
 					<p className="text-xl text-[#9E9E9E] dark:text-[#5D5D5D]">
 						We wouldn't have gotten this far without{" "}
-						<span className="font-medium text-[#5D5D5D]">(o)ur Partners</span>.
-						Our partners are our backbone, (p)roviding much-needed support to
+						<span className="font-medium text-[#5D5D5D]">our Partners</span>.
+						Our partners are our backbone, providing much-needed support to
 						continue to support Africa.
 					</p>
 				</div>
@@ -58,7 +58,7 @@ const Partners = () => {
 								key={partner.id}
 								className="w-1/3 flex-shrink-0"
 							>
-								<div className="flex h-[386px] max-h-[91.5vw] w-[386px] max-w-[91.5vw] items-center justify-center rounded-sm bg-[#FAFAFA] p-12">
+								<div className="flex h-[270px] max-h-[64vw] w-[270px] max-w-[64vw] items-center justify-center rounded-sm bg-[#FAFAFA] p-8">
 									<img
 										src={partner.logo}
 										alt={`${partner.name} logo`}
