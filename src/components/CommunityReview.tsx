@@ -56,17 +56,17 @@ const ReviewCard = ({
 export function CommunityReview() {
 	return (
 		<FadeIn className="bg-background container relative m-auto flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-			<Marquee className="[--duration:40s]">
+			<Marquee className="[--duration:120s]">
 				{firstRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
-			<Marquee reverse className="[--duration:40s]">
+			<Marquee reverse className="[--duration:120s]">
 				{secondRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
-			<Marquee className="[--duration:40s]">
+			<Marquee className="[--duration:130s]">
 				{thirdRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
 				))}
