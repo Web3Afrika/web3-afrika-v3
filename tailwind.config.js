@@ -18,6 +18,7 @@ export default {
 					"linear-gradient(to right bottom, rgba('#000000',0.8), rgba('#000000',0.8)), url('assets/donate.png')",
 				heroLight: "url('assets/bgs/light-hero-bg.png')",
 				heroDark: "url('assets/bgs/dark-hero-bg.png')",
+				dots: "url('assets/bgs/dots.png')",
 			},
 			animation: {
 				marquee: "marquee var(--duration) linear infinite",
