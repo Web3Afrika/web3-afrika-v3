@@ -46,7 +46,7 @@ const StatData = () => {
 					<StatCard
 						// prefix="$"
 						suffix="+"
-						value={<CountUp limit={2100} format="(dd).d" />}
+						value={<CountUp limit={2100} format="(,ddd)" />}
 						description="Developer community members across Africa"
 						descriptionWidth="sm"
 					/>
@@ -55,7 +55,7 @@ const StatData = () => {
 					<StatCard
 						// prefix="$"
 						suffix="+"
-						value={<CountUp limit={12500} format="(dd)" />}
+						value={<CountUp limit={12500} format="(,ddd)" />}
 						description="Community members across all platforms"
 						descriptionWidth="sm"
 					/>
