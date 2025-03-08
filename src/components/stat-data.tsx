@@ -1,5 +1,7 @@
+import React from "react";
 import { cn } from "../util";
 import { FadeIn, FadeInStagger } from "./FadeIn";
+import CountUp from "./count-up";
 
 const descriptionWidths = {
 	sm: "max-w-[200px]",
@@ -8,16 +10,22 @@ const descriptionWidths = {
 
 const StatCard = ({
 	value,
+	prefix,
+	suffix,
 	description,
 	descriptionWidth,
 }: {
-	value: string;
+	value: React.ReactNode;
+	prefix?: string;
+	suffix?: string;
 	description: string;
 	descriptionWidth: keyof typeof descriptionWidths;
 }) => (
-	<div className="rounded-lg bg-[#FAFAFA] py-10 dark:bg-[#121212]">
-		<h3 className="mb-4 text-6xl font-medium text-[#7A7A7A] md:text-8xl">
+	<div className="rounded-lg bg-[#FAFAFA] py-12 dark:bg-[#121212]">
+		<h3 className="mb-4 flex h-12 items-center justify-center overflow-clip text-6xl font-medium text-[#7A7A7A] md:h-20 md:text-8xl">
+			{prefix}
 			{value}
+			{suffix}
 		</h3>
 		<p
 			className={cn(
@@ -36,22 +44,27 @@ const StatData = () => {
 			<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
 				<FadeIn>
 					<StatCard
-						value="$1M+"
+						prefix="$"
+						suffix="K"
+						value={<CountUp limit={21.5} format="(dd).d" />}
 						description="Fundraising achieved through strategic partnerships"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						value="$1M+"
+						prefix="$"
+						suffix="K+"
+						value={<CountUp limit={10} format="(dd)" />}
 						description="achieved through strategic partnerships"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						value="5000"
-						description="Builers in attendance for hackathons and events"
+						suffix="K+"
+						value={<CountUp limit={7} format="(dd)" />}
+						description="Builders in attendance for hackathons and events"
 						descriptionWidth="md"
 					/>
 				</FadeIn>
