@@ -44,19 +44,19 @@ const StatData = () => {
 			<div className="grid w-full grid-cols-1 gap-8 text-center md:mb-16 md:grid-cols-3">
 				<FadeIn>
 					<StatCard
-						prefix="$"
-						suffix="K"
-						value={<CountUp limit={21.5} format="(dd).d" />}
-						description="Fundraising achieved through strategic partnerships"
+						// prefix="$"
+						suffix="+"
+						value={<CountUp limit={3000} format="(dd).d" />}
+						description="Developer community members across Africa"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>
 				<FadeIn>
 					<StatCard
-						prefix="$"
-						suffix="K+"
-						value={<CountUp limit={10} format="(dd)" />}
-						description="achieved through strategic partnerships"
+						// prefix="$"
+						suffix="+"
+						value={<CountUp limit={12500} format="(dd)" />}
+						description="Community members across all platforms"
 						descriptionWidth="sm"
 					/>
 				</FadeIn>

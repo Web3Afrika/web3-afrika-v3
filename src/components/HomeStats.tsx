@@ -9,11 +9,11 @@ const HomeStats = () => {
 			<FadeIn className="mb-12 max-w-4xl text-start">
 				<h2 className="mb-4 text-3xl text-[#5D5D5D] dark:text-white">
 					Web3 Afrika empowers Africans to lead in Web3 through education,
-					opportunities, and community
+					opportunities, and community.
 				</h2>
 				<p className="text-lg text-[#5D5D5D] dark:text-[#C0C0C0]">
 					Empowering African builders through hackathons, bounties, and
-					opportunities
+					opportunities.
 				</p>
 				<Link
 					to="/about"
