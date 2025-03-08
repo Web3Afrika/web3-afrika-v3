@@ -22,8 +22,8 @@ const Partners = () => {
 				<div className="max-w-4xl">
 					<p className="text-xl text-[#9E9E9E] dark:text-[#5D5D5D]">
 						We wouldn't have gotten this far without{" "}
-						<span className="font-medium text-[#5D5D5D]">Our Partners</span>.
-						Our partners are our backbone, Providing much needed support to
+						<span className="font-medium text-[#5D5D5D]">(o)ur Partners</span>.
+						Our partners are our backbone, (p)roviding much-needed support to
 						continue to support Africa.
 					</p>
 				</div>

@@ -141,7 +141,7 @@ export const teamMembers = [
 		linkedinLink: "https://www.linkedin.com/in/goodylili",
 	},
 	{
-		name: "Queen Haddassah",
+		name: "Esther E",
 		role: "Video Content Creator",
 		image: QueenHaddassah,
 		twitterLink: "https://x.com/QueenHaddassah",

@@ -16,6 +16,8 @@ export default {
 				partner: "url('./src/assets/donate.png')",
 				"hero-pattern":
 					"linear-gradient(to right bottom, rgba('#000000',0.8), rgba('#000000',0.8)), url('./src/assets/donate.png')",
+				heroLight: "url('./src/assets/bgs/light-hero-bg.png')",
+				heroDark: "url('./src/assets/bgs/dark-hero-bg.png')",
 			},
 			animation: {
 				marquee: "marquee var(--duration) linear infinite",

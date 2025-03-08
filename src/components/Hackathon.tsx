@@ -5,7 +5,7 @@ import { Build, Meetup } from "./icons";
 const Hackathon = () => {
 	return (
 		<FadeInStagger className="container mx-auto px-6 py-16">
-			<p className="mb-4 text-sm text-[#5D5D5D]">Top events & Hackatons</p>
+			<p className="mb-4 text-sm text-[#5D5D5D]">Top events & Hackathons</p>
 			<div className="grid grid-cols-3 gap-10 gap-x-4 md:gap-x-10">
 				<FadeIn className="col-span-full space-y-4 md:col-span-1">
 					<div className="rounded-lg bg-[#09705F] p-6">
@@ -55,10 +55,13 @@ const Hackathon = () => {
 
 				<FadeIn className="col-span-2 flex items-center md:col-span-1">
 					<div className="flex h-56 w-full flex-col justify-between rounded-lg bg-gray-50 p-6 dark:bg-[#121212] md:h-3/4">
-						<p className="mb-4 text-sm text-[#707070] dark:text-[#BDBDBD] md:text-2xl">
-							Scroll Community Meetup, here we collaborated with scroll and the
-							web3 community, View below.
-						</p>
+						<div className="mb-4 text-sm text-[#707070] dark:text-[#BDBDBD] md:text-2xl">
+							<p>Scroll Community Meetup.</p>
+							<p>
+								Here we collaborated with scroll and the web3 community, View
+								below.
+							</p>
+						</div>
 						<a
 							href="https://x.com/web3afrika/status/1760998743925461454"
 							target="_blank"
