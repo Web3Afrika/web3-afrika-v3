@@ -13,9 +13,18 @@ import QueenHaddassah from "./assets/team/QueenHaddassah.jpeg";
 import Tony from "./assets/team/tony.png";
 
 import HackathonImage1 from "./assets/hackathons/hackathon-1.jpeg";
+import HackathonImage10 from "./assets/hackathons/hackathon-10.jpeg";
+import HackathonImage11 from "./assets/hackathons/hackathon-11.jpeg";
+import HackathonImage12 from "./assets/hackathons/hackathon-12.jpeg";
+import HackathonImage13 from "./assets/hackathons/hackathon-13.jpeg";
 import HackathonImage2 from "./assets/hackathons/hackathon-2.jpeg";
 import HackathonImage3 from "./assets/hackathons/hackathon-3.jpeg";
 import HackathonImage4 from "./assets/hackathons/hackathon-4.jpeg";
+import HackathonImage5 from "./assets/hackathons/hackathon-5.jpeg";
+import HackathonImage6 from "./assets/hackathons/hackathon-6.jpeg";
+import HackathonImage7 from "./assets/hackathons/hackathon-7.jpeg";
+import HackathonImage8 from "./assets/hackathons/hackathon-8.jpeg";
+import HackathonImage9 from "./assets/hackathons/hackathon-9.jpeg";
 
 import ConferenceImage1 from "./assets/conferences/conference-1.jpeg";
 import ConferenceImage10 from "./assets/conferences/conference-10.jpeg";
@@ -221,8 +230,15 @@ export const hackathons = [
 	{ id: 2, src: HackathonImage2 },
 	{ id: 3, src: HackathonImage3 },
 	{ id: 4, src: HackathonImage4 },
-	{ id: 5, src: HackathonImage2 },
-	{ id: 6, src: HackathonImage3 },
+	{ id: 5, src: HackathonImage5 },
+	{ id: 6, src: HackathonImage6 },
+	{ id: 7, src: HackathonImage7 },
+	{ id: 8, src: HackathonImage8 },
+	{ id: 9, src: HackathonImage9 },
+	{ id: 10, src: HackathonImage10 },
+	{ id: 11, src: HackathonImage11 },
+	{ id: 12, src: HackathonImage12 },
+	{ id: 13, src: HackathonImage13 },
 ];
 
 export const conferences = [
