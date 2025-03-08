@@ -48,15 +48,24 @@ import MaleAvatar3 from "./assets/avatar/maleAvatar-3.png";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
+import AYA from "./assets/partners/AYA.jpg";
+import Bunzz from "./assets/partners/Bunzz.jpg";
 import Celo from "./assets/partners/celo.png";
+import ChainIDE from "./assets/partners/Chain-IDE.jpg";
 import CmFest from "./assets/partners/cmfest.svg";
 import D_D from "./assets/partners/d_d.svg";
+import Ethereum from "./assets/partners/Ethereum.jpg";
+import ETHitopia from "./assets/partners/ETHitopia.jpg";
+import Felbeth from "./assets/partners/Felbeth.jpg";
+import LagosBlockchainWeek from "./assets/partners/Lagos-Blockchain-Week.jpg";
 import Oasis from "./assets/partners/oasis.png";
 import Polygon from "./assets/partners/polygon.svg";
 import Scroll from "./assets/partners/scroll.svg";
 import TheMu from "./assets/partners/themu.svg";
 import Web3Bridge from "./assets/partners/web3-bridge.svg";
 import Web3Global from "./assets/partners/web3-global.png";
+import Web3Ladies from "./assets/partners/Web3Ladies.jpg";
+import Web3LagosConference from "./assets/partners/Web3LagosConference.jpg";
 
 export const navLinks = [
 	{ href: "/", label: "Home" },
@@ -294,6 +303,35 @@ export const partners = [
 	},
 	{ id: 10, name: "Partner 10", logo: Celo, url: "https://celo.org/" },
 	{ id: 11, name: "Partner 11", logo: Oasis, url: "https://oasisonchain.xyz" },
+	{ id: 12, name: "Partner 12", logo: Felbeth, url: "https://felbeth.com" },
+	{
+		id: 13,
+		name: "Partner 13",
+		logo: ETHitopia,
+		url: "https://x.com/ETHiopia____",
+	},
+	{
+		id: 14,
+		name: "Partner 14",
+		logo: Web3Ladies,
+		url: "https://x.com/web3ladies",
+	},
+	{
+		id: 15,
+		name: "Partner 15",
+		logo: Web3LagosConference,
+		url: "https://event.web3bridge.com",
+	},
+	{
+		id: 16,
+		name: "Partner 16",
+		logo: LagosBlockchainWeek,
+		url: "https://lagosblockchainweek.io",
+	},
+	{ id: 17, name: "Partner 17", logo: ChainIDE, url: "https://chainide.com" },
+	{ id: 18, name: "Partner 18", logo: Bunzz, url: "https://www.bunzz.dev" },
+	{ id: 19, name: "Partner 19", logo: Ethereum, url: "https://ethereum.org" },
+	{ id: 20, name: "Partner 20", logo: AYA, url: "https://www.ayahq.com" },
 ];
 
 export const reviews = [
