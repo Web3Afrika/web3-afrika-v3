@@ -48,23 +48,23 @@ import MaleAvatar3 from "./assets/avatar/maleAvatar-3.png";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
-import AYA from "./assets/partners/AYA.jpg";
-import Bunzz from "./assets/partners/Bunzz.jpg";
+import AYA from "./assets/partners/aya.svg";
+import Bunzz from "./assets/partners/Bunzz.png";
 import Celo from "./assets/partners/celo.png";
 import ChainIDE from "./assets/partners/Chain-IDE.jpg";
 import CmFest from "./assets/partners/cmfest.svg";
 import D_D from "./assets/partners/d_d.svg";
-import Ethereum from "./assets/partners/Ethereum.jpg";
-import ETHitopia from "./assets/partners/ETHitopia.jpg";
-import Felbeth from "./assets/partners/Felbeth.jpg";
-import LagosBlockchainWeek from "./assets/partners/Lagos-Blockchain-Week.jpg";
+import Ethereum from "./assets/partners/ethereum.svg";
+import ETHitopia from "./assets/partners/ETHitopia.png";
+import Felbeth from "./assets/partners/Felbeth.png";
+import LagosBlockchainWeek from "./assets/partners/Lagos-Blockchain-Week.png";
 import Oasis from "./assets/partners/oasis.png";
 import Polygon from "./assets/partners/polygon.svg";
 import Scroll from "./assets/partners/scroll.svg";
 import TheMu from "./assets/partners/themu.svg";
 import Web3Bridge from "./assets/partners/web3-bridge.svg";
 import Web3Global from "./assets/partners/web3-global.png";
-import Web3Ladies from "./assets/partners/Web3Ladies.jpg";
+import Web3Ladies from "./assets/partners/Web3Ladies.svg";
 import Web3LagosConference from "./assets/partners/Web3LagosConference.jpg";
 
 export const navLinks = [
