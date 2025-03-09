@@ -280,13 +280,9 @@ export const partners = [
 		logo: Web3Bridge,
 		url: "https://www.web3bridgeafrica.com/",
 	},
-	{
-		id: 4,
-		name: "Partner 4",
-		logo: Web3Global,
-		url: "https://web3globalconference.com/",
-	},
-	{ id: 5, name: "Partner 5", logo: Akindo, url: "https://akindo.io/" },
+	{ id: 4, name: "Partner 4", logo: Bunzz, url: "https://www.bunzz.dev" },
+	{ id: 5, name: "Partner 5", logo: Oasis, url: "https://oasisonchain.xyz" },
+
 	{ id: 6, name: "Partner 6", logo: TheMu, url: "https://the-mu.xyz/" },
 	{ id: 7, name: "Partner 7", logo: CmFest, url: "https://cmfest.africa/" },
 	{
@@ -302,7 +298,7 @@ export const partners = [
 		url: "https://arbitrum.foundation/",
 	},
 	{ id: 10, name: "Partner 10", logo: Celo, url: "https://celo.org/" },
-	{ id: 11, name: "Partner 11", logo: Oasis, url: "https://oasisonchain.xyz" },
+	{ id: 11, name: "Partner 11", logo: Akindo, url: "https://akindo.io/" },
 	{ id: 12, name: "Partner 12", logo: Felbeth, url: "https://felbeth.com" },
 	{
 		id: 13,
@@ -329,7 +325,12 @@ export const partners = [
 		url: "https://lagosblockchainweek.io",
 	},
 	{ id: 17, name: "Partner 17", logo: ChainIDE, url: "https://chainide.com" },
-	{ id: 18, name: "Partner 18", logo: Bunzz, url: "https://www.bunzz.dev" },
+	{
+		id: 18,
+		name: "Partner 18",
+		logo: Web3Global,
+		url: "https://web3globalconference.com/",
+	},
 	{ id: 19, name: "Partner 19", logo: Ethereum, url: "https://ethereum.org" },
 	{ id: 20, name: "Partner 20", logo: AYA, url: "https://www.ayahq.com" },
 ];
