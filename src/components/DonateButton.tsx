@@ -95,7 +95,7 @@ const Modal = ({
 	};
 
 	return (
-		<div className={cn("fixed inset-0 top-0 z-20", className)}>
+		<div className={cn("fixed inset-0 top-0 z-30", className)}>
 			<div
 				className={cn(
 					"fixed inset-0 top-0 z-20 !m-0 bg-black bg-opacity-0 transition-opacity duration-200",
