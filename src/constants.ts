@@ -58,6 +58,7 @@ import Ethereum from "./assets/partners/Ethereum.jpg";
 import ETHitopia from "./assets/partners/ETHitopia.jpg";
 import Felbeth from "./assets/partners/Felbeth.jpg";
 import LagosBlockchainWeek from "./assets/partners/Lagos-Blockchain-Week.jpg";
+import MorphLayer from "./assets/partners/MorphLayer.jpg";
 import Oasis from "./assets/partners/oasis.png";
 import Polygon from "./assets/partners/polygon.svg";
 import Scroll from "./assets/partners/scroll.svg";
@@ -66,6 +67,7 @@ import Web3Bridge from "./assets/partners/web3-bridge.svg";
 import Web3Global from "./assets/partners/web3-global.png";
 import Web3Ladies from "./assets/partners/Web3Ladies.jpg";
 import Web3LagosConference from "./assets/partners/Web3LagosConference.jpg";
+import WomenInDefi from "./assets/partners/wid.png";
 
 export const navLinks = [
 	{ href: "/", label: "Home" },
@@ -332,6 +334,18 @@ export const partners = [
 	{ id: 18, name: "Partner 18", logo: Bunzz, url: "https://www.bunzz.dev" },
 	{ id: 19, name: "Partner 19", logo: Ethereum, url: "https://ethereum.org" },
 	{ id: 20, name: "Partner 20", logo: AYA, url: "https://www.ayahq.com" },
+	{
+		id: 21,
+		name: "Partner 21",
+		logo: WomenInDefi,
+		url: "https://womenindefi.org",
+	},
+	{
+		id: 22,
+		name: "Partner 22",
+		logo: MorphLayer,
+		url: "https://www.morphl2.io",
+	},
 ];
 
 export const reviews = [
