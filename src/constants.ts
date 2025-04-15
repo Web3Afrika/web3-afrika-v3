@@ -336,13 +336,13 @@ export const partners = [
 	{ id: 20, name: "Partner 20", logo: AYA, url: "https://www.ayahq.com" },
 	{
 		id: 21,
-		name: "Partner 21",
+		name: "WomenInDefi",
 		logo: WomenInDefi,
 		url: "https://womenindefi.org",
 	},
 	{
 		id: 22,
-		name: "Partner 22",
+		name: "MorphLayer",
 		logo: MorphLayer,
 		url: "https://www.morphl2.io",
 	},
