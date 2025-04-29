@@ -177,6 +177,7 @@ const BlogHighlights = ({
 
 					const response = await fetch(proxyUrl, {
 						headers: {
+							"Access-Control-Allow-Origin": "*", // Allow all origins
 							Accept:
 								"application/xml, application/rss+xml, text/xml, text/html",
 							"X-Requested-With": "XMLHttpRequest", // Required by some proxies
