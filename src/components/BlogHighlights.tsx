@@ -157,10 +157,10 @@ const BlogHighlights = ({
 				// AllOrigins is a common CORS proxy
 				(url: string) =>
 					`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-				// Cors-Anywhere (needs header)
-				(url: string) => `https://cors-anywhere.herokuapp.com/${url}`,
-				// Alternative proxies
-				(url: string) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+				// // Cors-Anywhere (needs header)
+				// (url: string) => `https://cors-anywhere.herokuapp.com/${url}`,
+				// // Alternative proxies
+				// (url: string) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
 				(url: string) => `https://thingproxy.freeboard.io/fetch/${url}`,
 				// Direct (for environments where CORS isn't an issue)
 				(url: string) => url,
