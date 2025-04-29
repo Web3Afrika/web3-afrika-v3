@@ -29,25 +29,18 @@ const parseRssFeed = (xmlString: string): RSSItem[] => {
 		// Function to extract CDATA content
 		const extractCDATA = (content: string): string => {
 			if (content.includes("<![CDATA[")) {
-				return content.replace("<![CDATA[", "").replace("]]>", "").trim();
+				return content.replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1").trim();
 			}
 			return content.trim();
 		};
 
 		// Function to extract HTML content
 		const extractHTML = (html: string): string => {
-			// Basic approach to strip HTML tags
+			// Basic approach to strip HTML tags but keep the content
 			return html
 				.replace(/<[^>]*>/g, " ")
 				.replace(/\s+/g, " ")
 				.trim();
-		};
-
-		// Function to extract image URL from HTML content
-		const extractImageUrl = (html: string): string => {
-			const imgRegex = /<img[^>]+src="([^">]+)"/i;
-			const match = html.match(imgRegex);
-			return match ? match[1] : "";
 		};
 
 		// Find all <item> tags
@@ -70,18 +63,35 @@ const parseRssFeed = (xmlString: string): RSSItem[] => {
 			const pubDate = extractContent(itemContent, "pubDate");
 
 			// Extract author (using dc:creator tag)
-			const creatorRaw = extractContent(itemContent, "dc:creator");
+			const creatorRaw = extractContent(itemContent, "dc\\:creator");
 			const author = extractCDATA(creatorRaw);
 
-			// Extract content
+			// Extract content from content:encoded or description
 			const contentRaw =
-				extractContent(itemContent, "content:encoded") ||
+				extractContent(itemContent, "content\\:encoded") ||
 				extractContent(itemContent, "description");
-			const contentCDATA = extractCDATA(contentRaw);
-			const content = extractHTML(contentCDATA);
+			const contentCleaned = extractCDATA(contentRaw);
 
-			// Extract image URL
-			const imageUrl = extractImageUrl(contentCDATA);
+			// Clean and truncate content for preview
+			const content = extractHTML(contentCleaned).substring(0, 200) + "...";
+
+			// Look for coverImage in hashnode data
+			let imageUrl = "";
+
+			// Try to get image URL from hashnode:coverImage tag (specific to Hashnode blogs)
+			const coverImageTag = extractContent(
+				itemContent,
+				"hashnode\\:coverImage",
+			);
+			if (coverImageTag) {
+				imageUrl = coverImageTag;
+			} else {
+				// Fallback: Extract image from content if available
+				const imgMatch = contentCleaned.match(/<img[^>]+src="([^">]+)"/i);
+				if (imgMatch && imgMatch[1]) {
+					imageUrl = imgMatch[1];
+				}
+			}
 
 			// Create item object
 			items.push({
@@ -89,8 +99,8 @@ const parseRssFeed = (xmlString: string): RSSItem[] => {
 				title,
 				link,
 				date: pubDate,
-				content: content.substring(0, 200) + "...",
-				author,
+				content,
+				author: author || "Unknown Author",
 				imageUrl,
 			});
 		}
@@ -100,6 +110,29 @@ const parseRssFeed = (xmlString: string): RSSItem[] => {
 		console.error("Error parsing RSS feed:", error);
 		return [];
 	}
+};
+
+/**
+ * Simple but effective HTML cleaner
+ */
+const cleanHtml = content => {
+	if (!content) return "";
+
+	// First decode common HTML entities
+	let decoded = content
+		.replace(/&lt;/g, "<")
+		.replace(/&gt;/g, ">")
+		.replace(/&quot;/g, '"')
+		.replace(/&amp;/g, "&")
+		.replace(/&nbsp;/g, " ");
+
+	// Then remove all HTML tags
+	let cleaned = decoded.replace(/<[^>]+>/g, " ");
+
+	// Clean up whitespace
+	cleaned = cleaned.replace(/\s+/g, " ").trim();
+
+	return cleaned;
 };
 
 const BlogHighlights = ({
@@ -119,41 +152,76 @@ const BlogHighlights = ({
 			setIsLoading(true);
 			setError(null);
 
-			try {
-				// Direct request to the RSS feed
-				const directUrl = "https://blog.web3afrika.com/rss.xml";
+			// Create an array of proxy services to try
+			const proxies = [
+				// AllOrigins is a common CORS proxy
+				(url: string) =>
+					`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+				// Cors-Anywhere (needs header)
+				(url: string) => `https://cors-anywhere.herokuapp.com/${url}`,
+				// Alternative proxies
+				(url: string) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+				(url: string) => `https://thingproxy.freeboard.io/fetch/${url}`,
+				// Direct (for environments where CORS isn't an issue)
+				(url: string) => url,
+			];
 
-				const response = await fetch(directUrl, {
-					headers: {
-						Accept: "application/xml, application/rss+xml, text/xml",
-					},
-					// Adding a timeout using AbortController
-					signal: AbortSignal.timeout(15000), // 15 second timeout
-				});
+			const targetUrl = "https://blog.web3afrika.com/rss.xml";
+			let lastError = null;
 
-				if (!response.ok) {
-					throw new Error(`HTTP error! Status: ${response.status}`);
+			// Try each proxy in order until one works
+			for (const proxyFn of proxies) {
+				try {
+					const proxyUrl = proxyFn(targetUrl);
+					console.log(`Trying to fetch RSS from: ${proxyUrl}`);
+
+					const response = await fetch(proxyUrl, {
+						headers: {
+							Accept:
+								"application/xml, application/rss+xml, text/xml, text/html",
+							"X-Requested-With": "XMLHttpRequest", // Required by some proxies
+						},
+						// Adding a timeout using AbortController
+						signal: AbortSignal.timeout(10000), // 10 second timeout
+					});
+
+					if (!response.ok) {
+						throw new Error(`HTTP error! Status: ${response.status}`);
+					}
+
+					// Get the content as text
+					const text = await response.text();
+
+					// Verify it's an actual RSS feed by checking for basic RSS elements
+					if (!text.includes("<rss") && !text.includes("<channel")) {
+						throw new Error("Response doesn't appear to be an RSS feed");
+					}
+
+					// Parse the RSS feed
+					const parsedArticles = parseRssFeed(text);
+
+					if (parsedArticles.length === 0) {
+						throw new Error("No articles found in the RSS feed");
+					}
+
+					// Success! Store the articles and exit the loop
+					setArticles(parsedArticles);
+					setIsLoading(false);
+					return;
+				} catch (error) {
+					console.error(`Error with proxy: ${error}`);
+					lastError = error;
+					// Continue to next proxy
 				}
-
-				// Get the XML content as text
-				const xmlText = await response.text();
-
-				// Parse the RSS feed using our custom parsing function
-				const parsedArticles = parseRssFeed(xmlText);
-
-				if (parsedArticles.length === 0) {
-					throw new Error("No articles found in the RSS feed");
-				}
-
-				setArticles(parsedArticles);
-				setIsLoading(false);
-			} catch (error) {
-				console.error("Error fetching RSS feed:", error);
-				setError(
-					error instanceof Error ? error.message : "Unknown error occurred",
-				);
-				setIsLoading(false);
 			}
+
+			// If we get here, all proxies failed
+			setError(
+				lastError instanceof Error
+					? lastError.message
+					: "Failed to fetch RSS feed with all available proxies",
+			);
+			setIsLoading(false);
 		}
 
 		fetchRSS();
@@ -286,7 +354,7 @@ const BlogHighlights = ({
 									</h2>
 
 									<p className="line-clamp-3 text-xs text-[#9E9E9E] md:text-xl">
-										{articles[0].content}
+										{cleanHtml(articles[0].content)}
 									</p>
 
 									<span className="block text-sm text-[#5D5D5D] md:text-base">
@@ -364,7 +432,7 @@ const BlogHighlights = ({
 									</h2>
 
 									<p className="mb-4 text-xs text-[#9E9E9E] md:text-sm">
-										{article.content}
+										{cleanHtml(article.content)}
 									</p>
 
 									<span className="mb-4 block text-sm text-[#5D5D5D] md:text-base">
