@@ -115,11 +115,11 @@ const parseRssFeed = (xmlString: string): RSSItem[] => {
 /**
  * Simple but effective HTML cleaner
  */
-const cleanHtml = content => {
+const cleanHtml = (content: string) => {
 	if (!content) return "";
 
 	// First decode common HTML entities
-	let decoded = content
+	const decoded = content
 		.replace(/&lt;/g, "<")
 		.replace(/&gt;/g, ">")
 		.replace(/&quot;/g, '"')
