@@ -155,8 +155,8 @@ const BlogHighlights = ({
 			// Create an array of proxy services to try
 			const proxies = [
 				// AllOrigins is a common CORS proxy
-				(url: string) =>
-					`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+				// (url: string) =>
+				// 	`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
 				// // Cors-Anywhere (needs header)
 				// (url: string) => `https://cors-anywhere.herokuapp.com/${url}`,
 				// // Alternative proxies
