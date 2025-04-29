@@ -3,5 +3,14 @@
 	"references": [
 		{ "path": "./tsconfig.app.json" },
 		{ "path": "./tsconfig.node.json" }
-	]
+	],
+	"compilerOptions": {
+		// ... other options ...
+		"module": "nodenext", // Or "nodenext"
+		"target": "es2022", // Or a recent ES version supported by Node 22.x
+		"outDir": "./dist", // Or wherever your compiled JS files go
+		"esModuleInterop": true, // Often needed when mixing import/require styles (though less so with nodenext)
+		"moduleResolution": "nodenext" // Recommended with "nodenext" module, or "node" with "esnext"
+		// ... other options ...
+	}
 }
