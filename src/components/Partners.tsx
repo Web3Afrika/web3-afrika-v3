@@ -58,11 +58,11 @@ const Partners = () => {
 								key={partner.id}
 								className="w-1/3 flex-shrink-0"
 							>
-								<div className="flex h-[270px] max-h-[64vw] w-[270px] max-w-[64vw] items-center justify-center rounded-sm bg-[#FAFAFA] p-8">
+								<div className="flex h-[194px] max-h-[46vw] w-[194px] max-w-[46vw] items-center justify-center rounded-sm bg-[#FAFAFA] p-[22px]">
 									<img
 										src={partner.logo}
 										alt={`${partner.name} logo`}
-										className="max-h-28 w-3/5 max-w-full object-contain"
+										className="max-h-[86px] w-3/5 max-w-full object-contain"
 									/>
 								</div>
 							</a>

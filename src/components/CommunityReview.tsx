@@ -66,7 +66,7 @@ export function CommunityReview() {
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
-			<Marquee className="[--duration:130s]">
+			<Marquee className="[--duration:100s]">
 				{thirdRow.map(review => (
 					<ReviewCard key={review.id} {...review} />
 				))}

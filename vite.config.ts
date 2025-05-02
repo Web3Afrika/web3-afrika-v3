@@ -1,20 +1,16 @@
-import react from "@vitejs/plugin-react";
-import { defineConfig, loadEnv } from "vite";
+// vite.config.js (or .ts)
+import react from "@vitejs/plugin-react"; // Assuming you're using React
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
-export default defineConfig(({ mode }) => {
-	const env = loadEnv(mode, process.cwd(), "");
-
-	return {
-		plugins: [react()],
-		server: {
-			proxy: {
-				"/discord": {
-					target: env.VITE_DISCORD_URL,
-					changeOrigin: true,
-					rewrite: path => path.replace(/^\/discord/, ""),
-				},
+export default defineConfig({
+	plugins: [react()], // Include other plugins you use
+	server: {
+		proxy: {
+			"/api": {
+				target: "http://localhost:3000", // Matches the port in your api-dev-server.ts
+				changeOrigin: true, // Correctly handles CORS issues by changing the origin header
+				rewrite: path => path.replace(/^\/api/, "/api"), // Ensures the /api path is included in the forwarded request URL
 			},
 		},
-	};
+	},
 });
