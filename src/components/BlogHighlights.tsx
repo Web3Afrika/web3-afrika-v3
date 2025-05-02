@@ -10,109 +10,10 @@ interface RSSItem {
 	title: string;
 	link: string;
 	date: string;
-	content: string; // Using cleaned content
+	content: string;
 	author?: string;
 	imageUrl?: string;
 }
-
-// --- Helper functions (extractContent, extractCDATA, cleanHtml) ---
-
-const extractContent = (xml: string, tag: string): string => {
-	const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "is");
-	const match = xml.match(regex);
-	return match && match[1] ? match[1].trim() : "";
-};
-
-const extractCDATA = (content: string): string => {
-	const cdataRegex = /<!\[CDATA\[([\s\S]*?)\]\]>/gs;
-	if (cdataRegex.test(content)) {
-		return content.replace(cdataRegex, "$1").trim();
-	}
-	return content.trim();
-};
-
-/**
- * Simple but effective HTML cleaner
- */
-const cleanHtml = (content: string) => {
-	if (!content) return "";
-
-	const decoded = content
-		.replace(/&lt;/g, "<")
-		.replace(/&gt;/g, ">")
-		.replace(/&quot;/g, '"')
-		.replace(/&amp;/g, "&")
-		.replace(/&#39;/g, "'")
-		.replace(/&nbsp;/g, " ");
-
-	let cleaned = decoded.replace(/<[^>]+>/g, " ");
-
-	cleaned = cleaned.replace(/\s+/g, " ").trim();
-
-	return cleaned;
-};
-
-// --- parseRssFeed function ---
-
-const parseRssFeed = (xmlString: string): RSSItem[] => {
-	try {
-		const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-		const items: RSSItem[] = [];
-		let match;
-
-		while ((match = itemRegex.exec(xmlString)) !== null) {
-			const itemContent = match[1];
-
-			const titleRaw = extractContent(itemContent, "title");
-			const title = extractCDATA(titleRaw);
-
-			const link = extractContent(itemContent, "link");
-			const guid = extractContent(itemContent, "guid");
-
-			const pubDate = extractContent(itemContent, "pubDate");
-
-			const creatorRaw = extractContent(itemContent, "dc:creator");
-			const author = extractCDATA(creatorRaw);
-
-			const contentRaw =
-				extractContent(itemContent, "content:encoded") ||
-				extractContent(itemContent, "description");
-			const contentCleaned = extractCDATA(contentRaw);
-
-			const imageUrl = extractContent(itemContent, "hashnode:coverImage");
-
-			items.push({
-				id: guid || link,
-				title: title || "Untitled Article",
-				link: link || "#",
-				date: pubDate,
-				content: contentCleaned,
-				author: author || "Unknown Author",
-				imageUrl: imageUrl,
-			});
-		}
-
-		if (items.length > 0) {
-			items.sort((a, b) => {
-				const dateA = new Date(a.date).getTime();
-				const dateB = new Date(b.date).getTime();
-
-				if (isNaN(dateA) && isNaN(dateB)) return 0;
-				if (isNaN(dateA)) return 1;
-				if (isNaN(dateB)) return -1;
-
-				return dateB - dateA;
-			});
-		}
-
-		return items;
-	} catch (error) {
-		console.error("Error parsing RSS feed:", error); // Keep error log for parsing failures
-		return [];
-	}
-};
-
-// --- BlogHighlights Component ---
 
 const BlogHighlights = ({
 	noDescription,
@@ -130,12 +31,12 @@ const BlogHighlights = ({
 			setIsLoading(true);
 			setError(null);
 
-			const apiUrl = "/api/rss";
+			const apiUrl = "https://redesign-review.vercel.app/api/rss";
 
 			try {
 				const response = await fetch(apiUrl, {
 					headers: {
-						Accept: "application/xml, text/xml, */*",
+						Accept: "application/json",
 					},
 					signal: AbortSignal.timeout(15000),
 				});
@@ -144,8 +45,7 @@ const BlogHighlights = ({
 					let errorData;
 					try {
 						errorData = await response.json();
-						// eslint-disable-next-line @typescript-eslint/no-unused-vars
-					} catch (e) {
+					} catch {
 						errorData = { message: response.statusText };
 					}
 					throw new Error(
@@ -153,28 +53,12 @@ const BlogHighlights = ({
 					);
 				}
 
-				const text = await response.text();
+				const articles = await response.json();
 
-				if (
-					!text.includes("<rss") &&
-					!text.includes("<channel") &&
-					!text.includes("<feed")
-				) {
-					throw new Error(
-						"Response from API route doesn't appear to be an RSS feed",
-					);
-				}
-
-				const parsedArticles = parseRssFeed(text);
-
-				if (parsedArticles.length === 0 && text.length > 100) {
-					setError(
-						"No articles found after parsing. The feed might be empty or parsing logic needs review.",
-					);
-				} else if (parsedArticles.length === 0) {
-					setError("No articles found after parsing the RSS feed.");
+				if (articles.length === 0) {
+					setError("No articles found in the RSS feed.");
 				} else {
-					setArticles(parsedArticles);
+					setArticles(articles);
 				}
 			} catch (error) {
 				console.error(`Error fetching or parsing RSS via API route: ${error}`); // Keep error log for fetch failures
@@ -236,12 +120,21 @@ const BlogHighlights = ({
 						</Link>
 					</div>
 				)}
-				<div className="rounded-lg bg-red-50 p-6 text-center dark:bg-red-900/20">
-					<p className="text-red-600 dark:text-red-400">
-						Unable to load articles: {error}
+				<div className="space-y-4 rounded-lg bg-red-50 p-6 py-16 text-center dark:bg-red-900/20">
+					<p className="text-lg text-red-600 dark:text-red-400">
+						Unable to load articles
 					</p>
-					<p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-						Please try again later or check the blog directly.
+					<p className="text-gray-600 dark:text-gray-400">
+						<span>Please try again later or </span>{" "}
+						<a
+							href="https://blog.web3afrika.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline"
+						>
+							check the blog
+						</a>{" "}
+						<span>directly.</span>
 					</p>
 				</div>
 			</section>
@@ -286,7 +179,7 @@ const BlogHighlights = ({
 	}
 
 	// --- Render Articles ---
-	const displayArticles = partial ? articles.slice(0, 4) : articles;
+	const displayArticles = partial ? articles.slice(0, 5) : articles;
 	const featuredArticle =
 		displayArticles.length > 0 ? displayArticles[0] : null;
 	const otherArticles = displayArticles.slice(1);
@@ -350,7 +243,7 @@ const BlogHighlights = ({
 								</a>
 							</h2>
 							<p className="mb-4 line-clamp-3 text-sm text-[#9E9E9E] md:text-base">
-								{cleanHtml(featuredArticle.content)}
+								{featuredArticle.content}
 							</p>
 							<span className="mb-5 block text-xs text-[#5D5D5D] dark:text-gray-400 md:text-sm">
 								By {featuredArticle.author}
@@ -412,7 +305,7 @@ const BlogHighlights = ({
 											</a>
 										</h2>
 										<p className="mb-3 line-clamp-2 text-xs text-[#9E9E9E] md:text-sm">
-											{cleanHtml(article.content)}
+											{article.content}
 										</p>
 									</div>
 
