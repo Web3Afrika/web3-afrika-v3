@@ -1,4 +1,5 @@
 import Ajoke from "./assets/team/ajoke.png";
+import Chinaza from "./assets/team/chinaza.png";
 import Eniola from "./assets/team/eniola.jpeg";
 import Goodness from "./assets/team/goodness.png";
 import Idris from "./assets/team/idris.jpeg";
@@ -54,11 +55,11 @@ import Celo from "./assets/partners/celo.png";
 import ChainIDE from "./assets/partners/Chain-IDE.jpg";
 import CmFest from "./assets/partners/cmfest.svg";
 import D_D from "./assets/partners/d_d.svg";
-import MorphLayer from "./assets/partners/MorphLayer.jpg";
 import Ethereum from "./assets/partners/ethereum.svg";
 import ETHitopia from "./assets/partners/ETHitopia.png";
 import Felbeth from "./assets/partners/Felbeth.png";
 import LagosBlockchainWeek from "./assets/partners/Lagos-Blockchain-Week.png";
+import MorphLayer from "./assets/partners/MorphLayer.jpg";
 import Oasis from "./assets/partners/oasis.png";
 import Polygon from "./assets/partners/polygon.svg";
 import Scroll from "./assets/partners/scroll.svg";
@@ -182,6 +183,13 @@ export const teamMembers = [
 		image: Israel,
 		twitterLink: "https://x.com/techwithmide",
 		linkedinLink: "https://www.linkedin.com/in/ogedengbe-israel-a93407219/",
+	},
+	{
+		name: "Chinaza",
+		role: "Product Designer",
+		image: Chinaza,
+		twitterLink: "https://x.com/IchekeChinaza",
+		linkedinLink: "https://www.linkedin.com/in/chinaza-i-329947a5/",
 	},
 ];
 
