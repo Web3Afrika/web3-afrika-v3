@@ -40,6 +40,19 @@ import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
 import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 import ConferenceImage9 from "./assets/conferences/conference-9.jpeg";
 
+import BuildAfrikaImage from "./assets/events/build-afrika.jpeg";
+import BuildAfrikaImage1 from "./assets/events/build-afrika1.jpeg";
+import BuildAfrikaImage10 from "./assets/events/build-afrika10.jpeg";
+import BuildAfrikaImage11 from "./assets/events/build-afrika11.jpeg";
+import BuildAfrikaImage2 from "./assets/events/build-afrika2.jpeg";
+import BuildAfrikaImage3 from "./assets/events/build-afrika3.jpeg";
+import BuildAfrikaImage4 from "./assets/events/build-afrika4.jpeg";
+import BuildAfrikaImage5 from "./assets/events/build-afrika5.jpeg";
+import BuildAfrikaImage6 from "./assets/events/build-afrika6.jpeg";
+import BuildAfrikaImage7 from "./assets/events/build-afrika7.jpeg";
+import BuildAfrikaImage8 from "./assets/events/build-afrika8.jpeg";
+import BuildAfrikaImage9 from "./assets/events/build-afrika9.jpeg";
+
 import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
 import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
 import FemaleAvatar3 from "./assets/avatar/femaleAvatar-3.png";
@@ -273,6 +286,21 @@ export const conferences = [
 	{ id: 10, src: ConferenceImage10 },
 	{ id: 11, src: ConferenceImage11 },
 	{ id: 12, src: ConferenceImage12 },
+];
+
+export const events = [
+	{ id: 1, src: BuildAfrikaImage },
+	{ id: 2, src: BuildAfrikaImage1 },
+	{ id: 3, src: BuildAfrikaImage2 },
+	{ id: 4, src: BuildAfrikaImage3 },
+	{ id: 5, src: BuildAfrikaImage4 },
+	{ id: 6, src: BuildAfrikaImage5 },
+	{ id: 7, src: BuildAfrikaImage6 },
+	{ id: 8, src: BuildAfrikaImage7 },
+	{ id: 9, src: BuildAfrikaImage8 },
+	{ id: 10, src: BuildAfrikaImage9 },
+	{ id: 11, src: BuildAfrikaImage10 },
+	{ id: 12, src: BuildAfrikaImage11 },
 ];
 
 export const partners = [

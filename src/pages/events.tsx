@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AnimatedText } from "../components/animated-text";
 import { FadeIn } from "../components/FadeIn";
 import { ArrowRight } from "../components/icons";
-import { conferences, hackathons, upcomingEvents } from "../constants";
+import { conferences, events, hackathons, upcomingEvents } from "../constants";
 import Layout from "../layout";
 
 export default function App() {
@@ -93,6 +93,45 @@ export default function App() {
 							loop={true}
 						>
 							{conferences.map(event => (
+								<SwiperSlide key={event.id} className="w-fit">
+									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
+										<img
+											src={event.src}
+											alt={`Event ${event.id}`}
+											className="h-full w-full rounded-lg object-cover"
+										/>
+									</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
+				</FadeIn>
+				<AnimatedText
+					text={["Events"]}
+					once
+					className="mb-4 text-base text-[#292929] dark:text-[#B0B0B0] md:text-3xl"
+				/>
+				<FadeIn className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8">
+					<h2 className="mb-2 text-base font-medium text-[#292929] dark:text-white md:text-3xl">
+						Build Afrika Event
+					</h2>
+					<p className="max-w-4xl text-sm text-[#9E9E9E] md:text-lg">
+						This event was designed to empower builders with the skills,
+						knowledge, and connections needed to make a meaningful impact on the
+						Arbitrum ecosystem.
+					</p>
+					<div className="mt-4 md:mt-6">
+						<Swiper
+							slidesPerView={"auto"}
+							spaceBetween={20}
+							autoplay={{
+								delay: 2500,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay]}
+							loop={true}
+						>
+							{events.map(event => (
 								<SwiperSlide key={event.id} className="w-fit">
 									<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
 										<img
