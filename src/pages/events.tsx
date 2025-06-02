@@ -118,7 +118,7 @@ export default function App() {
 					<p className="max-w-4xl text-sm text-[#9E9E9E] md:text-lg">
 						This event was designed to empower builders with the skills,
 						knowledge, and connections needed to make a meaningful impact on the
-						Arbitrum ecosystem.
+						web3 ecosystem.
 					</p>
 					<div className="mt-4 md:mt-6">
 						<Swiper
