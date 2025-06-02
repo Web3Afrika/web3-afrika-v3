@@ -40,7 +40,7 @@ import ConferenceImage7 from "./assets/conferences/conference-7.jpeg";
 import ConferenceImage8 from "./assets/conferences/conference-8.jpeg";
 import ConferenceImage9 from "./assets/conferences/conference-9.jpeg";
 
-import BuildAfrikaImage from "./assets/events/build-afrika.jpeg";
+import BuildAfrikaImage0 from "./assets/events/build-afrika.jpeg";
 import BuildAfrikaImage1 from "./assets/events/build-afrika1.jpeg";
 import BuildAfrikaImage10 from "./assets/events/build-afrika10.jpeg";
 import BuildAfrikaImage11 from "./assets/events/build-afrika11.jpeg";
@@ -289,7 +289,7 @@ export const conferences = [
 ];
 
 export const events = [
-	{ id: 1, src: BuildAfrikaImage },
+	{ id: 1, src: BuildAfrikaImage0 },
 	{ id: 2, src: BuildAfrikaImage1 },
 	{ id: 3, src: BuildAfrikaImage2 },
 	{ id: 4, src: BuildAfrikaImage3 },
