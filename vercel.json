@@ -16,5 +16,12 @@
 				}
 			]
 		}
+	],
+	"redirects": [
+		{
+			"source": "/workshop-interest",
+			"destination": "https://docs.google.com/forms/d/1UBgNbERexuKsxU30v-0hInA9R7HZ9JSjqoWN1gdGpQI/viewform",
+			"permanent": true
+		}
 	]
 }
