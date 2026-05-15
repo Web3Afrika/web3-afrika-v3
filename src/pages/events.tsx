@@ -27,7 +27,7 @@ export default function App() {
 					/>
 				</div>
 
-				{majorEventsList.map((eventItem) => (
+				{majorEventsList.map(eventItem => (
 					<FadeIn
 						key={eventItem.id}
 						className="mb-14 bg-[#FAFAFA] p-4 dark:bg-black md:mb-24 md:p-8"
@@ -49,7 +49,7 @@ export default function App() {
 								modules={[Autoplay]}
 								loop={true}
 							>
-								{eventItem.images.map((img) => (
+								{eventItem.images.map(img => (
 									<SwiperSlide key={img.id} className="w-fit">
 										<div className="size-48 rounded-sm md:size-72 lg:size-[375px]">
 											<img

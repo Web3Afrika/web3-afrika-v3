@@ -54,6 +54,7 @@ import BuildAfrikaImage8 from "./assets/events/build-afrika8.jpeg";
 import BuildAfrikaImage9 from "./assets/events/build-afrika9.jpeg";
 
 import MonadImage1 from "./assets/events/Monad_1.jpg";
+import MonadImage10 from "./assets/events/Monad_10.jpg";
 import MonadImage2 from "./assets/events/Monad_2.jpg";
 import MonadImage3 from "./assets/events/Monad_3.jpg";
 import MonadImage4 from "./assets/events/Monad_4.jpg";
@@ -62,9 +63,15 @@ import MonadImage6 from "./assets/events/Monad_6.jpg";
 import MonadImage7 from "./assets/events/Monad_7.jpg";
 import MonadImage8 from "./assets/events/Monad_8.jpg";
 import MonadImage9 from "./assets/events/Monad_9.jpg";
-import MonadImage10 from "./assets/events/Monad_10.jpg";
 
+import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
+import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
+import FemaleAvatar3 from "./assets/avatar/femaleAvatar-3.png";
+import MaleAvatar1 from "./assets/avatar/maleAvatar-1.png";
+import MaleAvatar2 from "./assets/avatar/maleAvatar-2.png";
+import MaleAvatar3 from "./assets/avatar/maleAvatar-3.png";
 import MantleImage1 from "./assets/events/WEB3AfrikaXMantle-1.jpg";
+import MantleImage10 from "./assets/events/WEB3AfrikaXMantle-10.jpg";
 import MantleImage2 from "./assets/events/WEB3AfrikaXMantle-2.jpg";
 import MantleImage3 from "./assets/events/WEB3AfrikaXMantle-3.jpg";
 import MantleImage4 from "./assets/events/WEB3AfrikaXMantle-4.jpg";
@@ -73,13 +80,6 @@ import MantleImage6 from "./assets/events/WEB3AfrikaXMantle-6.jpg";
 import MantleImage7 from "./assets/events/WEB3AfrikaXMantle-7.jpg";
 import MantleImage8 from "./assets/events/WEB3AfrikaXMantle-8.jpg";
 import MantleImage9 from "./assets/events/WEB3AfrikaXMantle-9.jpg";
-import MantleImage10 from "./assets/events/WEB3AfrikaXMantle-10.jpg";
-import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
-import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
-import FemaleAvatar3 from "./assets/avatar/femaleAvatar-3.png";
-import MaleAvatar1 from "./assets/avatar/maleAvatar-1.png";
-import MaleAvatar2 from "./assets/avatar/maleAvatar-2.png";
-import MaleAvatar3 from "./assets/avatar/maleAvatar-3.png";
 
 import Akindo from "./assets/partners/akindo.svg";
 import Arbitrum from "./assets/partners/arbitrum.svg";
