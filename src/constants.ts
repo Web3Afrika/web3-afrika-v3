@@ -53,6 +53,27 @@ import BuildAfrikaImage7 from "./assets/events/build-afrika7.jpeg";
 import BuildAfrikaImage8 from "./assets/events/build-afrika8.jpeg";
 import BuildAfrikaImage9 from "./assets/events/build-afrika9.jpeg";
 
+import MonadImage1 from "./assets/events/Monad_1.jpg";
+import MonadImage2 from "./assets/events/Monad_2.jpg";
+import MonadImage3 from "./assets/events/Monad_3.jpg";
+import MonadImage4 from "./assets/events/Monad_4.jpg";
+import MonadImage5 from "./assets/events/Monad_5.jpg";
+import MonadImage6 from "./assets/events/Monad_6.jpg";
+import MonadImage7 from "./assets/events/Monad_7.jpg";
+import MonadImage8 from "./assets/events/Monad_8.jpg";
+import MonadImage9 from "./assets/events/Monad_9.jpg";
+import MonadImage10 from "./assets/events/Monad_10.jpg";
+
+import MantleImage1 from "./assets/events/WEB3AfrikaXMantle-1.jpg";
+import MantleImage2 from "./assets/events/WEB3AfrikaXMantle-2.jpg";
+import MantleImage3 from "./assets/events/WEB3AfrikaXMantle-3.jpg";
+import MantleImage4 from "./assets/events/WEB3AfrikaXMantle-4.jpg";
+import MantleImage5 from "./assets/events/WEB3AfrikaXMantle-5.jpg";
+import MantleImage6 from "./assets/events/WEB3AfrikaXMantle-6.jpg";
+import MantleImage7 from "./assets/events/WEB3AfrikaXMantle-7.jpg";
+import MantleImage8 from "./assets/events/WEB3AfrikaXMantle-8.jpg";
+import MantleImage9 from "./assets/events/WEB3AfrikaXMantle-9.jpg";
+import MantleImage10 from "./assets/events/WEB3AfrikaXMantle-10.jpg";
 import FemaleAvatar1 from "./assets/avatar/femaleAvatar-1.png";
 import FemaleAvatar2 from "./assets/avatar/femaleAvatar-2.png";
 import FemaleAvatar3 from "./assets/avatar/femaleAvatar-3.png";
@@ -301,6 +322,69 @@ export const events = [
 	{ id: 10, src: BuildAfrikaImage9 },
 	{ id: 11, src: BuildAfrikaImage10 },
 	{ id: 12, src: BuildAfrikaImage11 },
+];
+
+export const monadEvents = [
+	{ id: 1, src: MonadImage1 },
+	{ id: 2, src: MonadImage2 },
+	{ id: 3, src: MonadImage3 },
+	{ id: 4, src: MonadImage4 },
+	{ id: 5, src: MonadImage5 },
+	{ id: 6, src: MonadImage6 },
+	{ id: 7, src: MonadImage7 },
+	{ id: 8, src: MonadImage8 },
+	{ id: 9, src: MonadImage9 },
+	{ id: 10, src: MonadImage10 },
+];
+
+export const mantleEvents = [
+	{ id: 1, src: MantleImage1 },
+	{ id: 2, src: MantleImage2 },
+	{ id: 3, src: MantleImage3 },
+	{ id: 4, src: MantleImage4 },
+	{ id: 5, src: MantleImage5 },
+	{ id: 6, src: MantleImage6 },
+	{ id: 7, src: MantleImage7 },
+	{ id: 8, src: MantleImage8 },
+	{ id: 9, src: MantleImage9 },
+	{ id: 10, src: MantleImage10 },
+];
+export const majorEventsList = [
+	{
+		id: 1,
+		title: "Web3 Afrika Builders Event + Arbitrum",
+		description:
+			"This event was designed to empower builders with the skills, knowledge, and connections needed to make a meaningful impact on the Arbitrum ecosystem.",
+		images: hackathons,
+	},
+	{
+		id: 2,
+		title: "Web3 Afrika + Scroll (Scroll Community)",
+		description:
+			"This event was designed to empower builders with the skills, knowledge, and connections needed to make a meaningful impact on the Scroll ecosystem.",
+		images: conferences,
+	},
+	{
+		id: 3,
+		title: "Build Afrika Event",
+		description:
+			"This event was designed to empower builders with the skills, knowledge, and connections needed to make a meaningful impact on the web3 ecosystem.",
+		images: events,
+	},
+	{
+		id: 4,
+		title: "Monad Blitz x Web3Afrika",
+		description:
+			"An exciting collaboration between Monad and Web3Afrika to accelerate developer adoption and foster innovation in the Monad ecosystem.",
+		images: monadEvents,
+	},
+	{
+		id: 5,
+		title: "Web3Afrika x Mantle",
+		description:
+			"A collaborative event designed to onboard and support builders on the Mantle network, providing them with necessary skills and connections.",
+		images: mantleEvents,
+	},
 ];
 
 export const partners = [
