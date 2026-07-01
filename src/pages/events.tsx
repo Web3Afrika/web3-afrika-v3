@@ -3,12 +3,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AnimatedText } from "../components/animated-text";
 import { FadeIn } from "../components/FadeIn";
 import { ArrowRight } from "../components/icons";
+import JsonLd from "../components/JsonLd";
+import Seo from "../components/Seo";
 import { majorEventsList, upcomingEvents } from "../constants";
 import Layout from "../layout";
+import { breadcrumbSchema, eventsListSchema } from "../lib/schema";
 
-export default function App() {
+export default function Events() {
 	return (
 		<Layout>
+			<Seo
+				title="Web3 Afrika Events — Workshops, Hackathons & Summits"
+				description="Explore Web3 Afrika's hackathons, conferences, workshops, and community events empowering African builders across the continent."
+				path="/events"
+			/>
+			<JsonLd
+				data={[
+					eventsListSchema(),
+					breadcrumbSchema([
+						{ name: "Home", path: "/" },
+						{ name: "Events", path: "/events" },
+					]),
+				]}
+			/>
 			<section className="container mx-auto mt-4 w-11/12 md:mt-40">
 				<div className="mb-3 space-y-8 text-start md:mb-8 md:px-5">
 					<AnimatedText

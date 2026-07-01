@@ -161,7 +161,7 @@ const Modal = ({
 					<div className="flex flex-col gap-2 sm:flex-row">
 						<input
 							type="text"
-							placeholder="0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766"
+							readOnly
 							value="0x4BaF3334dF86FB791A6DF6Cf4210C685ab6A1766"
 							className="flex-1 rounded-lg border border-gray-200 bg-transparent p-2 text-gray-400"
 						/>

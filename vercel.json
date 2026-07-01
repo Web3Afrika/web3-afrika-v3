@@ -1,5 +1,7 @@
 {
-	"rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+	"installCommand": "npm ci",
+	"cleanUrls": true,
+	"trailingSlash": false,
 	"headers": [
 		{
 			"source": "/api/(.*)",

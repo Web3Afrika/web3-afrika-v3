@@ -1,19 +1,10 @@
 // @ts-expect-error eslint doesn't like the import of the font
 import "@fontsource-variable/archivo";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import "swiper/swiper-bundle.css";
-import App from "./App.tsx";
-import { ThemeProvider } from "./components/ThemeToggle.tsx";
+import { ViteReactSSG } from "vite-react-ssg";
+import routes from "./App";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
-	<StrictMode>
-		<BrowserRouter>
-			<ThemeProvider>
-				<App />
-			</ThemeProvider>
-		</BrowserRouter>
-	</StrictMode>,
-);
+// vite-react-ssg drives the app: it calls this on the client (hydrate) and
+// during the build (renderToString for each route) to emit static HTML.
+export const createRoot = ViteReactSSG({ routes });

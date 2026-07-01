@@ -1,0 +1,149 @@
+{
+  "fetchedAt": "2026-07-01T13:11:37.216Z",
+  "items": [
+    {
+      "title": "Accelerating Action for Women in Web3",
+      "link": "https://blog.web3afrika.com/accelerating-action-for-women-in-web3",
+      "pubDate": "Wed, 18 Mar 2026 10:05:42 GMT",
+      "author": "Web3Afrika",
+      "description": "This year’s International Women’s Day theme, “Accelerate Action,” is a reminder that progress toward gender equity requires intentional effort, bold leadership, and collective responsibility. In emerg",
+      "image": "https://cdn.hashnode.com/uploads/covers/5f517da11ed5446c783c2617/fb9d914d-68a5-4f19-b964-edd46c131aea.png"
+    },
+    {
+      "title": "Wallets Are the Front Door to Web3: Let’s Make Them Welcoming",
+      "link": "https://blog.web3afrika.com/wallets-are-the-front-door-to-web3-lets-make-them-welcoming",
+      "pubDate": "Fri, 11 Jul 2025 00:21:22 GMT",
+      "author": "Omotejowho Mentie",
+      "description": "Here's the thing about Web3: we keep talking about scalability, security, and decentralization, but most people never even make it past the first step. They try to set up a crypto wallet, get overwhelmed, and... give up.",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1752325247781/1c69f6fb-4a1e-429a-b075-0807c069de1e.png"
+    },
+    {
+      "title": "Deploying and Interacting with EVM Contracts",
+      "link": "https://blog.web3afrika.com/deploying-and-interacting-with-evm-contracts",
+      "pubDate": "Sat, 15 Mar 2025 17:24:16 GMT",
+      "author": "Ukeje Chukwemeriwo Goodness",
+      "description": "Writing smart contract code is only the beginning if you’re trying to build anything onchain. You’ll need to deploy the contract onchain where you can interact with it and build further. Deploying smart contracts on EVM ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1742048269961/6fbfa853-fcc3-4b16-bd71-0cb0da34a623.png"
+    },
+    {
+      "title": "Getting Started with Solidity, All you need to know (A Step by Step Guide).",
+      "link": "https://blog.web3afrika.com/getting-started-with-solidity-all-you-need-to-know-a-step-by-step-guide",
+      "pubDate": "Sat, 06 May 2023 20:18:21 GMT",
+      "author": "Vinyl Davyl",
+      "description": "Solidity is a high-level programming language that is specifically used to write smart contracts on the Ethereum blockchain. Smart contracts are self-executing programs that enforce the terms of an agreement between two ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1742047986885/b6720106-2e52-49ff-88b1-f0cb39127d08.png"
+    },
+    {
+      "title": "Demystifying Consensus Mechanisms: A Comprehensive Guide",
+      "link": "https://blog.web3afrika.com/demystifying-consensus-mechanisms-a-comprehensive-guide",
+      "pubDate": "Sat, 06 May 2023 20:12:04 GMT",
+      "author": "Franklin Ohaegbulam",
+      "description": "The consensus mechanism is a crucial concept in the world of blockchain technology, and it can vary widely depending on the specific use case or application. In centralized systems, a single administrator wields control ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1742047930174/8562e7fa-05ac-4e9a-acbf-664227abe41e.png"
+    },
+    {
+      "title": "Why is the Hard Drive for Blockchain and the Internet known as IPFS?",
+      "link": "https://blog.web3afrika.com/why-is-the-hard-drive-for-blockchain-and-the-internet-known-as-ipfs",
+      "pubDate": "Sat, 06 May 2023 20:08:40 GMT",
+      "author": "Vinyl Davyl",
+      "description": "Introduction In the world of blockchain, data storage has always been a challenge. Traditional centralized systems often face several limitations related to security, privacy, scalability, and censorship. A decentralized",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1742048140413/c5897e01-6c65-4ee9-979f-a76c0a8c817e.png"
+    },
+    {
+      "title": "A Dive into the World of Decentralized Finance in Africa",
+      "link": "https://blog.web3afrika.com/a-dive-into-the-world-of-decentralized-finance-in-africa",
+      "pubDate": "Wed, 22 Feb 2023 13:28:24 GMT",
+      "author": "Eriola Ogunsina",
+      "description": "Decentralized finance (DeFi) is a rapidly growing sector of the financial world with a global impact, including in Africa. DeFi seeks to bring financial services to the masses through blockchain tech and decentralized ne",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1742048031936/824e4358-a14e-4547-9262-f66afb73305f.png"
+    },
+    {
+      "title": "Exploring DeSci:  24 DeSci DAO's doing amazing things",
+      "link": "https://blog.web3afrika.com/exploring-desci-24-desci-daos-doing-amazing-things",
+      "pubDate": "Mon, 24 Oct 2022 10:48:38 GMT",
+      "author": "Chinonso Anyaehie",
+      "description": "Just 3 months ago, I never knew something like decentralized science existed. I got to know that something as such existed after joining VitaDAO. Meanwhile, I only joined VitaDAO because I was fascinated by their mission",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1666608371119/ro_DAIVR4.png"
+    },
+    {
+      "title": "5 Benefits of Technical Writing for Developers",
+      "link": "https://blog.web3afrika.com/5-benefits-of-technical-writing-for-developers",
+      "pubDate": "Mon, 10 Oct 2022 08:43:02 GMT",
+      "author": "Dauda Lawal",
+      "description": "Introduction Technical writing is not a career for the faint-hearted. Technical writing can be challenging, time-consuming, and, at times, even frightening. The mere thought of spending your day writing about technical s",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1665153711592/7v7N6FMYd.png"
+    },
+    {
+      "title": "Understanding solidity",
+      "link": "https://blog.web3afrika.com/understanding-solidity",
+      "pubDate": "Thu, 06 Oct 2022 09:46:52 GMT",
+      "author": "Akintomiwa",
+      "description": "Block greetings, great builders. As per person wey dey familiar with this web 3 space, you go don hear about this term \"solidity\". For this article, I go like explain wetin he be. The first time wey I go search for the m",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1657114655564/jeFLUYi3Y.png"
+    },
+    {
+      "title": "Array struct in solidity",
+      "link": "https://blog.web3afrika.com/array-struct-in-solidity",
+      "pubDate": "Thu, 06 Oct 2022 09:32:43 GMT",
+      "author": "Michael Fawole",
+      "description": "In this article, I will be explaining explicitly what we call array struct in solidity and how they work in solidity coding. Before we talk about array-struct, you should know what array is and what struct is. What is an",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1664832309211/A6v-ROh_0.png"
+    },
+    {
+      "title": "Exploring Ethereum ERC Standards",
+      "link": "https://blog.web3afrika.com/exploring-ethereum-erc-standards",
+      "pubDate": "Mon, 26 Sep 2022 10:04:13 GMT",
+      "author": "Victor Fawole",
+      "description": "After bitcoin, everyone knows that Ethereum is the one that follows, and it is regarded as the mother of smart contracts. This article is going to increase your understanding of Ethereum standards. As a developer, it is ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1663370072042/xXvWCPNvp.jpg"
+    },
+    {
+      "title": "What Is Ethereum Merge and The Major Misconceptions?",
+      "link": "https://blog.web3afrika.com/what-is-ethereum-merge-and-the-major-misconceptions",
+      "pubDate": "Thu, 25 Aug 2022 20:42:34 GMT",
+      "author": "Victor Fawole",
+      "description": "Introduction After the EIP-1559 upgrade last year, the entire ethereum ecosystem has been longing to see the Ethereum upgrade called \"The Merge\". A lot of people are already speculating that the upgrade will make the pri",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1661422003806/cQdtH40vZ.png"
+    },
+    {
+      "title": "Smart contracts and the Ethereum blockchain",
+      "link": "https://blog.web3afrika.com/smart-contracts-and-the-ethereum-blockchain",
+      "pubDate": "Mon, 15 Aug 2022 18:46:02 GMT",
+      "author": "Oreoluwa Akinola",
+      "description": "Introduction The Ethereum blockchain is very distinct as it is the first to implement smart contracts, which changed the blockchain use cases with the invention of decentralized apps, digital agreements, token creations,",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659655355410/dk2pX42VF.jpg"
+    },
+    {
+      "title": "The Complete Guide to Stablecoins",
+      "link": "https://blog.web3afrika.com/the-complete-guide-to-stablecoins",
+      "pubDate": "Mon, 01 Aug 2022 15:21:04 GMT",
+      "author": "Chinonso Anyaehie",
+      "description": "There are a lot of misunderstandings between Bitcoin and Stablecoin. The latter is more stable in value and less susceptible to market value fluctuations. On the other hand, Bitcoins are highly volatile in market value, ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659367044349/3Pfrz4xDQ.jpg"
+    },
+    {
+      "title": "What is Web 3.0: A Layman's Guide to the Decentralized Web",
+      "link": "https://blog.web3afrika.com/what-is-web-30-a-laymans-guide-to-the-decentralized-web",
+      "pubDate": "Fri, 29 Jul 2022 15:30:33 GMT",
+      "author": "Chinonso Anyaehie",
+      "description": "Many people still believe that Web3 is just for high-tech people, which alienates laypeople and discourages them from getting involved. The Web3 isn't just for developers; it also needs the layperson to complete the ecos",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659107920559/qLAwPtUHB.jpg"
+    },
+    {
+      "title": "Wetin be Web3 ?",
+      "link": "https://blog.web3afrika.com/wetin-be-web3",
+      "pubDate": "Mon, 20 Jun 2022 16:04:57 GMT",
+      "author": "Akintomiwa",
+      "description": "If you dey this tech space, you go don dey hear about \"web 3\" upandown but you fit no sabi wetin he mean abi you fit dey confused about wetin e be. For here, I go try explain wetin Web 3 be in pidgin and I hope say you g",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1655740524732/PKhOt5VO3.jpeg"
+    },
+    {
+      "title": "How To Create Your Own ERC20 Token In 30 Mins + Contract Verification",
+      "link": "https://blog.web3afrika.com/how-to-create-your-own-erc20-token-in-30-mins-contract-verification",
+      "pubDate": "Mon, 20 Jun 2022 15:55:12 GMT",
+      "author": "Pamilerin",
+      "description": "Introduction Have you ever heard of tokens like Shiba Inu, Dai, and Usdt listed on popular exchanges and wondered how they were created? Or probably just getting started with smart contract development. In this guide, we",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1655400986248/BshCtRdUE.png"
+    }
+  ]
+}
