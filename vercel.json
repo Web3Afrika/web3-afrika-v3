@@ -1,4 +1,5 @@
 {
+	"installCommand": "npm ci",
 	"cleanUrls": true,
 	"trailingSlash": false,
 	"headers": [
