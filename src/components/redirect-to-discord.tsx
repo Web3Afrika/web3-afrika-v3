@@ -7,7 +7,8 @@ export const RedirectToDiscord = () => {
 	const discordUrl = import.meta.env.VITE_DISCORD_URL as string | undefined;
 
 	useEffect(() => {
-		if (discordUrl) window.location.href = discordUrl;
+		// replace() so /discord isn't kept in history (avoids a Back-button loop).
+		if (discordUrl) window.location.replace(discordUrl);
 	}, [discordUrl]);
 
 	return (

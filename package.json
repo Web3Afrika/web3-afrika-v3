@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite-react-ssg dev --host",
-		"build": "npm run prebuild && tsc -b && vite-react-ssg build",
+		"build": "tsc -b && vite-react-ssg build",
 		"prebuild": "node scripts/fetch-blog-feed.mjs && node scripts/generate-sitemap.mjs",
 		"lint": "eslint .",
 		"preview": "vite preview --outDir dist",
