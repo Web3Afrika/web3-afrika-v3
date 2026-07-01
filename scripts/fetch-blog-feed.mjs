@@ -10,7 +10,9 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const FEED_URL = "https://blog.web3afrika.com/rss.xml";
-const LIMIT = 12;
+// Keep this >= the number of posts the site's RSS API returns, so every
+// displayed post has a snapshot cover image to fall back on (see BlogHighlights).
+const LIMIT = 20;
 const OUT = join(
 	dirname(fileURLToPath(import.meta.url)),
 	"..",

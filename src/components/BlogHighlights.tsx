@@ -29,6 +29,15 @@ const snapshotArticles: RSSItem[] = blogFeed.items.map(item => ({
 	imageUrl: item.image || undefined,
 }));
 
+// The site's RSS API currently returns posts without cover images, so fall back
+// to the build-time snapshot's images (pulled directly from Hashnode) keyed by
+// post link.
+const snapshotImageByLink = new Map(
+	snapshotArticles
+		.filter(a => a.imageUrl)
+		.map(a => [a.link, a.imageUrl as string]),
+);
+
 const BlogHighlights = ({
 	noDescription,
 	partial,
@@ -71,7 +80,12 @@ const BlogHighlights = ({
 				const fetched: RSSItem[] = await response.json();
 
 				if (fetched.length > 0) {
-					setArticles(fetched);
+					// Backfill cover images from the snapshot when the API omits them.
+					const withImages = fetched.map(a => ({
+						...a,
+						imageUrl: a.imageUrl || snapshotImageByLink.get(a.link),
+					}));
+					setArticles(withImages);
 				} else if (snapshotArticles.length === 0) {
 					setError("No articles found in the RSS feed.");
 				}

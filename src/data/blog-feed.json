@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-01T11:27:39.476Z",
+  "fetchedAt": "2026-07-01T13:11:37.216Z",
   "items": [
     {
       "title": "Accelerating Action for Women in Web3",
@@ -96,6 +96,54 @@
       "author": "Victor Fawole",
       "description": "After bitcoin, everyone knows that Ethereum is the one that follows, and it is regarded as the mother of smart contracts. This article is going to increase your understanding of Ethereum standards. As a developer, it is ",
       "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1663370072042/xXvWCPNvp.jpg"
+    },
+    {
+      "title": "What Is Ethereum Merge and The Major Misconceptions?",
+      "link": "https://blog.web3afrika.com/what-is-ethereum-merge-and-the-major-misconceptions",
+      "pubDate": "Thu, 25 Aug 2022 20:42:34 GMT",
+      "author": "Victor Fawole",
+      "description": "Introduction After the EIP-1559 upgrade last year, the entire ethereum ecosystem has been longing to see the Ethereum upgrade called \"The Merge\". A lot of people are already speculating that the upgrade will make the pri",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1661422003806/cQdtH40vZ.png"
+    },
+    {
+      "title": "Smart contracts and the Ethereum blockchain",
+      "link": "https://blog.web3afrika.com/smart-contracts-and-the-ethereum-blockchain",
+      "pubDate": "Mon, 15 Aug 2022 18:46:02 GMT",
+      "author": "Oreoluwa Akinola",
+      "description": "Introduction The Ethereum blockchain is very distinct as it is the first to implement smart contracts, which changed the blockchain use cases with the invention of decentralized apps, digital agreements, token creations,",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659655355410/dk2pX42VF.jpg"
+    },
+    {
+      "title": "The Complete Guide to Stablecoins",
+      "link": "https://blog.web3afrika.com/the-complete-guide-to-stablecoins",
+      "pubDate": "Mon, 01 Aug 2022 15:21:04 GMT",
+      "author": "Chinonso Anyaehie",
+      "description": "There are a lot of misunderstandings between Bitcoin and Stablecoin. The latter is more stable in value and less susceptible to market value fluctuations. On the other hand, Bitcoins are highly volatile in market value, ",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659367044349/3Pfrz4xDQ.jpg"
+    },
+    {
+      "title": "What is Web 3.0: A Layman's Guide to the Decentralized Web",
+      "link": "https://blog.web3afrika.com/what-is-web-30-a-laymans-guide-to-the-decentralized-web",
+      "pubDate": "Fri, 29 Jul 2022 15:30:33 GMT",
+      "author": "Chinonso Anyaehie",
+      "description": "Many people still believe that Web3 is just for high-tech people, which alienates laypeople and discourages them from getting involved. The Web3 isn't just for developers; it also needs the layperson to complete the ecos",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1659107920559/qLAwPtUHB.jpg"
+    },
+    {
+      "title": "Wetin be Web3 ?",
+      "link": "https://blog.web3afrika.com/wetin-be-web3",
+      "pubDate": "Mon, 20 Jun 2022 16:04:57 GMT",
+      "author": "Akintomiwa",
+      "description": "If you dey this tech space, you go don dey hear about \"web 3\" upandown but you fit no sabi wetin he mean abi you fit dey confused about wetin e be. For here, I go try explain wetin Web 3 be in pidgin and I hope say you g",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1655740524732/PKhOt5VO3.jpeg"
+    },
+    {
+      "title": "How To Create Your Own ERC20 Token In 30 Mins + Contract Verification",
+      "link": "https://blog.web3afrika.com/how-to-create-your-own-erc20-token-in-30-mins-contract-verification",
+      "pubDate": "Mon, 20 Jun 2022 15:55:12 GMT",
+      "author": "Pamilerin",
+      "description": "Introduction Have you ever heard of tokens like Shiba Inu, Dai, and Usdt listed on popular exchanges and wondered how they were created? Or probably just getting started with smart contract development. In this guide, we",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1655400986248/BshCtRdUE.png"
     }
   ]
 }
