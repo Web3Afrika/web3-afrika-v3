@@ -33,7 +33,7 @@ Twitter tags per route.
 **Answer-shaped content (for AI).**
 
 - FAQ section: [src/components/Faq.tsx](src/components/Faq.tsx) + [src/data/faqs.ts](src/data/faqs.ts)
-- Founder + impact section: [src/components/FounderImpact.tsx](src/components/FounderImpact.tsx)
+- Founder & team are exposed to AI via JSON-LD (`Person` + `Organization.member`) and [public/llms.txt](public/llms.txt) — intentionally not a visible on-page founder section.
 
 **Crawler / AI files** (in `public/`, served at the domain root):
 
@@ -92,7 +92,7 @@ falls back to the snapshot if that call fails.
    - Community numbers (currently 12,500+ members, 2,100+ developers, 7K+ at events —
      from [src/components/stat-data.tsx](src/components/stat-data.tsx) and [src/data/faqs.ts](src/data/faqs.ts)).
    - Founding year (not yet stated — add if you want it in the Organization schema).
-   - Any partner/ecosystem names claimed in [src/data/faqs.ts](src/data/faqs.ts) and [src/components/FounderImpact.tsx](src/components/FounderImpact.tsx), backed by the partner list in [src/constants.ts](src/constants.ts).
+   - Any partner/ecosystem names claimed in [src/data/faqs.ts](src/data/faqs.ts) and [public/llms.txt](public/llms.txt), backed by the partner list in [src/constants.ts](src/constants.ts).
 
 6. **Verify social profiles link back** to `web3afrika.com` (X, LinkedIn company page,
    YouTube, Discord, Hashnode). Bidirectional links strengthen entity trust. Update

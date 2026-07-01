@@ -11,6 +11,23 @@
 - **Partners & ecosystems:** Arbitrum, Polygon, Scroll, Celo, Ethereum, Developer DAO, Web3Bridge, and many others.
 - **Region:** Pan-African, with in-person events in hubs such as Lagos, Nigeria.
 
+## Team
+Web3 Afrika is built by a distributed pan-African team:
+- Idris Olubisi (Olanetsoft) — Founder
+- Tony Olendo — Co-founder
+- Ajoke Asunmonu — Partnership Lead
+- Jennifer Echenim — Tech Lead
+- Isaac Zara — Design Lead
+- Eniola Mercy — Community Manager
+- Oluwabamikemi — Community Manager
+- Joshua Omobola — Developer Relations
+- Kanayo Uzo — Experience Designer
+- Goodness — Content Creator
+- Esther E — Video Content Creator
+- Abdulqudus Ayoola — Developer
+- Ogedengbe Israel — Developer
+- Chinaza — Product Designer
+
 ## Key pages
 - [Home](https://www.web3afrika.com/): Overview of Web3 Afrika and its mission.
 - [About](https://www.web3afrika.com/about): Founder, team, mission and vision, impact, and FAQ.

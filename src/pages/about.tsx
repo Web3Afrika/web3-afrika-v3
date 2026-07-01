@@ -1,7 +1,6 @@
 import AboutOverview from "../components/AboutOverview";
 import CommunitySection from "../components/Community";
 import Faq from "../components/Faq";
-import FounderImpact from "../components/FounderImpact";
 import JsonLd from "../components/JsonLd";
 import PurposeSection from "../components/PurposeSection";
 import Seo from "../components/Seo";
@@ -30,7 +29,6 @@ export default function About() {
 			/>
 			<AboutOverview />
 			<Stats />
-			<FounderImpact />
 			<PurposeSection />
 			<TeamSection />
 			<Faq />
