@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Local agent / tooling config (not part of the project)
+.claude/
+.midnight-expert/
