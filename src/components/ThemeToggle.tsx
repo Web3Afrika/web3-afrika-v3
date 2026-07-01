@@ -9,41 +9,38 @@ const ThemeContext = createContext({
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-	const [darkMode, setDarkMode] = useState(() => {
-		if (typeof window !== "undefined") {
-			const savedTheme = localStorage.getItem("theme");
-			if (savedTheme) {
-				return savedTheme === "dark";
-			}
-			return true;
-		}
-		return true;
-	});
+	// Deterministic initial value: matches the server render AND the inline
+	// theme script in index.html (which sets `<html class="dark">` before paint,
+	// defaulting to dark). The visitor's saved preference is reconciled on mount,
+	// so the first client render never diverges from the server (no hydration
+	// mismatch, no flash).
+	const [darkMode, setDarkMode] = useState(true);
+	const [mounted, setMounted] = useState(false);
 
+	// Reconcile with the saved preference after hydration (client only).
 	useEffect(() => {
-		if (typeof window !== "undefined") {
-			if (darkMode) {
-				document.documentElement.classList.add("dark");
-				localStorage.setItem("theme", "dark");
-			} else {
-				document.documentElement.classList.remove("dark");
-				localStorage.setItem("theme", "light");
-			}
-		}
-	}, [darkMode]);
+		const savedTheme = localStorage.getItem("theme");
+		if (savedTheme) setDarkMode(savedTheme === "dark");
+		setMounted(true);
+	}, []);
 
+	// Drive the theme via the `dark` class on <html> (Tailwind class strategy)
+	// and persist it. Guarded by `mounted` so it never clobbers the saved value
+	// before it has been read.
 	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-			const handleChange = (e: MediaQueryListEvent) => {
-				if (!localStorage.getItem("theme")) {
-					setDarkMode(e.matches);
-				}
-			};
+		if (!mounted) return;
+		document.documentElement.classList.toggle("dark", darkMode);
+		localStorage.setItem("theme", darkMode ? "dark" : "light");
+	}, [darkMode, mounted]);
 
-			mediaQuery.addEventListener("change", handleChange);
-			return () => mediaQuery.removeEventListener("change", handleChange);
-		}
+	// Follow the OS preference only when the visitor hasn't chosen explicitly.
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+		const handleChange = (e: MediaQueryListEvent) => {
+			if (!localStorage.getItem("theme")) setDarkMode(e.matches);
+		};
+		mediaQuery.addEventListener("change", handleChange);
+		return () => mediaQuery.removeEventListener("change", handleChange);
 	}, []);
 
 	const toggleDarkMode = () => {
@@ -52,10 +49,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
-			<div className={darkMode ? "dark" : ""}>
-				<div className="min-h-screen bg-white transition-colors duration-200 dark:bg-black">
-					{children}
-				</div>
+			<div className="min-h-screen bg-white transition-colors duration-200 dark:bg-black">
+				{children}
 			</div>
 		</ThemeContext.Provider>
 	);

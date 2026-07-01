@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import blogFeed from "../data/blog-feed.json"; // Build-time RSS snapshot (SSR/SEO)
 import { cn, formatDate } from "../util"; // Assuming cn and formatDate are in util.ts
 import { AnimatedText } from "./animated-text"; // Assuming AnimatedText component
 import { FadeIn, FadeInStagger } from "./FadeIn"; // Assuming FadeIn/FadeInStagger components
@@ -15,6 +16,19 @@ interface RSSItem {
 	imageUrl?: string;
 }
 
+// Posts captured at build time (scripts/fetch-blog-feed.mjs). These are rendered
+// into the prerendered HTML so crawlers and AI bots see real blog content; the
+// client-side fetch below then refreshes them with the latest.
+const snapshotArticles: RSSItem[] = blogFeed.items.map(item => ({
+	id: item.link,
+	title: item.title,
+	link: item.link,
+	date: item.pubDate,
+	content: item.description,
+	author: item.author || "Web3 Afrika",
+	imageUrl: item.image || undefined,
+}));
+
 const BlogHighlights = ({
 	noDescription,
 	partial,
@@ -22,13 +36,14 @@ const BlogHighlights = ({
 	noDescription?: boolean;
 	partial?: boolean;
 }) => {
-	const [articles, setArticles] = useState<RSSItem[]>([]);
-	const [isLoading, setIsLoading] = useState(true);
+	const [articles, setArticles] = useState<RSSItem[]>(snapshotArticles);
+	const [isLoading, setIsLoading] = useState(snapshotArticles.length === 0);
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
 		async function fetchRSS() {
-			setIsLoading(true);
+			// Keep showing the snapshot while refreshing; only spin if we have
+			// nothing to show yet.
 			setError(null);
 
 			const apiUrl = "https://redesign-review.vercel.app/api/rss";
@@ -53,18 +68,21 @@ const BlogHighlights = ({
 					);
 				}
 
-				const articles = await response.json();
+				const fetched: RSSItem[] = await response.json();
 
-				if (articles.length === 0) {
+				if (fetched.length > 0) {
+					setArticles(fetched);
+				} else if (snapshotArticles.length === 0) {
 					setError("No articles found in the RSS feed.");
-				} else {
-					setArticles(articles);
 				}
 			} catch (error) {
 				console.error(`Error fetching or parsing RSS via API route: ${error}`); // Keep error log for fetch failures
-				setError(
-					error instanceof Error ? error.message : "Failed to fetch RSS feed",
-				);
+				// Only surface an error if we have no snapshot to fall back on.
+				if (snapshotArticles.length === 0) {
+					setError(
+						error instanceof Error ? error.message : "Failed to fetch RSS feed",
+					);
+				}
 			} finally {
 				setIsLoading(false);
 			}

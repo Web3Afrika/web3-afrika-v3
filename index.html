@@ -2,66 +2,36 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
-		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-
 		<meta name="author" content="Web3 Afrika" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="website" />
 
-		<meta name="description" content="Empowering African Web3 Builders" />
-
-		<!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<link rel="apple-touch-icon" href="/logo192.png" />
 		<link rel="manifest" href="/manifest.json" />
+
 		<!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+			Set the theme class on <html> before paint so there is no flash and no
+			hydration mismatch. Defaults to dark; honors a saved preference.
+		-->
+		<script>
+			(function () {
+				try {
+					var t = localStorage.getItem("theme");
+					if (t ? t === "dark" : true)
+						document.documentElement.classList.add("dark");
+					else document.documentElement.classList.remove("dark");
+				} catch (e) {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-		<!-- HTML Meta Tags -->
-		<title>Web3 Afrika: Africa</title>
-		<meta
-			name="description"
-			content="Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa."
-		/>
-
-		<!-- Google / Search Engine Tags -->
-		<meta itemprop="name" content="Web3 Afrika: Africa" />
-		<meta
-			itemprop="description"
-			content="Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa."
-		/>
-		<meta itemprop="image" content="./web3afrika-logo.png" />
-
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content="https://www.web3afrika.com" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Web3 Afrika: Africa" />
-		<meta
-			property="og:description"
-			content="Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa."
-		/>
-		<meta property="og:image" content="./web3afrika-logo.png" />
-
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Web3 Afrika: Africa" />
-		<meta
-			name="twitter:description"
-			content="Web3 Afrika exists to accelerate the education and opportunities of a new wave of builders and bring diversity into web3 conversations globally by fostering communities in Africa."
-		/>
-		<meta name="twitter:image" content="./web3afrika-logo.png" />
-	</head>
+		<!--
+			Title, description, canonical, Open Graph, Twitter and JSON-LD are
+			set per-page at render time via the Seo / JsonLd components
+			(vite-react-ssg Head). No static title here to avoid duplicates.
+		--></head>
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>

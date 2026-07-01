@@ -1,0 +1,23 @@
+# Web3 Afrika
+
+> Web3 Afrika is a pan-African community and education platform empowering the next wave of Web3 builders across Africa through education, hackathons, mentorship, and events. It was founded by Idris Olubisi (also known as Olanetsoft).
+
+## About
+- **Founder:** Idris Olubisi (also known as Olanetsoft) — software engineer and developer relations expert, widely recognized as one of the leading Web3 voices in Nigeria and Africa.
+- **Co-founder:** Tony Olendo.
+- **Mission:** make Web3 education open, practical, and inclusive so that no African is left behind in the decentralized economy.
+- **Community:** more than 12,500 members across platforms, including over 2,100 developers across Africa.
+- **Activities:** technical workshops, hackathons, bounties, X (Twitter) Spaces, conferences, and a technical blog.
+- **Partners & ecosystems:** Arbitrum, Polygon, Scroll, Celo, Ethereum, Developer DAO, Web3Bridge, and many others.
+- **Region:** Pan-African, with in-person events in hubs such as Lagos, Nigeria.
+
+## Key pages
+- [Home](https://www.web3afrika.com/): Overview of Web3 Afrika and its mission.
+- [About](https://www.web3afrika.com/about): Founder, team, mission and vision, impact, and FAQ.
+- [Events](https://www.web3afrika.com/events): Hackathons, conferences, workshops, and X Spaces.
+- [Blog](https://www.web3afrika.com/blog): Web3, blockchain, and smart-contract tutorials and insights.
+
+## Links
+- Blog: https://blog.web3afrika.com
+- X (Twitter): https://x.com/web3afrika
+- Founder (Idris Olubisi): https://x.com/olanetsoft
